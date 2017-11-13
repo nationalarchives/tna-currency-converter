@@ -731,20 +731,24 @@ function bp_output() {
 
     var bp_values = bp_formula(get_bp_year(),get_bp_pounds(),get_bp_shillings(),get_bp_old_pence(),get_bp_new_pence(),get_inflation_rate(get_bp_year()));
     var HTML_output = "<ul>" +
-        build_bp_li("Horses",bp_values.horses) +
-        build_bp_li("Cows",bp_values.cows) +
-        build_bp_li("Wool",bp_values.wool) +
-        build_bp_li("Wheat",bp_values.wheat) +
-        build_bp_li("Wages",bp_values.wage) +
-        "</ul>"
+        build_bp_li("Horses",bp_values.horses, "./img/horse.gif") +
+
+        build_bp_li("Cows",bp_values.cows, "./img/cow.gif") +
+
+        build_bp_li("Wool",bp_values.wool, "./img/wool.gif") +
+
+        build_bp_li("Wheat",bp_values.wheat, "./img/wheat.gif") +
+
+        build_bp_li("Wages",bp_values.wage, "./img/wages.gif") +
+        "</ul>";
 
     $("#bp-result").hide();
     $("#bp-result").html(HTML_output);
     $("#bp-result").delay(500).fadeIn();
 }
 
-function build_bp_li(string,value) {
-    return "<li>" + string + ": " + value +"</li>";
+function build_bp_li(string,value, img) {
+    return "<li>" + string + ": " + value + " <img src='"+ img +"'/>" +"</li>" ;
 }
 
 $("#omtn-form").submit(function (event) {
