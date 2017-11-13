@@ -137,6 +137,8 @@ generate_breadcrumbs($pagesArray);
 											    echo "<option value='".$i."'>".$i ."</option>";
 
 										    } ?>
+
+                                            <option value="2017">2017</option>
                                         </select>
                                     </div>
                                     <div class="form-row">

@@ -679,6 +679,14 @@ var conversion_data = {
         "wheat_price": 17.36,
         "wage_price": 57.6
     },
+    "2017": {
+       "inflation": 1.37,
+        "horse_price": 2387.37,
+        "cow_price": 1200,
+        "wool_price": 6.35,
+        "wage_price": 100,
+        "wheat_price": 1.88,
+    }
 };
 
 $(function () {
@@ -719,7 +727,7 @@ function hide_inputs_based_on_year(year, id) {
 }
 
 function omtn_output() {
-    var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_bp_shillings(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
+    var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_omtn_pounds(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
     var output_string =  omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
     $("#omtn-result").hide();
@@ -824,7 +832,7 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
     var bp_money_to_2005 = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
-    
+
     return {
         horses: Math.floor(bp_money_to_2005 / get_horse_price(2005)),
         cows: Math.floor(bp_money_to_2005 / get_cow_price(2005)),
