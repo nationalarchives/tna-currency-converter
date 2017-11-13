@@ -730,13 +730,22 @@ function omtn_output() {
 function bp_output() {
 
     var bp_values = bp_formula(get_bp_year(),get_bp_pounds(),get_bp_shillings(),get_bp_old_pence(),get_bp_new_pence(),get_inflation_rate(get_bp_year()));
-
+    var HTML_output = "<ul>" +
+        build_bp_li("Horses",bp_values.horses) +
+        build_bp_li("Cows",bp_values.cows) +
+        build_bp_li("Wool",bp_values.wool) +
+        build_bp_li("Wheat",bp_values.wheat) +
+        build_bp_li("Wages",bp_values.wage) +
+        "</ul>"
 
     $("#bp-result").hide();
-    $("#bp-result").text(JSON.stringify(bp_values));
+    $("#bp-result").html(HTML_output);
     $("#bp-result").delay(500).fadeIn();
 }
 
+function build_bp_li(string,value) {
+    return "<li>" + string + ": " + value +"</li>";
+}
 
 $("#omtn-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
@@ -815,8 +824,7 @@ function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
     alert("BP Money to 2005: " + bp_money_to_2005);
     return {
-        horses:
-            Math.floor(bp_money_to_2005 / get_horse_price(2005)),
+        horses: Math.floor(bp_money_to_2005 / get_horse_price(2005)),
         cows: Math.floor(bp_money_to_2005 / get_cow_price(2005)),
         wool: Math.floor(bp_money_to_2005 / get_wool_price(2005)),
         wheat: Math.floor(bp_money_to_2005 / get_wheat_price(2005)),
