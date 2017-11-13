@@ -824,9 +824,7 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
     var bp_money_to_2005 = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
-
-
-    alert("BP Money to 2005: " + bp_money_to_2005);
+    
     return {
         horses: Math.floor(bp_money_to_2005 / get_horse_price(2005)),
         cows: Math.floor(bp_money_to_2005 / get_cow_price(2005)),
