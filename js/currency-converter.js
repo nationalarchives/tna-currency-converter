@@ -731,7 +731,7 @@ function omtn_output() {
     var output_string =  omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
     $("#omtn-result").hide();
-    $("#omtn-result").text("In 2005, this money is worth approximately " + output_string);
+    $("#omtn-result").text("In 2017, this money is worth approximately " + output_string);
     $("#omtn-result").delay(500).fadeIn();
 }
 
@@ -814,19 +814,33 @@ function get_bp_new_pence() {
 
 
 function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
+    var mathResult;
 
     if (year <= 1970) {
 
-        var mathResult = ((pounds + (shillings / 20) + (old_pence / 240) ) * inflation);
+         mathResult = ((pounds + (shillings / 20) + (old_pence / 240) ) * inflation);
 
-        return mathResult;
+
     }
     else if (year > 1970) {
-        var mathResult = (pounds + new_pence)*inflation;
+        mathResult = (pounds + new_pence)*inflation;
 
-        return mathResult;
+
     }
 
+    var debug = {
+        before_inflation: mathResult
+    };
+
+    if(year != 2017) {
+        mathResult = mathResult * conversion_data[2017].inflation;
+    }
+
+     debug["after_inflation"] = mathResult;
+
+       alert(JSON.stringify(debug));
+
+    return mathResult;
 }
 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
