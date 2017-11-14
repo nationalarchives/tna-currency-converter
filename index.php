@@ -124,7 +124,7 @@ generate_breadcrumbs($pagesArray);
 
                             <form action="index.php" method="post" id="bp-form">
                                 <fieldset>
-                                    <legend>Enter currency to show its purchasing power in 2005</legend>
+                                    <legend>Enter currency to show its purchasing power in 2017</legend>
                                     <div class="form-row">
                                         <label for="bp-year">Year of currency</label>
                                         <select id="bp-year" name="bp-year">
@@ -166,7 +166,7 @@ generate_breadcrumbs($pagesArray);
                                     </div>
 
                                     <div class="form-row">
-                                        <input type="submit" name="convert-currency" id="bp-submit" value="Convert to 2005 currency" class="button">
+                                        <input type="submit" name="convert-currency" id="bp-submit" value="Show currency power in 2017" class="button">
                                     </div>
 
 

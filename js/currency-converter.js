@@ -831,15 +831,37 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
-    var bp_money_to_2005 = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
+    var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
+    var inflation_divided = false;
+
+    if(get_bp_year() == 2017) {
+        // Divide by 1.37 so the inflation is removed;
+        bp_money_to_modern_value = bp_money_to_modern_value / conversion_data[2017].inflation;
+        inflation_divided = true;
+    }
+    else {
+        bp_money_to_modern_value = bp_money_to_modern_value * conversion_data[2017].inflation;
+    }
+
+    var debug_string = {
+        "bp_year" : get_bp_year(),
+        "bp_money_to_modern_value": bp_money_to_modern_value,
+        "inflation_divided": inflation_divided,
+        "cow": Math.floor(bp_money_to_modern_value / get_cow_price(2017))
+    }
+    alert(JSON.stringify(debug_string,null,4));
+
+
 
     return {
-        horses: Math.floor(bp_money_to_2005 / get_horse_price(2005)),
-        cows: Math.floor(bp_money_to_2005 / get_cow_price(2005)),
-        wool: Math.floor(bp_money_to_2005 / get_wool_price(2005)),
-        wheat: Math.floor(bp_money_to_2005 / get_wheat_price(2005)),
-        wage: Math.floor(bp_money_to_2005 / get_wage_price(2005))
+        horses: Math.floor(bp_money_to_modern_value / get_horse_price(2017)),
+        cows: Math.floor(bp_money_to_modern_value / get_cow_price(2017)),
+        wool: Math.floor(bp_money_to_modern_value / get_wool_price(2017)),
+        wheat: Math.floor(bp_money_to_modern_value / get_wheat_price(2017)),
+        wage: Math.floor(bp_money_to_modern_value / get_wage_price(2017))
     }
+
+
 }
 
 
