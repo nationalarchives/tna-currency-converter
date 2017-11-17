@@ -3,7 +3,7 @@
 <?php
 //Used for browser title and for META tags.
 include 'functions.php';
-$title = "Currency Converter: 1420 to 2017 - The National Archives"
+$title = "Currency Converter: 1270 to 2017 - The National Archives"
 ?>
 
 <!-- no-js class is needed for Modernizr -->
@@ -22,7 +22,7 @@ include 'functions/currency-math-values.php';
 //		Add breadcrumbs here
 $pagesArray = array(
     array("Help with your research", "http://nationalarchives.gov.uk/help-with-your-research/"),
-    array("Currency Converter: 1420 - 2017", "")
+    array("Currency Converter: 1270 - 2017", "")
 );
 
 generate_breadcrumbs($pagesArray);
@@ -34,7 +34,7 @@ generate_breadcrumbs($pagesArray);
             <div class="col-md-12">
                 <article>
                     <div class="entry-header">
-                        <h1>Currency Converter: 1420 - 2017</h1>
+                        <h1>Currency Converter: 1270 - 2017</h1>
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
@@ -50,7 +50,7 @@ generate_breadcrumbs($pagesArray);
             <div class="col-md-12">
                 <article>
                     <div class="entry-header">
-                        <h1>Convert old money to new</h1>
+                        <h2>Convert old money to new</h2>
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
@@ -77,7 +77,7 @@ generate_breadcrumbs($pagesArray);
                                         <input type="number" id="omtn-pounds" name="omtn-pounds" value="0" required>
                                     </div>
                                     <div class="form-row" id="omtn-shillings-row">
-                                        <label for="omtn-shillings">Shillings</label>
+                                        <label for="omtn-shillings">Shillings (s)</label>
                                         <select id="omtn-shillings" name="omtn-shillings">
 										    <?php for($i = 0; $i <= 19; $i = $i+1){
 											    echo "<option value='".$i."'>".$i ."</option>";
@@ -87,7 +87,7 @@ generate_breadcrumbs($pagesArray);
                                     </div>
 
                                     <div class="form-row" id="omtn-old-pence-row">
-                                        <label for="omtn-old-pence">Pence</label>
+                                        <label for="omtn-old-pence">Pence (d)</label>
                                         <input type="number" name="omtn-old-pence" id="omtn-old-pence" step="0.01" min="0" max="11.99" value="0" >
                                     </div>
 
@@ -117,7 +117,7 @@ generate_breadcrumbs($pagesArray);
             <div class="col-md-12">
                 <article>
                     <div class="entry-header">
-                        <h1>Buying power</h1>
+                        <h2>Buying power</h2>
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
@@ -146,7 +146,7 @@ generate_breadcrumbs($pagesArray);
                                         <input type="number" id="bp-pounds" name="bp-pounds" value="0" required>
                                     </div>
                                     <div class="form-row" id="bp-shillings-row">
-                                        <label for="bp-shillings">Shillings</label>
+                                        <label for="bp-shillings">Shillings (s)</label>
                                         <select id="bp-shillings" name="bp-shillings">
 										    <?php for($i = 0; $i <= 19; $i = $i+1){
 											    echo "<option value='".$i."'>".$i ."</option>";
@@ -156,7 +156,7 @@ generate_breadcrumbs($pagesArray);
                                     </div>
 
                                     <div class="form-row" id="bp-old-pence-row">
-                                        <label for="omtn-old-pence">Pence</label>
+                                        <label for="omtn-old-pence">Pence (d)</label>
                                         <input type="number" name="omtn-old-pence" id="bp-old-pence" step="0.01" min="0" max="11.99" value="0" >
                                     </div>
 

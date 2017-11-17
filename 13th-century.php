@@ -22,7 +22,7 @@ include 'functions/currency-math-values.php';
 //		Add breadcrumbs here
 $pagesArray = array(
 	array("Help with your research", "http://nationalarchives.gov.uk/help-with-your-research/"),
-	array("Currency Converter: 1420 - 2017", "./index.php"),
+	array("Currency Converter: 1270 - 2017", "./index.php"),
 	array("Thirteenth Century","")
 );
 
@@ -39,7 +39,7 @@ generate_breadcrumbs($pagesArray);
 					</div>
 					<div class="row entry-content">
 						<div class="col-md-12">
-							<p>The data used to provide the calculations for the currency converter has been collated from original documents and official statistics, and the survey of material used has been as comprehensive as possible. However, the results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Approximations are from 2005.</p>
+							<img src="./img/thirteenth-century.jpg" />
 						</div>
 					</div>
 				</article>
