@@ -925,17 +925,12 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 
     }
 
-    var debug = {
-        before_inflation: mathResult
-    };
 
     if(year != 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
-     debug["after_inflation"] = mathResult;
 
-       alert(JSON.stringify(debug));
 
     return mathResult;
 }
@@ -951,11 +946,9 @@ function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
     }
 
-    alert(JSON.stringify(obj));
 
     var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
-
-    alert(bp_money_to_modern_value);
+    
 
     return {
         horses: Math.floor(bp_money_to_modern_value / get_horse_price(2017)),
