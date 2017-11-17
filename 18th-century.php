@@ -32,7 +32,7 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h1><?= $title ?></h1>
@@ -45,6 +45,29 @@ generate_breadcrumbs($pagesArray);
 				</article>
 
 			</div>
+            <div class="col-md-3">
+                <article>
+                    <div class="entry-header">
+                        <h2>Navigation</h2>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <ul class="full">
+                                <li><a href="./index.php">Currency Converter</a></li>
+                                <li><a href="./13th-century.php">13th Century</a></li>
+                                <li><a href="./14th-century.php">14th Century</a></li>
+                                <li><a href="./15th-century.php">15th Century</a></li>
+                                <li><a href="./16th-century.php">16th Century</a></li>
+                                <li><a href="./17th-century.php">17th Century</a></li>
+                                <li><a href="./18th-century.php">18th Century</a></li>
+                                <li><a href="./19th-century.php">19th Century</a></li>
+                                <li><a href="./20th-century.php">20th Century</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
 		</div>
 
 		<div class="row">
