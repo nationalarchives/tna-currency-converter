@@ -3,7 +3,7 @@
 <?php
 //Used for browser title and for META tags.
 include 'functions.php';
-$title = "Currency Converter: 1420 to 2005 - The National Archives"
+$title = "Currency Converter: 1420 to 2017 - The National Archives"
 ?>
 
 <!-- no-js class is needed for Modernizr -->
@@ -22,7 +22,7 @@ include 'functions/currency-math-values.php';
 //		Add breadcrumbs here
 $pagesArray = array(
     array("Help with your research", "http://nationalarchives.gov.uk/help-with-your-research/"),
-    array("Currency Converter: 1420 - 2015", "")
+    array("Currency Converter: 1420 - 2017", "")
 );
 
 generate_breadcrumbs($pagesArray);
@@ -34,11 +34,11 @@ generate_breadcrumbs($pagesArray);
             <div class="col-md-12">
                 <article>
                     <div class="entry-header">
-                        <h1>Currency Converter: 1420 - 2015</h1>
+                        <h1>Currency Converter: 1420 - 2017</h1>
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
-                            <p>The data used to provide the calculations for the currency converter has been collated from original documents and official statistics, and the survey of material used has been as comprehensive as possible. However, the results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Approximations are from 2005. <strong>A calculation has been added on top of these approximations to align with 2015 currency values.</strong></p>
+                            <p>The data used to provide the calculations for the currency converter has been collated from original documents and official statistics, and the survey of material used has been as comprehensive as possible. However, the results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Approximations are from 2005.</p>
                         </div>
                     </div>
                 </article>
@@ -57,7 +57,7 @@ generate_breadcrumbs($pagesArray);
 
                             <form action="index.php" method="post" id="omtn-form">
                                 <fieldset>
-                                    <legend>Enter currency to be converted to 2005 values:</legend>
+                                    <legend>Enter currency to be converted to 2017 values:</legend>
                                     <div class="form-row">
                                         <label for="omtn-year">Year of currency</label>
                                         <select id="omtn-year" name="omtn-year">
