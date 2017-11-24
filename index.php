@@ -54,6 +54,7 @@ generate_breadcrumbs($pagesArray);
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
+                                                        
 
                             <form action="index.php" method="post" id="omtn-form">
                                 <fieldset>
@@ -104,7 +105,7 @@ generate_breadcrumbs($pagesArray);
                                 </fieldset>
                             </form>
 
-                            <span id="omtn-result"></span>
+                            <div id="omtn-result" class="result"></div>
 
                         </div>
                     </div>

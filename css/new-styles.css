@@ -47,3 +47,12 @@
 .show {
     background-image: url(http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/icon-24-accordion-close.png);
 }
+
+.result {
+    background-color: #FFF8D0;
+    border-left: 4px solid #EBAB2C;
+}
+
+.result h4 {
+    margin: 1%;
+}

@@ -772,6 +772,16 @@ var conversion_data = {
         "wage_price": 100,
         "wheat_price": 1.88,
         "century":"21st"
+    },
+    "century_intros" : {
+        "13th" : "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
+        "14th" : "Between 1315 and 1322, the Great Famine, brought about by unusually prolonged periods of heavy rainfall and cold spells, killed 10-15% of the population.",
+        "15th" : "A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres.",
+        "16th" : "The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable.",
+        "17th" : "In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century.",
+        "18th" : "One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. ",
+        "19th" : "The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society.",
+        "20th" : "The twentieth century saw the most rapid and dramatic social and economic change of any century.",
     }
 };
 
@@ -816,16 +826,23 @@ function omtn_output() {
     var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_omtn_pounds(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
     var output_string =  omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
-    $("#omtn-result").hide();
-    $("#omtn-result").text("In 2017, this money is worth approximately " + output_string);
-    $("#omtn-result").delay(500).fadeIn();
+   // $("#omtn-result").hide();
+    $("#omtn-result").html("<h4>In 2017, this money is worth approximately " + output_string +"</h4>");
+  //  $("#omtn-result").delay(500).fadeIn();
 }
 
 function bp_output() {
 
     var bp_values = bp_formula(get_bp_year(),get_bp_pounds(),get_bp_shillings(),get_bp_old_pence(),get_bp_new_pence(),get_inflation_rate(get_bp_year()));
     var century = conversion_data[get_bp_year()].century;
-    var HTML_output = "<ul>" +
+    var century_preview = "";
+
+    if(century != "21st"){
+        century_preview = "<p>" + conversion_data.century_intros[century]
+        + " <a href='./" +century+ "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
+    }
+
+    var HTML_output = "<h3>In 2017, you could buy one of these: </h3>"+"<div class='result'>" +
         build_bp_li("Horses",bp_values.horses, "(single)", "./img/horse.gif") +
 
         build_bp_li("Cows",bp_values.cows, "(single)","./img/cow.gif") +
@@ -834,10 +851,10 @@ function bp_output() {
 
         build_bp_li("Wheat",bp_values.wheat,"quarters" ,"./img/wheat.gif") +
 
-        build_bp_li("Wages",bp_values.wage,"hours (skilled tradesman)" ,"./img/wages.gif") +
+        build_bp_li("Wages",bp_values.wage,"days (skilled tradesman)" ,"./img/wages.gif") +
 
-        "</ul>" +
-        "<p><a href='./" +century+ "-century.php' target='_blank'>Read more about the " + century + " century</p>";
+        "</div>" +
+        century_preview;
 
     $("#bp-result").hide();
     $("#bp-result").html(HTML_output);
@@ -845,7 +862,7 @@ function bp_output() {
 }
 
 function build_bp_li(string,value,unit, img) {
-    return "<li>" + string + ": " + value + " " + unit + " <img src='"+ img +"'/>" +"</li>" ;
+    return "<h4>" + string + ": " + value + " " + unit + " <img src='"+ img +"'/>" +"</h4>" ;
 }
 
 $("#omtn-form").submit(function (event) {
@@ -948,7 +965,7 @@ function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
 
     var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
-    
+
 
     return {
         horses: Math.floor(bp_money_to_modern_value / get_horse_price(2017)),
