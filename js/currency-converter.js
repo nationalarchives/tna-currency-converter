@@ -953,10 +953,16 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
     var a = ((pounds)+(shillings/20)+(old_pence/240));
     var b = a * inflation;
     var debug_object = {
-        
+        "p" : pounds,
+        "s" : shillings,
+        "op" : old_pence,
+        "inf" : inflation,
+        "a" : a,
+        "b" : b,
+
     }
 
-    alert(a);
+    alert(JSON.stringify(debug_object));
     return mathResult;
 }
 
