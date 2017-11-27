@@ -837,20 +837,20 @@ function bp_output() {
     var century_preview = "";
 
     if (century != "21st") {
-        century_preview = "<p>" + conversion_data.century_intros[century]
-            + "<br/><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
+        century_preview = "<p><blockquote>" + conversion_data.century_intros[century]
+            + "<br/><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </a></blockquote></p>";
     }
 
-    var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy one of these: </h3>" +
-        build_bp_li("Horses", bp_values.horses, "", "./img/horse.gif") +
+    var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy either of these with £" + bp_values.money +": </h3>" +
+        build_bp_output_html("Horses", bp_values.horses, "", "./img/horse.gif") +
 
-        build_bp_li("Cows", bp_values.cows, "", "./img/cow.gif") +
+        build_bp_output_html("Cows", bp_values.cows, "", "./img/cow.gif") +
 
-        build_bp_li("Wool", bp_values.wool, "stones", "./img/wool.gif") +
+        build_bp_output_html("Wool", bp_values.wool, "stones", "./img/wool.gif") +
 
-        build_bp_li("Wheat", bp_values.wheat, "quarters", "./img/wheat.gif") +
+        build_bp_output_html("Wheat", bp_values.wheat, "quarters", "./img/wheat.gif") +
 
-        build_bp_li("Wages", bp_values.wage, "days (skilled tradesman)", "./img/wages.gif") +
+        build_bp_output_html("Wages", bp_values.wage, "days (skilled tradesman)", "./img/wages.gif") +
         century_preview +
         "</div>"
     ;
@@ -860,7 +860,7 @@ function bp_output() {
     $("#bp-result").fadeIn();
 }
 
-function build_bp_li(string, value, unit, img) {
+function build_bp_output_html(string, value, unit, img) {
     return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
@@ -955,7 +955,8 @@ function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
         cows: Math.floor(bp_money_to_modern_value / get_cow_price(2017)),
         wool: Math.floor(bp_money_to_modern_value / get_wool_price(2017)),
         wheat: Math.floor(bp_money_to_modern_value / get_wheat_price(2017)),
-        wage: Math.floor(bp_money_to_modern_value / get_wage_price(2017))
+        wage: Math.floor(bp_money_to_modern_value / get_wage_price(2017)),
+        money: bp_money_to_modern_value
     }
 
 

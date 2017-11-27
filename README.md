@@ -52,4 +52,36 @@ To convert the 2005 value to 2017 we multiply by 1.037 (3.7%) making the total �
 
 #Buying power maths
 
-The formula for buying power is calculated using the above "Old Money to New" formula.
+This part of the currency takes money from the past, and shows how powerful it would be in 2017.
+
+The formula for buying power is calculated partly using the above "old money to new" formula.
+
+1. Take users money and year input
+2. Convert the money to 2017 currency using the above "old money to new" formula store as "new_money"
+3. Divide the "new_money" by the horse, cow, wool, wheat and wages prices to return the buying power.
+4 Floor the values (e.g. 1.5 horses becomes 1 horse) and return results to user
+
+####Example
+User inputs 
+ * 10 Pounds
+ * 99 Pence
+ * 1975 Year (which becomes a 5.57 inflation multiplier). 
+ 
+   "inflation": 1.037,
+         "horse_price": 2387.37,
+         "cow_price": 1200,
+         "wool_price": 6.35,
+         "wage_price": 100,
+         "wheat_price": 1.88,
+ 
+ The old money to new formula is ran which returns £63.48, which is then used to calculate the buying power:
+ 
+     63.48/2287.37 // Horses = 0
+     63.48/1200 // Cows = 0 
+     63.48/6.35 // Wool = 0 stones
+     63.48/100 // Wages = 0 days wages
+     63.48/1.88 // Wheat = 33 quarters
+     
+ This then gives you the buying power of £10.99 in 1975 in 2017.    
+     
+     
