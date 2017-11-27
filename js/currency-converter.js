@@ -943,12 +943,20 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
     }
 
 
+
+
     if(year != 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
 
+    var a = ((pounds)+(shillings/20)+(old_pence/240));
+    var b = a * inflation;
+    var debug_object = {
+        
+    }
 
+    alert(a);
     return mathResult;
 }
 
