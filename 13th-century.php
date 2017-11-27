@@ -2,7 +2,7 @@
 
 <?php
 //Used for browser title and for META tags.
-include 'functions.php';
+include 'get_root_url.php';
 $title = "Thirteenth Century"
 ?>
 
@@ -37,11 +37,12 @@ generate_breadcrumbs($pagesArray);
 					<div class="entry-header">
 						<h1><?= $title ?></h1>
 					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/thirteenth-century.jpg" />
-						</div>
-					</div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century. Titow (English Rural Society) demonstrated that between ten and thirteen and a half acres were needed to maintain the average family of four and a half persons. The average tenant with half a yardland and fifteen acres of fertile soil must have been on the edge of destitution. Opportunities for casual work on the demesne were few and far between and only allowed a peasant to earn a few shillings here and there. There was, however, a growing number of wage earners such as artisans, tradesmen and hired labourers who created an expanding market for goods and services. Large scale landlords and small scale producers who were able to sell a surplus had an opportunity for profit.</p>
+                            <p>The growth of population as well as trade also helped expand and establish larger villages and towns. Long distance trade was still quite limited in the thirteenth century and developed at a different pace throughout the country. However, wool was exported to Flanders and for those who could afford such a luxury, wine was imported from Gascony. From Scandinavia came expensive furs and stone from Caen was imported and used for mouldings and carvings in Westminster Abbey. In the thirteenth and fourteenth centuries the aristocracy bought squirrel skins, which could add £2 to £3 to the cost of a garment and luxurious textiles such as silks and linens, while others wore a larger amount of woollen cloth.</p>
+                        </div>
+                    </div>
 				</article>
 
 			</div>
@@ -54,7 +55,7 @@ generate_breadcrumbs($pagesArray);
 						<div class="col-md-12">
 							<ul class="full">
 								<li><a href="./index.php">Currency Converter</a></li>
-								<li><a href="./13th-century.php">13th Century</a></li>
+								<li><strong>13th Century</strong></li>
 								<li><a href="./14th-century.php">14th Century</a></li>
 								<li><a href="./15th-century.php">15th Century</a></li>
 								<li><a href="./16th-century.php">16th Century</a></li>
@@ -70,25 +71,9 @@ generate_breadcrumbs($pagesArray);
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<p>Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century. Titow (English Rural Society) demonstrated that between ten and thirteen and a half acres were needed to maintain the average family of four and a half persons. The average tenant with half a yardland and fifteen acres of fertile soil must have been on the edge of destitution. Opportunities for casual work on the demesne were few and far between and only allowed a peasant to earn a few shillings here and there. There was, however, a growing number of wage earners such as artisans, tradesmen and hired labourers who created an expanding market for goods and services. Large scale landlords and small scale producers who were able to sell a surplus had an opportunity for profit.</p>
-							<p>The growth of population as well as trade also helped expand and establish larger villages and towns. Long distance trade was still quite limited in the thirteenth century and developed at a different pace throughout the country. However, wool was exported to Flanders and for those who could afford such a luxury, wine was imported from Gascony. From Scandinavia came expensive furs and stone from Caen was imported and used for mouldings and carvings in Westminster Abbey. In the thirteenth and fourteenth centuries the aristocracy bought squirrel skins, which could add £2 to £3 to the cost of a garment and luxurious textiles such as silks and linens, while others wore a larger amount of woollen cloth.</p>
-						</div>
-					</div>
-				</article>
-
-			</div>
-		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Travel</h2>
@@ -105,7 +90,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Currency</h2>

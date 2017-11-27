@@ -2,7 +2,7 @@
 
 <?php
 //Used for browser title and for META tags.
-include 'functions.php';
+include 'get_root_url.php';
 $title = "Currency Converter: 1270 to 2017 - The National Archives"
 ?>
 
@@ -28,37 +28,59 @@ $pagesArray = array(
 generate_breadcrumbs($pagesArray);
 ?>
 
+<div class="level-one">
+    <div class="container">
+        <div class="row" role="banner">
+            <div class="col-md-12">
+                <article class="banner feature-img feature-img-bg"
+                         style="background-image: url(./img/currency-converter-banner.jpg);">
+                    <div class="entry-header">
+                        <h1>Currency Converter: 1270 - 2017</h1>
+                    </div>
+                    <div class="entry-content">
+                        <div class="col-md-12">
+                            <p>The results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Read more.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 <main id="primary" role="main" class="content-area">
     <div class="container">
-        <div class="row">
+        <!--<div class="row">
             <div class="col-md-12">
                 <article>
                     <div class="entry-header">
                         <h1>Currency Converter: 1270 - 2017</h1>
                     </div>
                     <div class="row entry-content">
-                        <div class="col-md-12">
+                        <div class="col-md-9">
                             <p>The data used to provide the calculations for the currency converter has been collated from original documents and official statistics, and the survey of material used has been as comprehensive as possible. However, the results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Approximations are from 2005.</p>
                         </div>
                     </div>
                 </article>
 
             </div>
-        </div>
+        </div>-->
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <article>
                     <div class="entry-header">
                         <h2>Convert old money to new</h2>
                     </div>
                     <div class="row entry-content">
                         <div class="col-md-12">
-                                                        
+
 
                             <form action="index.php" method="post" id="omtn-form">
                                 <fieldset>
-                                    <legend>Enter currency to be converted to 2017 values:</legend>
+                                    <legend>Enter currency to be converted to 2017 values</legend>
                                     <div class="form-row">
                                         <label for="omtn-year">Year of currency</label>
                                         <select id="omtn-year" name="omtn-year">
@@ -98,15 +120,38 @@ generate_breadcrumbs($pagesArray);
                                     </div>
 
                                     <div class="form-row">
-                                        <input type="submit" name="convert-currency" id="omtn-submit" value="Convert to 2005 currency" class="button">
+                                        <input type="submit" name="convert-currency" id="omtn-submit" value="Convert to 2017 currency" class="button">
                                     </div>
 
 
                                 </fieldset>
                             </form>
 
-                            <div id="omtn-result" class="result"></div>
+                            <div id="omtn-result" class="omtn"></div>
 
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="col-md-3">
+                <article>
+                    <div class="entry-header">
+                        <h2>Navigation</h2>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <ul class="full">
+                                <li><strong>Currency Converter</strong></li>
+                                <li><a href="./13th-century.php">13th Century</a></li>
+                                <li><a href="./14th-century.php">14th Century</a></li>
+                                <li><a href="./15th-century.php">15th Century</a></li>
+                                <li><a href="./16th-century.php">16th Century</a></li>
+                                <li><a href="./17th-century.php">17th Century</a></li>
+                                <li><a href="./18th-century.php">18th Century</a></li>
+                                <li><a href="./19th-century.php">19th Century</a></li>
+                                <li><a href="./20th-century.php">20th Century</a></li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -115,7 +160,7 @@ generate_breadcrumbs($pagesArray);
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <article>
                     <div class="entry-header">
                         <h2>Buying power</h2>

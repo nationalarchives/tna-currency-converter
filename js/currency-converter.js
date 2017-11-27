@@ -839,30 +839,30 @@ function bp_output() {
 
     if(century != "21st"){
         century_preview = "<p>" + conversion_data.century_intros[century]
-        + " <a href='./" +century+ "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
+        + "<br/><a href='./" +century+ "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
     }
 
-    var HTML_output = "<h3>In 2017, you could buy one of these: </h3>"+"<div class='result'>" +
-        build_bp_li("Horses",bp_values.horses, "(single)", "./img/horse.gif") +
+    var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy one of these: </h3>" +
+        build_bp_li("Horses",bp_values.horses, "", "./img/horse.gif") +
 
-        build_bp_li("Cows",bp_values.cows, "(single)","./img/cow.gif") +
+        build_bp_li("Cows",bp_values.cows, "","./img/cow.gif") +
 
         build_bp_li("Wool",bp_values.wool,"stones","./img/wool.gif") +
 
         build_bp_li("Wheat",bp_values.wheat,"quarters" ,"./img/wheat.gif") +
 
         build_bp_li("Wages",bp_values.wage,"days (skilled tradesman)" ,"./img/wages.gif") +
+        century_preview +
+        "</div>"
+       ;
 
-        "</div>" +
-        century_preview;
 
-    $("#bp-result").hide();
     $("#bp-result").html(HTML_output);
-    $("#bp-result").delay(500).fadeIn();
+    $("#bp-result").fadeIn();
 }
 
 function build_bp_li(string,value,unit, img) {
-    return "<h4>" + string + ": " + value + " " + unit + " <img src='"+ img +"'/>" +"</h4>" ;
+    return "<h4>" + " <img src='"+ img +"'/>" + string + ": " + value + " " + unit + "</h4>" ;
 }
 
 $("#omtn-form").submit(function (event) {

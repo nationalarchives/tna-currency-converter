@@ -2,7 +2,7 @@
 
 <?php
 //Used for browser title and for META tags.
-include 'functions.php';
+include 'get_root_url.php';
 $title = "Fourteenth Century"
 ?>
 
@@ -55,7 +55,7 @@ generate_breadcrumbs($pagesArray);
                             <ul class="full">
                                 <li><a href="./index.php">Currency Converter</a></li>
                                 <li><a href="./13th-century.php">13th Century</a></li>
-                                <li><a href="./14th-century.php">14th Century</a></li>
+                                <li><strong>14th Century</strong></li>
                                 <li><a href="./15th-century.php">15th Century</a></li>
                                 <li><a href="./16th-century.php">16th Century</a></li>
                                 <li><a href="./17th-century.php">17th Century</a></li>
@@ -71,7 +71,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Standard of Living</h2>
@@ -91,7 +91,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Currency</h2>

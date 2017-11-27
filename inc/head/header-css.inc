@@ -3,7 +3,7 @@
       type='text/css' media='all'/>
 <link rel='stylesheet' href="<?php echo SITE_URL ?>css/base-sass.min.css"/>
 <link rel='stylesheet' href="<?php echo SITE_URL ?>css/new-styles.css"/>
-
+<link rel='stylesheet' href="<?php echo SITE_URL ?>css/tna-forms.css"/>
 <!-- Fav icon -->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo SITE_URL ?>img/favicon.ico">
 <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo SITE_URL ?>img/favicon.ico">

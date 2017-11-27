@@ -2,7 +2,7 @@
 
 <?php
 //Used for browser title and for META tags.
-include 'functions.php';
+include 'get_root_url.php';
 $title = "Twentieth Century"
 ?>
 
@@ -61,7 +61,7 @@ generate_breadcrumbs($pagesArray);
                                 <li><a href="./17th-century.php">17th Century</a></li>
                                 <li><a href="./18th-century.php">18th Century</a></li>
                                 <li><a href="./19th-century.php">19th Century</a></li>
-                                <li><a href="./20th-century.php">20th Century</a></li>
+                                <li><strong>20th Century</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Standard of Living</h2>
@@ -88,7 +88,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<article>
 					<div class="entry-header">
 						<h2>Transport</h2>
@@ -109,7 +109,7 @@ generate_breadcrumbs($pagesArray);
 		</div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <article>
                     <div class="entry-header">
                         <h2>Currency</h2>
