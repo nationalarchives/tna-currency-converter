@@ -6,7 +6,7 @@ var conversion_data = {
         "wool_price": 0.13,
         "wheat_price": 0.16,
         "wage_price": 0.01,
-        "century":"13th"
+        "century": "13th"
     },
     "1280": {
         "inflation": 506.62,
@@ -15,7 +15,7 @@ var conversion_data = {
         "wool_price": 0.23,
         "wheat_price": 0.26,
         "wage_price": 0.01,
-        "century":"13th"
+        "century": "13th"
     },
     "1290": {
         "inflation": 536.83,
@@ -24,7 +24,7 @@ var conversion_data = {
         "wool_price": 0.23,
         "wheat_price": 0.26,
         "wage_price": 0.01,
-        "century":"13th"
+        "century": "13th"
     },
     "1300": {
         "inflation": 517.54,
@@ -33,7 +33,7 @@ var conversion_data = {
         "wool_price": 0.23,
         "wheat_price": 0.26,
         "wage_price": 0.01,
-        "century":"14th"
+        "century": "14th"
     },
     "1310": {
         "inflation": 446.49,
@@ -42,7 +42,7 @@ var conversion_data = {
         "wool_price": 0.23,
         "wheat_price": 0.26,
         "wage_price": 0.01,
-        "century":"14th"
+        "century": "14th"
     },
     "1320": {
         "inflation": 335.83,
@@ -51,7 +51,7 @@ var conversion_data = {
         "wool_price": 0.23,
         "wheat_price": 0.26,
         "wage_price": 0.01,
-        "century":"14th"
+        "century": "14th"
     },
     "1330": {
         "inflation": 447.68,
@@ -60,7 +60,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1340": {
         "inflation": 546.73,
@@ -69,7 +69,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1350": {
         "inflation": 428.64,
@@ -78,7 +78,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1360": {
         "inflation": 363.44,
@@ -87,7 +87,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1370": {
         "inflation": 358.01,
@@ -96,7 +96,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1380": {
         "inflation": 450.48,
@@ -105,7 +105,7 @@ var conversion_data = {
         "wool_price": 0.18,
         "wheat_price": 0.31,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1390": {
         "inflation": 483.3,
@@ -114,7 +114,7 @@ var conversion_data = {
         "wool_price": 0.18,
         "wheat_price": 0.31,
         "wage_price": 0.02,
-        "century":"14th"
+        "century": "14th"
     },
     "1400": {
         "inflation": 447.28,
@@ -123,7 +123,7 @@ var conversion_data = {
         "wool_price": 0.18,
         "wheat_price": 0.31,
         "wage_price": 0.02,
-        "century":"15th"
+        "century": "15th"
     },
     "1410": {
         "inflation": 459.93,
@@ -132,7 +132,7 @@ var conversion_data = {
         "wool_price": 0.18,
         "wheat_price": 0.31,
         "wage_price": 0.02,
-        "century":"15th"
+        "century": "15th"
     },
     "1420": {
         "inflation": 469.35,
@@ -141,7 +141,7 @@ var conversion_data = {
         "wool_price": 0.18,
         "wheat_price": 0.31,
         "wage_price": 0.02,
-        "century":"15th"
+        "century": "15th"
     },
     "1430": {
         "inflation": 455.77,
@@ -150,7 +150,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1440": {
         "inflation": 469.35,
@@ -159,7 +159,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1450": {
         "inflation": 455.77,
@@ -168,7 +168,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1460": {
         "inflation": 469.35,
@@ -177,7 +177,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1470": {
         "inflation": 500.58,
@@ -186,7 +186,7 @@ var conversion_data = {
         "wool_price": 0.14,
         "wheat_price": 0.37,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1480": {
         "inflation": 504.59,
@@ -195,7 +195,7 @@ var conversion_data = {
         "wool_price": 0.11,
         "wheat_price": 0.4,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1490": {
         "inflation": 488.93,
@@ -204,7 +204,7 @@ var conversion_data = {
         "wool_price": 0.11,
         "wheat_price": 0.4,
         "wage_price": 0.03,
-        "century":"15th"
+        "century": "15th"
     },
     "1500": {
         "inflation": 486.1,
@@ -213,7 +213,7 @@ var conversion_data = {
         "wool_price": 0.11,
         "wheat_price": 0.4,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1510": {
         "inflation": 483.77,
@@ -222,7 +222,7 @@ var conversion_data = {
         "wool_price": 0.11,
         "wheat_price": 0.4,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1520": {
         "inflation": 379.58,
@@ -231,7 +231,7 @@ var conversion_data = {
         "wool_price": 0.11,
         "wheat_price": 0.4,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1530": {
         "inflation": 322.1,
@@ -240,7 +240,7 @@ var conversion_data = {
         "wool_price": 0.32,
         "wheat_price": 0.93,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1540": {
         "inflation": 307.56,
@@ -249,7 +249,7 @@ var conversion_data = {
         "wool_price": 0.32,
         "wheat_price": 0.93,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1550": {
         "inflation": 200.51,
@@ -258,7 +258,7 @@ var conversion_data = {
         "wool_price": 0.32,
         "wheat_price": 0.93,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1560": {
         "inflation": 170.3,
@@ -267,7 +267,7 @@ var conversion_data = {
         "wool_price": 0.32,
         "wheat_price": 0.93,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1570": {
         "inflation": 173.89,
@@ -276,7 +276,7 @@ var conversion_data = {
         "wool_price": 0.32,
         "wheat_price": 0.93,
         "wage_price": 0.03,
-        "century":"16th"
+        "century": "16th"
     },
     "1580": {
         "inflation": 149.31,
@@ -285,7 +285,7 @@ var conversion_data = {
         "wool_price": 0.34,
         "wheat_price": 1.8,
         "wage_price": 0.05,
-        "century":"16th"
+        "century": "16th"
     },
     "1590": {
         "inflation": 125.29,
@@ -294,7 +294,7 @@ var conversion_data = {
         "wool_price": 0.34,
         "wheat_price": 1.8,
         "wage_price": 0.05,
-        "century":"16th"
+        "century": "16th"
     },
     "1600": {
         "inflation": 100.64,
@@ -303,7 +303,7 @@ var conversion_data = {
         "wool_price": 0.34,
         "wheat_price": 1.8,
         "wage_price": 0.05,
-        "century":"17th"
+        "century": "17th"
     },
     "1610": {
         "inflation": 97.88,
@@ -312,7 +312,7 @@ var conversion_data = {
         "wool_price": 0.34,
         "wheat_price": 1.8,
         "wage_price": 0.05,
-        "century":"17th"
+        "century": "17th"
     },
     "1620": {
         "inflation": 96,
@@ -321,7 +321,7 @@ var conversion_data = {
         "wool_price": 0.34,
         "wheat_price": 1.8,
         "wage_price": 0.05,
-        "century":"17th"
+        "century": "17th"
     },
     "1630": {
         "inflation": 89.16,
@@ -330,7 +330,7 @@ var conversion_data = {
         "wool_price": 0.8,
         "wheat_price": 3.83,
         "wage_price": 0.07,
-        "century":"17th"
+        "century": "17th"
     },
     "1640": {
         "inflation": 85.8,
@@ -339,7 +339,7 @@ var conversion_data = {
         "wool_price": 0.8,
         "wheat_price": 3.83,
         "wage_price": 0.07,
-        "century":"17th"
+        "century": "17th"
     },
     "1650": {
         "inflation": 75.56,
@@ -348,7 +348,7 @@ var conversion_data = {
         "wool_price": 0.8,
         "wheat_price": 3.83,
         "wage_price": 0.07,
-        "century":"17th"
+        "century": "17th"
     },
     "1660": {
         "inflation": 76.77,
@@ -357,7 +357,7 @@ var conversion_data = {
         "wool_price": 0.8,
         "wheat_price": 3.83,
         "wage_price": 0.07,
-        "century":"17th"
+        "century": "17th"
     },
     "1670": {
         "inflation": 83.05,
@@ -366,7 +366,7 @@ var conversion_data = {
         "wool_price": 0.8,
         "wheat_price": 3.83,
         "wage_price": 0.07,
-        "century":"17th"
+        "century": "17th"
     },
     "1680": {
         "inflation": 83.54,
@@ -375,7 +375,7 @@ var conversion_data = {
         "wool_price": 0.6,
         "wheat_price": 2,
         "wage_price": 0.09,
-        "century":"17th"
+        "century": "17th"
     },
     "1690": {
         "inflation": 87.47,
@@ -384,7 +384,7 @@ var conversion_data = {
         "wool_price": 0.6,
         "wheat_price": 2,
         "wage_price": 0.09,
-        "century":"17th"
+        "century": "17th"
     },
     "1700": {
         "inflation": 78.09,
@@ -393,7 +393,7 @@ var conversion_data = {
         "wool_price": 0.6,
         "wheat_price": 2,
         "wage_price": 0.09,
-        "century":"18th"
+        "century": "18th"
     },
     "1710": {
         "inflation": 76.59,
@@ -402,7 +402,7 @@ var conversion_data = {
         "wool_price": 0.6,
         "wheat_price": 2,
         "wage_price": 0.09,
-        "century":"18th"
+        "century": "18th"
     },
     "1720": {
         "inflation": 84.75,
@@ -411,7 +411,7 @@ var conversion_data = {
         "wool_price": 0.6,
         "wheat_price": 2,
         "wage_price": 0.09,
-        "century":"18th"
+        "century": "18th"
     },
     "1730": {
         "inflation": 85.98,
@@ -420,7 +420,7 @@ var conversion_data = {
         "wool_price": 0.47,
         "wheat_price": 1.63,
         "wage_price": 0.1,
-        "century":"18th"
+        "century": "18th"
     },
     "1740": {
         "inflation": 86.29,
@@ -429,7 +429,7 @@ var conversion_data = {
         "wool_price": 0.47,
         "wheat_price": 1.63,
         "wage_price": 0.1,
-        "century":"18th"
+        "century": "18th"
     },
     "1750": {
         "inflation": 85.16,
@@ -438,7 +438,7 @@ var conversion_data = {
         "wool_price": 0.47,
         "wheat_price": 1.63,
         "wage_price": 0.1,
-        "century":"18th"
+        "century": "18th"
     },
     "1760": {
         "inflation": 74.79,
@@ -447,7 +447,7 @@ var conversion_data = {
         "wool_price": 0.47,
         "wheat_price": 1.63,
         "wage_price": 0.1,
-        "century":"18th"
+        "century": "18th"
     },
     "1770": {
         "inflation": 63.69,
@@ -456,7 +456,7 @@ var conversion_data = {
         "wool_price": 0.47,
         "wheat_price": 1.63,
         "wage_price": 0.1,
-        "century":"18th"
+        "century": "18th"
     },
     "1780": {
         "inflation": 62.85,
@@ -465,7 +465,7 @@ var conversion_data = {
         "wool_price": 0.9,
         "wheat_price": 5.69,
         "wage_price": 0.15,
-        "century":"18th"
+        "century": "18th"
     },
     "1790": {
         "inflation": 56.03,
@@ -474,7 +474,7 @@ var conversion_data = {
         "wool_price": 0.9,
         "wheat_price": 5.69,
         "wage_price": 0.15,
-        "century":"18th"
+        "century": "18th"
     },
     "1800": {
         "inflation": 32.17,
@@ -483,7 +483,7 @@ var conversion_data = {
         "wool_price": 0.9,
         "wheat_price": 5.69,
         "wage_price": 0.15,
-        "century":"19th"
+        "century": "19th"
     },
     "1810": {
         "inflation": 33.96,
@@ -492,7 +492,7 @@ var conversion_data = {
         "wool_price": 0.9,
         "wheat_price": 5.69,
         "wage_price": 0.15,
-        "century":"19th"
+        "century": "19th"
     },
     "1820": {
         "inflation": 41.92,
@@ -501,7 +501,7 @@ var conversion_data = {
         "wool_price": 0.9,
         "wheat_price": 5.69,
         "wage_price": 0.15,
-        "century":"19th"
+        "century": "19th"
     },
     "1830": {
         "inflation": 49.49,
@@ -510,7 +510,7 @@ var conversion_data = {
         "wool_price": 0.66,
         "wheat_price": 2.01,
         "wage_price": 0.2,
-        "century":"19th"
+        "century": "19th"
     },
     "1840": {
         "inflation": 44.1,
@@ -519,7 +519,7 @@ var conversion_data = {
         "wool_price": 0.66,
         "wheat_price": 2.01,
         "wage_price": 0.2,
-        "century":"19th"
+        "century": "19th"
     },
     "1850": {
         "inflation": 58.53,
@@ -528,7 +528,7 @@ var conversion_data = {
         "wool_price": 0.66,
         "wheat_price": 2.01,
         "wage_price": 0.2,
-        "century":"19th"
+        "century": "19th"
     },
     "1860": {
         "inflation": 43.16,
@@ -537,7 +537,7 @@ var conversion_data = {
         "wool_price": 0.66,
         "wheat_price": 2.01,
         "wage_price": 0.2,
-        "century":"19th"
+        "century": "19th"
     },
     "1870": {
         "inflation": 45.7,
@@ -546,7 +546,7 @@ var conversion_data = {
         "wool_price": 0.66,
         "wheat_price": 2.01,
         "wage_price": 0.2,
-        "century":"19th"
+        "century": "19th"
     },
     "1880": {
         "inflation": 48.31,
@@ -555,7 +555,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"19th"
+        "century": "19th"
     },
     "1890": {
         "inflation": 59.89,
@@ -564,7 +564,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"19th"
+        "century": "19th"
     },
     "1900": {
         "inflation": 57.06,
@@ -573,7 +573,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1905": {
         "inflation": 57.35,
@@ -582,7 +582,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1910": {
         "inflation": 57.06,
@@ -591,7 +591,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1915": {
         "inflation": 43.06,
@@ -600,7 +600,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1920": {
         "inflation": 21.21,
@@ -609,7 +609,7 @@ var conversion_data = {
         "wool_price": 0.54,
         "wheat_price": 1.28,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1925": {
         "inflation": 29.97,
@@ -618,7 +618,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1930": {
         "inflation": 33.42,
@@ -627,7 +627,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 0.33,
-        "century":"20th"
+        "century": "20th"
     },
     "1935": {
         "inflation": 36.98,
@@ -636,7 +636,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1940": {
         "inflation": 28.72,
@@ -645,7 +645,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1945": {
         "inflation": 25.95,
@@ -654,7 +654,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1950": {
         "inflation": 22.78,
@@ -663,7 +663,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1955": {
         "inflation": 17.42,
@@ -672,7 +672,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1960": {
         "inflation": 15.3,
@@ -681,7 +681,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1965": {
         "inflation": 12.86,
@@ -690,7 +690,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1970": {
         "inflation": 10.28,
@@ -699,7 +699,7 @@ var conversion_data = {
         "wool_price": 4.44,
         "wheat_price": 5.98,
         "wage_price": 1.42,
-        "century":"20th"
+        "century": "20th"
     },
     "1975": {
         "inflation": 5.57,
@@ -708,7 +708,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"20th"
+        "century": "20th"
     },
     "1980": {
         "inflation": 2.85,
@@ -717,7 +717,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"20th"
+        "century": "20th"
     },
     "1985": {
         "inflation": 2.01,
@@ -726,7 +726,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"20th"
+        "century": "20th"
     },
     "1990": {
         "inflation": 1.51,
@@ -735,7 +735,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"20th"
+        "century": "20th"
     },
     "1995": {
         "inflation": 1.28,
@@ -744,7 +744,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"20th"
+        "century": "20th"
     },
     "2000": {
         "inflation": 1.12,
@@ -753,7 +753,7 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"21st"
+        "century": "21st"
     },
     "2005": {
         "inflation": 1,
@@ -762,118 +762,117 @@ var conversion_data = {
         "wool_price": 5.36,
         "wheat_price": 17.36,
         "wage_price": 57.6,
-        "century":"21st"
+        "century": "21st"
     },
     "2017": {
-       "inflation": 1.037,
+        "inflation": 1.037,
         "horse_price": 2387.37,
         "cow_price": 1200,
         "wool_price": 6.35,
         "wage_price": 100,
         "wheat_price": 1.88,
-        "century":"21st"
+        "century": "21st"
     },
-    "century_intros" : {
-        "13th" : "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
-        "14th" : "Between 1315 and 1322, the Great Famine, brought about by unusually prolonged periods of heavy rainfall and cold spells, killed 10-15% of the population.",
-        "15th" : "A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres.",
-        "16th" : "The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable.",
-        "17th" : "In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century.",
-        "18th" : "One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. ",
-        "19th" : "The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society.",
-        "20th" : "The twentieth century saw the most rapid and dramatic social and economic change of any century.",
+    "century_intros": {
+        "13th": "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
+        "14th": "Between 1315 and 1322, the Great Famine, brought about by unusually prolonged periods of heavy rainfall and cold spells, killed 10-15% of the population.",
+        "15th": "A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres.",
+        "16th": "The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable.",
+        "17th": "In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century.",
+        "18th": "One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. ",
+        "19th": "The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society.",
+        "20th": "The twentieth century saw the most rapid and dramatic social and economic change of any century.",
     }
 };
 
 $(function () {
     console.log("jQuery loaded.");
-    hide_inputs_based_on_year(get_omtn_year(),"omtn");
-    hide_inputs_based_on_year(get_bp_year(),"bp");
+    hide_inputs_based_on_year(get_omtn_year(), "omtn");
+    hide_inputs_based_on_year(get_bp_year(), "bp");
 });
 
 $("#omtn-year").change(function () {
 
-   hide_inputs_based_on_year(get_omtn_year(),"omtn");
+    hide_inputs_based_on_year(get_omtn_year(), "omtn");
 
 });
 
 $("#bp-year").change(function () {
 
-    hide_inputs_based_on_year(get_bp_year(),"bp");
+    hide_inputs_based_on_year(get_bp_year(), "bp");
 
 });
 
 
 function hide_inputs_based_on_year(year, id) {
 
-    if(year > 1970){
+    if (year > 1970) {
         /* Hide old UK currency inputs & show modern */
-
-        $("#" + id +"-shillings-row").hide();
-        $("#" + id +"-old-pence-row").hide();
-        $("#" + id +"-new-pence-row").show();
+        $("#" + id + "-shillings-row").hide();
+        $("#" + id + "-old-pence-row").hide();
+        $("#" + id + "-new-pence-row").show();
     }
-    else if(get_omtn_year() <= 1970) {
+    else if (get_omtn_year() <= 1970) {
         /* Hide modern UK currency inputs & show old */
-        $("#" + id +"-shillings-row").show();
-        $("#" + id +"-old-pence-row").show();
-        $("#" + id +"-new-pence-row").hide();
+        $("#" + id + "-shillings-row").show();
+        $("#" + id + "-old-pence-row").show();
+        $("#" + id + "-new-pence-row").hide();
     }
 
 }
 
 function omtn_output() {
-    var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_omtn_shillings(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
-    var output_string =  omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+    var omtn_result_float = omtn_formula(get_omtn_year(), get_omtn_pounds(), get_omtn_shillings(), get_omtn_old_pence(), get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
+    var output_string = omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
-   // $("#omtn-result").hide();
-    $("#omtn-result").html("<h4>In 2017, this money is worth approximately " + output_string +"</h4>");
-  //  $("#omtn-result").delay(500).fadeIn();
+    // $("#omtn-result").hide();
+    $("#omtn-result").html("<h4>In 2017, this money is worth approximately " + output_string + "</h4>");
+    //  $("#omtn-result").delay(500).fadeIn();
 }
 
 function bp_output() {
 
-    var bp_values = bp_formula(get_bp_year(),get_bp_pounds(),get_bp_shillings(),get_bp_old_pence(),get_bp_new_pence(),get_inflation_rate(get_bp_year()));
+    var bp_values = bp_formula(get_bp_year(), get_bp_pounds(), get_bp_shillings(), get_bp_old_pence(), get_bp_new_pence(), get_inflation_rate(get_bp_year()));
     var century = conversion_data[get_bp_year()].century;
     var century_preview = "";
 
-    if(century != "21st"){
+    if (century != "21st") {
         century_preview = "<p>" + conversion_data.century_intros[century]
-        + "<br/><a href='./" +century+ "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
+            + "<br/><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </p>";
     }
 
     var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy one of these: </h3>" +
-        build_bp_li("Horses",bp_values.horses, "", "./img/horse.gif") +
+        build_bp_li("Horses", bp_values.horses, "", "./img/horse.gif") +
 
-        build_bp_li("Cows",bp_values.cows, "","./img/cow.gif") +
+        build_bp_li("Cows", bp_values.cows, "", "./img/cow.gif") +
 
-        build_bp_li("Wool",bp_values.wool,"stones","./img/wool.gif") +
+        build_bp_li("Wool", bp_values.wool, "stones", "./img/wool.gif") +
 
-        build_bp_li("Wheat",bp_values.wheat,"quarters" ,"./img/wheat.gif") +
+        build_bp_li("Wheat", bp_values.wheat, "quarters", "./img/wheat.gif") +
 
-        build_bp_li("Wages",bp_values.wage,"days (skilled tradesman)" ,"./img/wages.gif") +
+        build_bp_li("Wages", bp_values.wage, "days (skilled tradesman)", "./img/wages.gif") +
         century_preview +
         "</div>"
-       ;
+    ;
 
 
     $("#bp-result").html(HTML_output);
     $("#bp-result").fadeIn();
 }
 
-function build_bp_li(string,value,unit, img) {
-    return "<h4>" + " <img src='"+ img +"'/>" + string + ": " + value + " " + unit + "</h4>" ;
+function build_bp_li(string, value, unit, img) {
+    return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
 $("#omtn-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
-   
+
     omtn_output();
 });
 
 $("#bp-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
-   
+
     bp_output();
 });
 
@@ -894,7 +893,7 @@ function get_omtn_old_pence() {
 }
 
 function get_omtn_new_pence() {
-    return parseInt($("#omtn-new-pence").val())/100;
+    return parseInt($("#omtn-new-pence").val()) / 100;
 }
 
 
@@ -915,7 +914,7 @@ function get_bp_old_pence() {
 }
 
 function get_bp_new_pence() {
-    return parseInt($("#bp-new-pence").val())/100;
+    return parseInt($("#bp-new-pence").val()) / 100;
 }
 
 
@@ -924,37 +923,31 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 
     if (year <= 1970) {
 
-            if(year != 2017) {
-                mathResult = ((pounds + (shillings / 20) + (old_pence / 240) ) * inflation);
-            }
-
+        mathResult = ((pounds + (shillings / 20) + (old_pence / 240) ) * inflation);
 
     }
     else if (year > 1970) {
-        if(year != 2017) {
-            mathResult = (pounds + new_pence)*inflation;
+        if (year != 2017) {
+            mathResult = (pounds + new_pence) * inflation;
         }
         else {
             mathResult = (pounds + new_pence);
         }
 
 
-
     }
 
 
-
-
-    if(year != 2017) {
+    if (year != 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
-     return mathResult;
+    return mathResult;
 }
 
-function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
+function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
 
-    var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
+    var bp_money_to_modern_value = omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
 
 
     return {
@@ -967,7 +960,6 @@ function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
 
 
 }
-
 
 
 function get_inflation_rate(year) {
