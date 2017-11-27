@@ -953,17 +953,7 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 }
 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
-    var obj = {
-        year: year,
-        pounds: pounds,
-        shillings: shillings,
-        old_pence: old_pence,
-        new_pence: new_pence,
-        inflation: inflation
-
-    }
-
-
+    
     var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
 
 
