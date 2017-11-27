@@ -33,18 +33,23 @@ generate_breadcrumbs($pagesArray);
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/seventeenth-century.jpg" />
-						</div>
-					</div>
-				</article>
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century. The expansion of the landowning classes continued until the mid-century but thereafter, this group faced growing pressure. Quite apart from those who lost land or had to pay fines as a result of the upheaval of the Civil War, from 1660, taxation continued at a high level.</p>
+                            <p>After 1689, for example, the land tax was levied at its full 20% rate of four shillings in the pound. Rental incomes stopped rising as rapidly and as food prices fell in the latter century, tenants found it harder to pay rents at all. Generally larger landowners were able to cope with this better and in some areas, although not universally, great estates expanded as smaller gentry were forced to sell up. Society, however, was not entirely static and people continued to cross the gap into the class of 'gentlemen'. Among smaller farmers there were also pressures from the mid-century.</p>
+                            <p>While pastoral farmers in forest areas may have escaped relatively unscathed or even prospered, small arable farmers found it difficult when grain prices fell. Many small farms were engrossed into larger units worked by paid labourers. Therefore in certain areas, there was a marked shift to larger farms and fewer small farmers. When prices began to stagnate or fall after 1650 a period of prosperity began for the labouring population of England. With population no longer increasing, there was less competition for work and wages began to rise. The wage-earners therefore had more disposable income.</p>
+                            <p>The seventeenth century also saw an expansion in the numbers and wealth of great merchants, a result of the struggles for control of international markets which had begun in the previous century. Merchants were attracted by new products from expansion into more distant territories such as sugar and tobacco from the Americas or silks and spices from Asia.</p>
+                            <p>The East India Company obtained it's royal charter in 1600 to allow it a monopoly of trade in the Indian Ocean region. In the late seventeenth century, some contemporaries began to comment that goods normally restricted to the upper landed classes were being bought, worn and eaten by a much greater range of people. More people were eating meat and wheat and although the new goods from abroad were initially often re-exported to Europe, they were later retained and consumed at home and their prices began to fall.</p>
+                            <p>The growth of the consumer society is demonstrated by the further development of shops and the retail trade which had begun in the sixteenth century. The two best known shopkeepers of the late seventeenth century are Roger Lowe of Leigh and William Stout of Lancaster both of whom stocked a wide range of goods of English, colonial and foreign origins.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -70,26 +75,7 @@ generate_breadcrumbs($pagesArray);
             </div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century. The expansion of the landowning classes continued until the mid-century but thereafter, this group faced growing pressure. Quite apart from those who lost land or had to pay fines as a result of the upheaval of the Civil War, from 1660, taxation continued at a high level.</p>
-                            <p>After 1689, for example, the land tax was levied at its full 20% rate of four shillings in the pound. Rental incomes stopped rising as rapidly and as food prices fell in the latter century, tenants found it harder to pay rents at all. Generally larger landowners were able to cope with this better and in some areas, although not universally, great estates expanded as smaller gentry were forced to sell up. Society, however, was not entirely static and people continued to cross the gap into the class of 'gentlemen'. Among smaller farmers there were also pressures from the mid-century.</p>
-                            <p>While pastoral farmers in forest areas may have escaped relatively unscathed or even prospered, small arable farmers found it difficult when grain prices fell. Many small farms were engrossed into larger units worked by paid labourers. Therefore in certain areas, there was a marked shift to larger farms and fewer small farmers. When prices began to stagnate or fall after 1650 a period of prosperity began for the labouring population of England. With population no longer increasing, there was less competition for work and wages began to rise. The wage-earners therefore had more disposable income.</p>
-                            <p>The seventeenth century also saw an expansion in the numbers and wealth of great merchants, a result of the struggles for control of international markets which had begun in the previous century. Merchants were attracted by new products from expansion into more distant territories such as sugar and tobacco from the Americas or silks and spices from Asia.</p>
-                            <p>The East India Company obtained it's royal charter in 1600 to allow it a monopoly of trade in the Indian Ocean region. In the late seventeenth century, some contemporaries began to comment that goods normally restricted to the upper landed classes were being bought, worn and eaten by a much greater range of people. More people were eating meat and wheat and although the new goods from abroad were initially often re-exported to Europe, they were later retained and consumed at home and their prices began to fall.</p>
-                            <p>The growth of the consumer society is demonstrated by the further development of shops and the retail trade which had begun in the sixteenth century. The two best known shopkeepers of the late seventeenth century are Roger Lowe of Leigh and William Stout of Lancaster both of whom stocked a wide range of goods of English, colonial and foreign origins.</p>
-						</div>
-					</div>
-				</article>
 
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-9">

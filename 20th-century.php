@@ -32,19 +32,20 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/twentieth-century.jpg" />
-						</div>
-					</div>
-				</article>
+            <div class="col-md-9" !important;">
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content" >
+                        <div class="col-md-12" style="min-height: 375px">
+                            <p>The twentieth century saw the most rapid and dramatic social and economic change of any century. Higher incomes and ever cheaper manufactured goods from overseas producers, often in the Far East, resulted in higher standards of living and a greatly expanded consumer society. At the same time rapid technical advance continually increased the range of luxury goods on the market, from vacuum cleaner and fridges to televisions, stereos and computers.</p>
+                            <p>In the employment marked the general change has been a gradual move away from employment in manufacturing towards occupation in service sectors and the increasing importance of professional, managerial and technical roles.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -68,23 +69,6 @@ generate_breadcrumbs($pagesArray);
                 </article>
 
             </div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>The twentieth century saw the most rapid and dramatic social and economic change of any century. Higher incomes and ever cheaper manufactured goods from overseas producers, often in the Far East, resulted in higher standards of living and a greatly expanded consumer society. At the same time rapid technical advance continually increased the range of luxury goods on the market, from vacuum cleaner and fridges to televisions, stereos and computers.</p>
-                            <p>In the employment marked the general change has been a gradual move away from employment in manufacturing towards occupation in service sectors and the increasing importance of professional, managerial and technical roles.</p>
-						</div>
-					</div>
-				</article>
-
-			</div>
 		</div>
 
 		<div class="row">

@@ -32,19 +32,21 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/sixteenth-century.jpg" />
-						</div>
-					</div>
-				</article>
+            <div class="col-md-9">
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable. Fortunes were poured into building grand houses and providing lavish hospitality. Expenditure on litigation among the upper classes was also high because the land law regarding the descent of property was going through a period of uncertainty. Landowners were also always in debt. Not because they were suffering from serious financial problems but because their rental income varied and they often need to borrow large sums to fund expensive projects such as house building.</p>
+                            <p>Most landowners were, however, more than able to cope with these pressures. Rising food prices and population created a demand for tenancies and this, combined with increases imposed on existing tenants by landlords, made for higher rents. Holdings were also expanded as the sales of ex-monastic lands mostly went to existing rather than new owners. From the second half of the century in particular, the numbers of men who might be classed among the gentry or aristocracy significantly expanded. For the labouring population this was not such a good time. While wages did rise, they did not increase as fast as prices and with an increasing population there was more competition and many were forced to take to the roads in search of work.</p>
+                            <p>Meanwhile, after 1550 international trade went though periods of trouble as English merchants found they had to compete with foreign merchants in the handling of English trade. The ultimate outcome was, however, favourable as trade began to expand to new areas. This made a wider range of new goods available to the population and together with general prosperity helped contribute to the development of shops. The great medieval fairs were gradually transformed into agricultural and wholesale markets and metropolitan and provincial shops sold a range of good, not only those made by the urban craftsman on site. James Backhouse of Kirkby Lonsdale in Westmorland died in 1578 leaving the stock of his shop which included Spanish silks, French garters, Norwich lace, Oxford gloves and Turkey purses.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -70,23 +72,6 @@ generate_breadcrumbs($pagesArray);
             </div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable. Fortunes were poured into building grand houses and providing lavish hospitality. Expenditure on litigation among the upper classes was also high because the land law regarding the descent of property was going through a period of uncertainty. Landowners were also always in debt. Not because they were suffering from serious financial problems but because their rental income varied and they often need to borrow large sums to fund expensive projects such as house building.</p>
-                            <p>Most landowners were, however, more than able to cope with these pressures. Rising food prices and population created a demand for tenancies and this, combined with increases imposed on existing tenants by landlords, made for higher rents. Holdings were also expanded as the sales of ex-monastic lands mostly went to existing rather than new owners. From the second half of the century in particular, the numbers of men who might be classed among the gentry or aristocracy significantly expanded. For the labouring population this was not such a good time. While wages did rise, they did not increase as fast as prices and with an increasing population there was more competition and many were forced to take to the roads in search of work.</p>
-                            <p>Meanwhile, after 1550 international trade went though periods of trouble as English merchants found they had to compete with foreign merchants in the handling of English trade. The ultimate outcome was, however, favourable as trade began to expand to new areas. This made a wider range of new goods available to the population and together with general prosperity helped contribute to the development of shops. The great medieval fairs were gradually transformed into agricultural and wholesale markets and metropolitan and provincial shops sold a range of good, not only those made by the urban craftsman on site. James Backhouse of Kirkby Lonsdale in Westmorland died in 1578 leaving the stock of his shop which included Spanish silks, French garters, Norwich lace, Oxford gloves and Turkey purses.</p>
-						</div>
-					</div>
-				</article>
-
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-9">

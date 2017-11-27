@@ -32,19 +32,21 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/eighteenth-century.jpg" />
-						</div>
-					</div>
-				</article>
+            <div class="col-md-9">
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. When pre-industrialization began a few decades later it gave rise to British industry and a British working class but first came the ongoing Agricultural Revolution. This process had begun in the previous century but continued in the first half of the eighteenth. It involved changes in improved animal husbandry, the introduction of root crops and early mechanization such as Jethro Tull's seed drill.</p>
+                            <p>This process reduced the need for large amounts of labour on the land and the intensification of enclosures in the second half of the eighteenth century not only increased rental incomes, it also forced people off common land, or off the land altogether to make way for sheep and created larger fields more suited to the new machinery than the old open field systems. The early manufacturing industries might contain modern machinery or they might not. They might be powered by water or horse power, or they might not. However, what they did have was highly centralized management and control by those providing the capital.</p>
+                            <p>Among the first was Lombe’s silk-throwing mill on the river Derwent in Derbyshire in 1719; from the 1760s there was Boulton and Watt's great Soho works on the edge of Birmingham; from the 1770s Arkwright's spinning-mills in Derbyshire, Lancashire and other counties. This would ultimately mean that the country would be able to support a population that largely did not produce food and cheaper cotton and other manufactured goods for all.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -70,23 +72,7 @@ generate_breadcrumbs($pagesArray);
             </div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. When pre-industrialization began a few decades later it gave rise to British industry and a British working class but first came the ongoing Agricultural Revolution. This process had begun in the previous century but continued in the first half of the eighteenth. It involved changes in improved animal husbandry, the introduction of root crops and early mechanization such as Jethro Tull's seed drill.</p>
-                            <p>This process reduced the need for large amounts of labour on the land and the intensification of enclosures in the second half of the eighteenth century not only increased rental incomes, it also forced people off common land, or off the land altogether to make way for sheep and created larger fields more suited to the new machinery than the old open field systems. The early manufacturing industries might contain modern machinery or they might not. They might be powered by water or horse power, or they might not. However, what they did have was highly centralized management and control by those providing the capital.</p>
-                            <p>Among the first was Lombe’s silk-throwing mill on the river Derwent in Derbyshire in 1719; from the 1760s there was Boulton and Watt's great Soho works on the edge of Birmingham; from the 1770s Arkwright's spinning-mills in Derbyshire, Lancashire and other counties. This would ultimately mean that the country would be able to support a population that largely did not produce food and cheaper cotton and other manufactured goods for all.</p>
-						</div>
-					</div>
-				</article>
 
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-9">

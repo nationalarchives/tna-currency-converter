@@ -32,19 +32,22 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/fifteenth-century.jpg" />
-						</div>
-					</div>
-				</article>
+            <div class="col-md-9">
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres. Magnates bought from cities, even from London. A rising knightly family such as that of Sir Hugh Luttrell of Dunster, Somerset purchased most of their goods in 1405-6 in towns around their home. Fish came from Porlock and Minehead; lime and horseshoes from Watchet; wine from Taunton and spices, wax and pewter from Bridgwater. In the accounts of 1418-19, the household of Alice de Bryene, a gentry widow from Suffolk consumed 46 head of cattle, 44 pigs, 57 sheep, a lot of poultry, 3 pheasants, 13 partridges and 3 herons as well as 102 rabbits, 5 cygnets, cod, haddock and occasionally pike and sturgeon.</p>
+                            <p>In aristocratic households the lavish provision of meat, bread and wines added up to calorific intakes so huge that most of the food must have been for conspicuous display rather than actual consumption. Remarkable regional variation in diet and lifestyle can, however, be observed. Rye was the main bread-corn in parts of Norfolk and Worcestershire, barley in north Suffolk. Game was available in forest areas and cider and perry were drunk in Hertfordshire. People were eating more fish, which could come from the new aristocratic fishponds or was still being brought in from Scandinavia.</p>
+                            <p>Above all food was cheap which left more income for other goods. Manufacturing and service profession proliferated in towns and even small villages. Urban artisans flourished, protected by guild status. The leather industry was the second largest after textiles and provided a whole series of goods from buckets and belts to saddles and bottles, many of which were modestly priced. Aspirational consumption expanded and there was wider participation in patterns of purchasing and taste. In the 1430s the export of cloth first exceeded the export of wool and villages became centres of production. Clothiers employed agents to deliver the wool and collect the product from rural workers.</p>
+                            <p>In the countryside, the availability of land and leases provided opportunities for expansion in villages and occasioned moves to neighbouring manors. Manumission was a common feature of the first half of the century, after which few peasants lived as unfree persons. Rural populations were generally better fed, clothed, housed and equipped than their ancestors would have been although problems were experienced in the mid-century recession. The disruption of trade with France and the Low Countries in the 1440s and 1450s made all imports more expensive and the consumption of luxuries had to be reassessed but recovery was quick in the latter half of the century.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -70,24 +73,6 @@ generate_breadcrumbs($pagesArray);
             </div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres. Magnates bought from cities, even from London. A rising knightly family such as that of Sir Hugh Luttrell of Dunster, Somerset purchased most of their goods in 1405-6 in towns around their home. Fish came from Porlock and Minehead; lime and horseshoes from Watchet; wine from Taunton and spices, wax and pewter from Bridgwater. In the accounts of 1418-19, the household of Alice de Bryene, a gentry widow from Suffolk consumed 46 head of cattle, 44 pigs, 57 sheep, a lot of poultry, 3 pheasants, 13 partridges and 3 herons as well as 102 rabbits, 5 cygnets, cod, haddock and occasionally pike and sturgeon.</p>
-                            <p>In aristocratic households the lavish provision of meat, bread and wines added up to calorific intakes so huge that most of the food must have been for conspicuous display rather than actual consumption. Remarkable regional variation in diet and lifestyle can, however, be observed. Rye was the main bread-corn in parts of Norfolk and Worcestershire, barley in north Suffolk. Game was available in forest areas and cider and perry were drunk in Hertfordshire. People were eating more fish, which could come from the new aristocratic fishponds or was still being brought in from Scandinavia.</p>
-                            <p>Above all food was cheap which left more income for other goods. Manufacturing and service profession proliferated in towns and even small villages. Urban artisans flourished, protected by guild status. The leather industry was the second largest after textiles and provided a whole series of goods from buckets and belts to saddles and bottles, many of which were modestly priced. Aspirational consumption expanded and there was wider participation in patterns of purchasing and taste. In the 1430s the export of cloth first exceeded the export of wool and villages became centres of production. Clothiers employed agents to deliver the wool and collect the product from rural workers.</p>
-                            <p>In the countryside, the availability of land and leases provided opportunities for expansion in villages and occasioned moves to neighbouring manors. Manumission was a common feature of the first half of the century, after which few peasants lived as unfree persons. Rural populations were generally better fed, clothed, housed and equipped than their ancestors would have been although problems were experienced in the mid-century recession. The disruption of trade with France and the Low Countries in the 1440s and 1450s made all imports more expensive and the consumption of luxuries had to be reassessed but recovery was quick in the latter half of the century.</p>
-						</div>
-					</div>
-				</article>
-
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-9">

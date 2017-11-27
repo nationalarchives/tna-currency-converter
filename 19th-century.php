@@ -32,19 +32,24 @@ generate_breadcrumbs($pagesArray);
 <main id="primary" role="main" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h1><?= $title ?></h1>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-							<img src="./img/nineteenth-century.jpg" />
-						</div>
-					</div>
-				</article>
+            <div class="col-md-9">
+                <article>
+                    <div class="entry-header">
+                        <h1><?= $title ?></h1>
+                    </div>
+                    <div class="row entry-content">
+                        <div class="col-md-12">
+                            <p>The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society. This was seen in the organisation and finance of industry and commerce, the skills and work practices of production and technology, massive population growth and the development and disciplining of labour. Some regions, notably coalfield areas, rapidly industrialised. Others saw revolutionary change focused around the development of trade and ship building in port cities.</p>
+                            <p>At least for a few decades, most mass manufactured items were produced more efficiently and competitively in Britain and the country had the commercial, financial and political power to edge out rivals. In some industries, most notably textiles, massive changes took place in technology and in the organisation of production causing dramatic productivity growth. This in turn brought a steep decline in prices. In many other sectors more modest organisational improvements coupled with greater specialisation and the employment of cheap labour brought similar, though less dramatic, results. An unprecedented range and variety of products thus came within the grasp of a new mass market both within Britain and overseas.</p>
+                            <p>The Great Exhibition of 1851 marked the peak of British economic dominance. A huge range of British products were displayed for foreign and domestic visitors in the monumental visionary architectural achievement of the Crystal Palace in Hyde Park. There was also increasing domestic demand both as a result of rising incomes for the middle classes and for workers with particular skills, and a population that increased from nine million in 1801 to thirty-six million in 1911. This helped to provide a secure bedrock for mid-Victorian prosperity.</p>
+                            <p>Increased wage earning opportunities for women and juveniles boosted family spending, notably in textile districts and in the towns. More people were buying a greater variety of textiles, clothing, shoes, household and domestic items - on their list was china, cutlery, mirrors, books, clocks, furniture, curtains and bedding, as well as a variety of small wares, such as buckles, ribbons, buttons, snuff boxes and other fancy goods. More beer, butter, bread, milk, meat, vegetables, fruit, fish and all other foodstuffs were now being bought rather than made or grown at home.</p>
+                            <p>It has been argued that this 'consumer revolution' from the later eighteenth century and into the Victorian period was also driven by social emulation. Ever-changing fashions and designs also stimulated demand whilst new forms of marketing and retailing made products more easily available to the consumer. This was manifest in the growth of urban and village shops, the use of shop window displays, the development of city department stores (from the 1880s), and the extension of newspaper and billboard advertising.</p>
+                            <p>Working life was becoming increasingly regulated, and the working week was reorganised to promote ever-greater efficiency. A new division between 'work' and 'leisure' emerged, and this new block of weekend leisure time coincided with the development of spectator sports like cricket and football, and the rise of music hall entertainment for the new working classes. The new railway network also made leisure travel and seaside holidays a possibility for many.</p>
+                        </div>
+                    </div>
+                </article>
 
-			</div>
+            </div>
             <div class="col-md-3">
                 <article>
                     <div class="entry-header">
@@ -68,27 +73,6 @@ generate_breadcrumbs($pagesArray);
                 </article>
 
             </div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-9">
-				<article>
-					<div class="entry-header">
-						<h2>Standard of Living</h2>
-					</div>
-					<div class="row entry-content">
-						<div class="col-md-12">
-                            <p>The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society. This was seen in the organisation and finance of industry and commerce, the skills and work practices of production and technology, massive population growth and the development and disciplining of labour. Some regions, notably coalfield areas, rapidly industrialised. Others saw revolutionary change focused around the development of trade and ship building in port cities.</p>
-                            <p>At least for a few decades, most mass manufactured items were produced more efficiently and competitively in Britain and the country had the commercial, financial and political power to edge out rivals. In some industries, most notably textiles, massive changes took place in technology and in the organisation of production causing dramatic productivity growth. This in turn brought a steep decline in prices. In many other sectors more modest organisational improvements coupled with greater specialisation and the employment of cheap labour brought similar, though less dramatic, results. An unprecedented range and variety of products thus came within the grasp of a new mass market both within Britain and overseas.</p>
-                            <p>The Great Exhibition of 1851 marked the peak of British economic dominance. A huge range of British products were displayed for foreign and domestic visitors in the monumental visionary architectural achievement of the Crystal Palace in Hyde Park. There was also increasing domestic demand both as a result of rising incomes for the middle classes and for workers with particular skills, and a population that increased from nine million in 1801 to thirty-six million in 1911. This helped to provide a secure bedrock for mid-Victorian prosperity.</p>
-                            <p>Increased wage earning opportunities for women and juveniles boosted family spending, notably in textile districts and in the towns. More people were buying a greater variety of textiles, clothing, shoes, household and domestic items - on their list was china, cutlery, mirrors, books, clocks, furniture, curtains and bedding, as well as a variety of small wares, such as buckles, ribbons, buttons, snuff boxes and other fancy goods. More beer, butter, bread, milk, meat, vegetables, fruit, fish and all other foodstuffs were now being bought rather than made or grown at home.</p>
-                            <p>It has been argued that this 'consumer revolution' from the later eighteenth century and into the Victorian period was also driven by social emulation. Ever-changing fashions and designs also stimulated demand whilst new forms of marketing and retailing made products more easily available to the consumer. This was manifest in the growth of urban and village shops, the use of shop window displays, the development of city department stores (from the 1880s), and the extension of newspaper and billboard advertising.</p>
-                            <p>Working life was becoming increasingly regulated, and the working week was reorganised to promote ever-greater efficiency. A new division between 'work' and 'leisure' emerged, and this new block of weekend leisure time coincided with the development of spectator sports like cricket and football, and the rise of music hall entertainment for the new working classes. The new railway network also made leisure travel and seaside holidays a possibility for many.</p>
-						</div>
-					</div>
-				</article>
-
-			</div>
 		</div>
 
 		<div class="row">
