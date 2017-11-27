@@ -14,7 +14,7 @@ This part of the currency converter takes any money from 1270 upwards and conver
 5. Multiply "old_money" by an inflation value according to the year of the currency. This gives us the result of the old currency converter, which converted to 2005. Store result as "2005_value".  
 6. Multiply "2005_value" by 3.7% to return "2017_value".
 
-Example: 10 Pounds, 5 Shillings, 10 Pence from 1270 would become £10.29. Then it is multiplied by it's inflation rate, 532.72, which becomes £5481.68. With the 3.7% inflation between 2005 and 2017, the final value becomes 7509.90
+Example: 10 Pounds, 5 Shillings, 10 Pence from 1270 would become £10.29. Then it is multiplied by it's inflation rate, 532.72, which becomes £5482.57. With the 3.7% inflation between 2005 and 2017, the final value becomes 7509.90
 
 ### Post 1970 currency
 1. Take the £'s from user input, store as "pounds"

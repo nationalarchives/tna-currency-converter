@@ -823,7 +823,7 @@ function hide_inputs_based_on_year(year, id) {
 }
 
 function omtn_output() {
-    var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_omtn_pounds(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
+    var omtn_result_float = omtn_formula(get_omtn_year(),get_omtn_pounds(),get_omtn_shillings(),get_omtn_old_pence(),get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
     var output_string =  omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
    // $("#omtn-result").hide();
@@ -949,21 +949,7 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
-
-    var a = ((pounds)+(shillings/20)+(old_pence/240));
-    var b = a * inflation;
-    var debug_object = {
-        "p" : pounds,
-        "s" : shillings,
-        "op" : old_pence,
-        "inf" : inflation,
-        "a" : a,
-        "b" : b,
-
-    }
-
-    alert(JSON.stringify(debug_object));
-    return mathResult;
+     return mathResult;
 }
 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
