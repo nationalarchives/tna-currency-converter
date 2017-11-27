@@ -765,7 +765,7 @@ var conversion_data = {
         "century":"21st"
     },
     "2017": {
-       "inflation": 1.37,
+       "inflation": 1.037,
         "horse_price": 2387.37,
         "cow_price": 1200,
         "wool_price": 6.35,
@@ -953,7 +953,7 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
 }
 
 function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation){
-    
+
     var bp_money_to_modern_value = omtn_formula(year,pounds, shillings, old_pence, new_pence, inflation).toFixed(2);
 
 
