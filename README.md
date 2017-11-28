@@ -1,8 +1,8 @@
-#TNA Currency Converter (2017 Update)
+# TNA Currency Converter (2017 Update)
 
 Revamp for the currency converter located at http://nationalarchives.gov.uk/currency
 
-##Old money to new formula
+## Old money to new formula
 
 This part of the currency converter takes any money from 1270 upwards and converts it to its worth in 2017.
 
@@ -14,7 +14,7 @@ This part of the currency converter takes any money from 1270 upwards and conver
 5. Multiply "old_money" by an inflation value according to the year of the currency. This gives us the result of the old currency converter, which converted to 2005. Store result as "2005_value".  
 6. Multiply "2005_value" by 3.7% to return "2017_value".
 
-####Example:
+#### Example:
  User inputs 
  * 10 Pounds
  * 5 Shillings
@@ -36,7 +36,7 @@ To convert the 2005 value to 2017 we multiply by 1.037 (3.7%) making the total Â
 4. Multiply "old_money" by an inflation value according to the year of the currency. This gives us the result of the old currency converter, which converted to 2005. Store result as "2005_value".  
 5. Multiply "2005_value" by 3.7% to return "2017_value".
 
-####Example:
+#### Example:
  User inputs 
  * 10 Pounds
  * 99 Pence
@@ -50,7 +50,7 @@ which returns 61.2143. This would be the shown to the user on the old currency c
  
 To convert the 2005 value to 2017 we multiply by 1.037 (3.7%) making the total Â£63.48
 
-#Buying power maths
+# Buying power maths
 
 This part of the currency takes money from the past, and shows how powerful it would be in 2017.
 
@@ -61,7 +61,7 @@ The formula for buying power is calculated partly using the above "old money to 
 3. Divide the "new_money" by the horse, cow, wool, wheat and wages prices to return the buying power.
 4 Floor the values (e.g. 1.5 horses becomes 1 horse) and return results to user
 
-####Example
+#### Example
 User inputs 
  * 10 Pounds
  * 99 Pence
