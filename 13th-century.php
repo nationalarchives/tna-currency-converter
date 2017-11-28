@@ -3,7 +3,7 @@
 <?php
 //Used for browser title and for META tags.
 include 'get_root_url.php';
-$title = "Thirteenth Century"
+$title = "Living in the Thirteenth Century"
 ?>
 
 <!-- no-js class is needed for Modernizr -->
@@ -23,7 +23,7 @@ include 'functions/currency-math-values.php';
 $pagesArray = array(
 	array("Help with your research", "http://nationalarchives.gov.uk/help-with-your-research/"),
 	array("Currency Converter: 1270 - 2017", "./index.php"),
-	array("Thirteenth Century","")
+	array($title,"")
 );
 
 generate_breadcrumbs($pagesArray);
@@ -55,14 +55,14 @@ generate_breadcrumbs($pagesArray);
 						<div class="col-md-12">
 							<ul class="full">
 								<li><a href="./index.php">Currency Converter</a></li>
-								<li><strong>13th Century</strong></li>
-								<li><a href="./14th-century.php">14th Century</a></li>
-								<li><a href="./15th-century.php">15th Century</a></li>
-								<li><a href="./16th-century.php">16th Century</a></li>
-								<li><a href="./17th-century.php">17th Century</a></li>
-								<li><a href="./18th-century.php">18th Century</a></li>
-								<li><a href="./19th-century.php">19th Century</a></li>
-								<li><a href="./20th-century.php">20th Century</a></li>
+								<li><strong>Living in the 13th Century</strong></li>
+								<li><a href="./14th-century.php">Living in the 14th Century</a></li>
+								<li><a href="./15th-century.php">Living in the 15th Century</a></li>
+								<li><a href="./16th-century.php">Living in the 16th Century</a></li>
+								<li><a href="./17th-century.php">Living in the 17th Century</a></li>
+								<li><a href="./18th-century.php">Living in the 18th Century</a></li>
+								<li><a href="./19th-century.php">Living in the 19th Century</a></li>
+								<li><a href="./20th-century.php">Living in the 20th Century</a></li>
 							</ul>
 						</div>
 					</div>
