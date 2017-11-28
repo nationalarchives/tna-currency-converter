@@ -79,3 +79,7 @@
     width: auto !important;
     padding: 0 0.5em !important;
 }
+
+#currency-converter-icon-disclaimer {
+    font-size: 0.6em;
+}

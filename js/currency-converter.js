@@ -334,27 +334,27 @@ function bp_output() {
     }
 
     var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy either of these with " + converted_money_string +": </h3>" +
-        build_bp_output_html("Horses", bp_values.horses, "", "./img/horse.gif") +
+        build_bp_output_html("Horses", bp_values.horses, "", "./img/horse.png") +
 
-        build_bp_output_html("Cows", bp_values.cows, "", "./img/cow.gif") +
+        build_bp_output_html("Cows", bp_values.cows, "", "./img/cow.png") +
 
-        build_bp_output_html("Wool", bp_values.wool, "stones", "./img/wool.gif") +
+        build_bp_output_html("Wool", bp_values.wool, "stones", "./img/ewe.png") +
 
-        build_bp_output_html("Wheat", bp_values.wheat, "quarters", "./img/wheat.gif") +
+        build_bp_output_html("Wheat", bp_values.wheat, "quarters", "./img/wheat.png") +
 
-        build_bp_output_html("Wages", bp_values.wage, "days (skilled tradesman)", "./img/wages.gif") +
+        build_bp_output_html("Wages", bp_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
 
-        build_bp_output_html("Houses", bp_values.houses,"(UK house price index)", "./img/wages.gif") +
+        build_bp_output_html("Houses", bp_values.houses,"(UK house price index)", "./img/coinage.png") +
         century_preview +
-        "</div>"
-    ;
+        "</div>" +
+        "<span id='currency-converter-icon-disclaimer'>Icons made by Freepik from www.flaticon.com </span>";
 
     $("#bp-result").html(HTML_output);
     $("#bp-result").fadeIn();
 }
 
 function build_bp_output_html(string, value, unit, img) {
-    return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
+    return "<h4>" + " <img src='" + img + "' width='10%'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
 $("#omtn-form").submit(function (event) {
