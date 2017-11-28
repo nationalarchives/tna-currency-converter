@@ -52,22 +52,6 @@ generate_breadcrumbs($pagesArray);
 
 <main id="primary" role="main" class="content-area">
     <div class="container">
-        <!--<div class="row">
-            <div class="col-md-12">
-                <article>
-                    <div class="entry-header">
-                        <h1>Currency Converter: 1270 - 2017</h1>
-                    </div>
-                    <div class="row entry-content">
-                        <div class="col-md-9">
-                            <p>The data used to provide the calculations for the currency converter has been collated from original documents and official statistics, and the survey of material used has been as comprehensive as possible. However, the results of the calculations are intended to be a general guide to historic values, rather than a categorical statement of fact. Approximations are from 2005.</p>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>-->
-
         <div class="row">
             <div class="col-md-9">
                 <article>
