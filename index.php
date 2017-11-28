@@ -28,6 +28,61 @@ $pagesArray = array(
 generate_breadcrumbs($pagesArray);
 ?>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <article>
+                        <div class="entry-header">
+                            <h2>A</h2>
+                        </div>
+                        <div class="row entry-content">
+                            <p>A</p>
+                        </div>
+                 </div>
+                    </article>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <article>
+                        <div class="entry-header">
+                            <h2>B</h2>
+                        </div>
+                        <div class="row entry-content">
+                            <p>B</p>
+                        </div>
+                </div>
+                </article>
+            </div>
+
+
+    </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <article>
+                        <div class="entry-header">
+                            <h2>C</h2>
+                        </div>
+                        <div class="row entry-content">
+                            <p>C</p>
+                        </div>
+                </div>
+                </article>
+            </div>
+
+
+        </div>
+
+
+
+</div>
+
 <div class="level-one">
     <div class="container">
         <div class="row" role="banner">
