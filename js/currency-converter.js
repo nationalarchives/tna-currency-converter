@@ -1,343 +1,259 @@
 var conversion_data = {
     "1270": {
-        "inflation": 532.72,
-        "century": "13th"
+        "inflation": 532.72
+
     },
     "1280": {
-        "inflation": 506.62,
-        "century": "13th"
+        "inflation": 506.62
     },
     "1290": {
-        "inflation": 536.83,
-        "century": "13th"
+        "inflation": 536.83
     },
     "1300": {
-        "inflation": 517.54,
-        "century": "14th"
+        "inflation": 517.54
     },
     "1310": {
-        "inflation": 446.49,
-        "century": "14th"
+        "inflation": 446.49
     },
     "1320": {
-        "inflation": 335.83,
-        "century": "14th"
+        "inflation": 335.83
     },
     "1330": {
-        "inflation": 447.68,
-        "century": "14th"
+        "inflation": 447.68
     },
     "1340": {
-        "inflation": 546.73,
-        "century": "14th"
+        "inflation": 546.73
     },
     "1350": {
-        "inflation": 428.64,
-        "century": "14th"
+        "inflation": 428.64
     },
     "1360": {
-        "inflation": 363.44,
-        "century": "14th"
+        "inflation": 363.44
     },
     "1370": {
-        "inflation": 358.01,
-        "century": "14th"
+        "inflation": 358.01
     },
     "1380": {
-        "inflation": 450.48,
-        "century": "14th"
+        "inflation": 450.48
     },
     "1390": {
-        "inflation": 483.3,
-        "century": "14th"
+        "inflation": 483.3
     },
     "1400": {
-        "inflation": 447.28,
-        "century": "15th"
+        "inflation": 447.28
     },
     "1410": {
-        "inflation": 459.93,
-        "century": "15th"
+        "inflation": 459.93
     },
     "1420": {
-        "inflation": 469.35,
-        "century": "15th"
+        "inflation": 469.35
     },
     "1430": {
-        "inflation": 455.77,
-        "century": "15th"
+        "inflation": 455.77
     },
     "1440": {
-        "inflation": 469.35,
-        "century": "15th"
+        "inflation": 469.35
     },
     "1450": {
-        "inflation": 455.77,
-        "century": "15th"
+        "inflation": 455.77
     },
     "1460": {
-        "inflation": 469.35,
-        "century": "15th"
+        "inflation": 469.35
     },
     "1470": {
-        "inflation": 500.58,
-        "century": "15th"
+        "inflation": 500.58
     },
     "1480": {
-        "inflation": 504.59,
-        "century": "15th"
+        "inflation": 504.59
     },
     "1490": {
-        "inflation": 488.93,
-        "century": "15th"
+        "inflation": 488.93
     },
     "1500": {
-        "inflation": 486.1,
-        "century": "16th"
+        "inflation": 486.1
     },
     "1510": {
-        "inflation": 483.77,
-        "century": "16th"
+        "inflation": 483.77
     },
     "1520": {
-        "inflation": 379.58,
-        "century": "16th"
+        "inflation": 379.58
     },
     "1530": {
-        "inflation": 322.1,
-        "century": "16th"
+        "inflation": 322.1
     },
     "1540": {
-        "inflation": 307.56,
-        "century": "16th"
+        "inflation": 307.56
     },
     "1550": {
-        "inflation": 200.51,
-        "century": "16th"
+        "inflation": 200.51
     },
     "1560": {
-        "inflation": 170.3,
-        "century": "16th"
+        "inflation": 170.3
     },
     "1570": {
-        "inflation": 173.89,
-        "century": "16th"
+        "inflation": 173.89
     },
     "1580": {
-        "inflation": 149.31,
-        "century": "16th"
+        "inflation": 149.31
     },
     "1590": {
-        "inflation": 125.29,
-        "century": "16th"
+        "inflation": 125.29
     },
     "1600": {
-        "inflation": 100.64,
-        "century": "17th"
+        "inflation": 100.64
     },
     "1610": {
-        "inflation": 97.88,
-        "century": "17th"
+        "inflation": 97.88
     },
     "1620": {
-        "inflation": 96,
-        "century": "17th"
+        "inflation": 96
     },
     "1630": {
-        "inflation": 89.16,
-        "century": "17th"
+        "inflation": 89.16
     },
     "1640": {
-        "inflation": 85.8,
-        "century": "17th"
+        "inflation": 85.8
     },
     "1650": {
-        "inflation": 75.56,
-        "century": "17th"
+        "inflation": 75.56
     },
     "1660": {
-        "inflation": 76.77,
-        "century": "17th"
+        "inflation": 76.77
     },
     "1670": {
-        "inflation": 83.05,
-        "century": "17th"
+        "inflation": 83.05
     },
     "1680": {
-        "inflation": 83.54,
-        "century": "17th"
+        "inflation": 83.54
     },
     "1690": {
-        "inflation": 87.47,
-        "century": "17th"
+        "inflation": 87.47
     },
     "1700": {
-        "inflation": 78.09,
-        "century": "18th"
+        "inflation": 78.09
     },
     "1710": {
-        "inflation": 76.59,
-        "century": "18th"
+        "inflation": 76.59
     },
     "1720": {
-        "inflation": 84.75,
-        "century": "18th"
+        "inflation": 84.75
     },
     "1730": {
-        "inflation": 85.98,
-        "century": "18th"
+        "inflation": 85.98
     },
     "1740": {
-        "inflation": 86.29,
-        "century": "18th"
+        "inflation": 86.29
     },
     "1750": {
-        "inflation": 85.16,
-        "century": "18th"
+        "inflation": 85.16
     },
     "1760": {
-        "inflation": 74.79,
-        "century": "18th"
+        "inflation": 74.79
     },
     "1770": {
-        "inflation": 63.69,
-        "century": "18th"
+        "inflation": 63.69
     },
     "1780": {
-        "inflation": 62.85,
-        "century": "18th"
+        "inflation": 62.85
     },
     "1790": {
-        "inflation": 56.03,
-        "century": "18th"
+        "inflation": 56.03
     },
     "1800": {
-        "inflation": 32.17,
-        "century": "19th"
+        "inflation": 32.17
     },
     "1810": {
-        "inflation": 33.96,
-        "century": "19th"
+        "inflation": 33.96
     },
     "1820": {
-        "inflation": 41.92,
-        "century": "19th"
+        "inflation": 41.92
     },
     "1830": {
-        "inflation": 49.49,
-        "century": "19th"
+        "inflation": 49.49
     },
     "1840": {
-        "inflation": 44.1,
-        "century": "19th"
+        "inflation": 44.1
     },
     "1850": {
-        "inflation": 58.53,
-        "century": "19th"
+        "inflation": 58.53
     },
     "1860": {
-        "inflation": 43.16,
-        "century": "19th"
+        "inflation": 43.16
     },
     "1870": {
-        "inflation": 45.7,
-        "century": "19th"
+        "inflation": 45.7
     },
     "1880": {
-        "inflation": 48.31,
-        "century": "19th"
+        "inflation": 48.31
     },
     "1890": {
-        "inflation": 59.89,
-        "century": "19th"
+        "inflation": 59.89
     },
     "1900": {
-        "inflation": 57.06,
-        "century": "20th"
+        "inflation": 57.06
     },
     "1905": {
-        "inflation": 57.35,
-        "century": "20th"
+        "inflation": 57.35
     },
     "1910": {
-        "inflation": 57.06,
-        "century": "20th"
+        "inflation": 57.06
     },
     "1915": {
-        "inflation": 43.06,
-        "century": "20th"
+        "inflation": 43.06
     },
     "1920": {
-        "inflation": 21.21,
-        "century": "20th"
+        "inflation": 21.21
     },
     "1925": {
-        "inflation": 29.97,
-        "century": "20th"
+        "inflation": 29.97
     },
     "1930": {
-        "inflation": 33.42,
-        "century": "20th"
+        "inflation": 33.42
     },
     "1935": {
-        "inflation": 36.98,
-        "century": "20th"
+        "inflation": 36.98
     },
     "1940": {
-        "inflation": 28.72,
-        "century": "20th"
+        "inflation": 28.72
     },
     "1945": {
-        "inflation": 25.95,
-        "century": "20th"
+        "inflation": 25.95
     },
     "1950": {
-        "inflation": 22.78,
-        "century": "20th"
+        "inflation": 22.78
     },
     "1955": {
-        "inflation": 17.42,
-        "century": "20th"
+        "inflation": 17.42
     },
     "1960": {
-        "inflation": 15.3,
-        "century": "20th"
+        "inflation": 15.3
     },
     "1965": {
-        "inflation": 12.86,
-        "century": "20th"
+        "inflation": 12.86
     },
     "1970": {
-        "inflation": 10.28,
-        "century": "20th"
+        "inflation": 10.28
     },
     "1975": {
-        "inflation": 5.57,
-        "century": "20th"
+        "inflation": 5.57
     },
     "1980": {
-        "inflation": 2.85,
-        "century": "20th"
+        "inflation": 2.85
     },
     "1985": {
-        "inflation": 2.01,
-        "century": "20th"
+        "inflation": 2.01
     },
     "1990": {
-        "inflation": 1.51,
-        "century": "20th"
+        "inflation": 1.51
     },
     "1995": {
-        "inflation": 1.28,
-        "century": "20th"
+        "inflation": 1.28
     },
     "2000": {
-        "inflation": 1.12,
-        "century": "21st"
+        "inflation": 1.12
     },
     "2005": {
-        "inflation": 1,
-        "century": "21st"
+        "inflation": 1
     },
     "2017": {
         "inflation": 1.037,
@@ -346,8 +262,7 @@ var conversion_data = {
         "wool_price": 6.35,
         "wage_price": 100,
         "wheat_price": 1.88,
-        "uk_house_price" : 226367,
-        "century": "21st"
+        "uk_house_price" : 226367
     },
     "century_intros": {
         "13th": "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
@@ -357,7 +272,7 @@ var conversion_data = {
         "17th": "In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century.",
         "18th": "One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. ",
         "19th": "The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society.",
-        "20th": "The twentieth century saw the most rapid and dramatic social and economic change of any century.",
+        "20th": "The twentieth century saw the most rapid and dramatic social and economic change of any century."
     }
 };
 
@@ -408,7 +323,9 @@ function omtn_output() {
 function bp_output() {
 
     var bp_values = bp_formula(get_bp_year(), get_bp_pounds(), get_bp_shillings(), get_bp_old_pence(), get_bp_new_pence(), get_inflation_rate(get_bp_year()));
-    var century = conversion_data[get_bp_year()].century;
+
+    var century = get_century(get_bp_year());
+
     var century_preview = "";
     var converted_money_string = bp_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
     if (century != "21st") {
@@ -451,6 +368,36 @@ $("#bp-form").submit(function (event) {
 
     bp_output();
 });
+
+function get_century(year) {
+    if(year >= 2000){
+        return "21st";
+    }
+    else if (year >= 1900) {
+        return "20th";
+    }
+    else if(year >= 1800) {
+        return "19th";
+    }
+    else if(year >= 1700) {
+        return "18th";
+    }
+    else if(year >= 1600) {
+        return "17th";
+    }
+    else if(year >= 1500) {
+        return "16th";
+    }
+    else if(year >= 1400) {
+        return "15th";
+    }
+    else if(year >= 1300) {
+        return "14th";
+    }
+    else if(year >= 1200) {
+        return "13th";
+    }
+}
 
 function get_omtn_year() {
     return parseInt($("#omtn-year").val());
