@@ -256,7 +256,7 @@ var conversion_data = {
         "inflation": 1
     },
     "2017": {
-        "inflation": 1.037,
+        "inflation": 1.37,
         "horse_price": 2387.37,
         "cow_price": 1200,
         "wool_price": 6.35,
