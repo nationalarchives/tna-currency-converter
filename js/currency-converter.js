@@ -1,7 +1,6 @@
 var conversion_data = {
     "1270": {
         "inflation": 532.72
-
     },
     "1280": {
         "inflation": 506.62
