@@ -262,7 +262,7 @@ var conversion_data = {
         "wool_price": 6.35,
         "wage_price": 100,
         "wheat_price": 1.88,
-        "uk_house_price" : 226367
+        "uk_house_price": 226367
     },
     "century_intros": {
         "13th": "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
@@ -297,7 +297,7 @@ function hide_inputs_by_year() {
 
 $("#currency-year").change(function () {
 
-   hide_inputs_by_year();
+    hide_inputs_by_year();
 
 });
 
@@ -316,7 +316,7 @@ function currency_output() {
 
     var HTML_output =
 
-        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" +  "<span id='currency-large-text'>"+ converted_money_string +"</span>" + "<h3>In 2017, you could buy either of these with " + converted_money_string +": </h3>" +
+        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" + "<h3>In 2017, you could buy either of these with " + converted_money_string + ": </h3>" +
         build_currency_output_html("Horses", currency_values.horses, "", "./img/horse.png") +
 
         build_currency_output_html("Cows", currency_values.cows, "", "./img/cow.png") +
@@ -327,7 +327,7 @@ function currency_output() {
 
         build_currency_output_html("Wages", currency_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
 
-        build_currency_output_html("Houses", currency_values.houses,"(UK house price index)", "./img/coinage.png") +
+        build_currency_output_html("Houses", currency_values.houses, "(UK house price index)", "./img/coinage.png") +
         century_preview +
         "</div>";
 
@@ -347,31 +347,31 @@ $("#currency-form").submit(function (event) {
 });
 
 function get_century(year) {
-    if(year >= 2000){
+    if (year >= 2000) {
         return "21st";
     }
     else if (year >= 1900) {
         return "20th";
     }
-    else if(year >= 1800) {
+    else if (year >= 1800) {
         return "19th";
     }
-    else if(year >= 1700) {
+    else if (year >= 1700) {
         return "18th";
     }
-    else if(year >= 1600) {
+    else if (year >= 1600) {
         return "17th";
     }
-    else if(year >= 1500) {
+    else if (year >= 1500) {
         return "16th";
     }
-    else if(year >= 1400) {
+    else if (year >= 1400) {
         return "15th";
     }
-    else if(year >= 1300) {
+    else if (year >= 1300) {
         return "14th";
     }
-    else if(year >= 1200) {
+    else if (year >= 1200) {
         return "13th";
     }
 }
