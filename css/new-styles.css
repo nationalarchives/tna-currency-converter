@@ -52,32 +52,40 @@
 
 }
 
-.omtn, .buying-power {
+.currency {
     background-color: #FFF8D0;
 }
 
-.omtn h4 {
+#currency-large-text {
     font-family: "Bitter", "Open Sans", arial, serif;
-    font-size: 1.6em !important;
+    font-size: 3em !important;
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
 }
 
-.buying-power p, .buying-power h4 {
+.currency h1, .currency img {
+    padding: 0 0.5em !important;
+}
+
+.currency p, .currency h4 {
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
 }
 
-.buying-power img {
+.currency img {
     padding: .5%;
 }
 
-.buying-power h3 {
+.currency h3 {
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
+}
+
+.currency-icon {
+    max-width: 80px;
 }
 
 #currency-converter-icon-disclaimer {

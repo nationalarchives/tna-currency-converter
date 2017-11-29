@@ -277,96 +277,73 @@ var conversion_data = {
 };
 
 $(function () {
-    console.log("jQuery loaded.");
-    hide_inputs_based_on_year(get_omtn_year(), "omtn");
-    hide_inputs_based_on_year(get_bp_year(), "bp");
+    hide_inputs_by_year();
 });
 
-$("#omtn-year").change(function () {
-
-    hide_inputs_based_on_year(get_omtn_year(), "omtn");
-
-});
-
-$("#bp-year").change(function () {
-
-    hide_inputs_based_on_year(get_bp_year(), "bp");
-
-});
-
-
-function hide_inputs_based_on_year(year, id) {
-
-    if (year > 1970) {
+function hide_inputs_by_year() {
+    if (get_currency_year() > 1970) {
         /* Hide old UK currency inputs & show modern */
-        $("#" + id + "-shillings-row").hide();
-        $("#" + id + "-old-pence-row").hide();
-        $("#" + id + "-new-pence-row").show();
+        $("#currency-shillings-row").hide();
+        $("#currency-old-pence-row").hide();
+        $("#currency-new-pence-row").show();
     }
-    else if (get_omtn_year() <= 1970) {
+    else if (get_currency_year() <= 1970) {
         /* Hide modern UK currency inputs & show old */
-        $("#" + id + "-shillings-row").show();
-        $("#" + id + "-old-pence-row").show();
-        $("#" + id + "-new-pence-row").hide();
+        $("#currency-shillings-row").show();
+        $("#currency-old-pence-row").show();
+        $("#currency-new-pence-row").hide();
     }
-
 }
 
-function omtn_output() {
-    var omtn_result_float = omtn_formula(get_omtn_year(), get_omtn_pounds(), get_omtn_shillings(), get_omtn_old_pence(), get_omtn_new_pence(), get_inflation_rate(get_omtn_year()));
-    var output_string = omtn_result_float.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
-    // $("#omtn-result").hide();
-    $("#omtn-result").html("<h4>In 2017, this money is worth approximately " + output_string + "</h4>");
-    //  $("#omtn-result").delay(500).fadeIn();
-}
+$("#currency-year").change(function () {
 
-function bp_output() {
+   hide_inputs_by_year();
 
-    var bp_values = bp_formula(get_bp_year(), get_bp_pounds(), get_bp_shillings(), get_bp_old_pence(), get_bp_new_pence(), get_inflation_rate(get_bp_year()));
+});
 
-    var century = get_century(get_bp_year());
+function currency_output() {
+
+    var currency_values = currency_formula(get_currency_year(), get_currency_pounds(), get_currency_shillings(), get_currency_old_pence(), get_currency_new_pence(), get_inflation_rate(get_currency_year()));
+
+    var century = get_century(get_currency_year());
 
     var century_preview = "";
-    var converted_money_string = bp_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+    var converted_money_string = currency_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
     if (century != "21st") {
-        century_preview = "<p><blockquote>" + conversion_data.century_intros[century]
-            + "<br/><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </a></blockquote></p>";
+        century_preview = "<p><blockquote>" + conversion_data.century_intros[century] + "</p>" +
+            "<p><cite><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </a></p></cite></blockquote>";
     }
 
-    var HTML_output = "<div class='buying-power'>" + "<h3>In 2017, you could buy either of these with " + converted_money_string +": </h3>" +
-        build_bp_output_html("Horses", bp_values.horses, "", "./img/horse.png") +
+    var HTML_output =
 
-        build_bp_output_html("Cows", bp_values.cows, "", "./img/cow.png") +
+        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" +  "<span id='currency-large-text'>"+ converted_money_string +"</span>" + "<h3>In 2017, you could buy either of these with " + converted_money_string +": </h3>" +
+        build_currency_output_html("Horses", currency_values.horses, "", "./img/horse.png") +
 
-        build_bp_output_html("Wool", bp_values.wool, "stones", "./img/ewe.png") +
+        build_currency_output_html("Cows", currency_values.cows, "", "./img/cow.png") +
 
-        build_bp_output_html("Wheat", bp_values.wheat, "quarters", "./img/wheat.png") +
+        build_currency_output_html("Wool", currency_values.wool, "stones", "./img/ewe.png") +
 
-        build_bp_output_html("Wages", bp_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
+        build_currency_output_html("Wheat", currency_values.wheat, "quarters", "./img/wheat.png") +
 
-        build_bp_output_html("Houses", bp_values.houses,"(UK house price index)", "./img/coinage.png") +
+        build_currency_output_html("Wages", currency_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
+
+        build_currency_output_html("Houses", currency_values.houses,"(UK house price index)", "./img/coinage.png") +
         century_preview +
-        "</div>" +
-        "<span id='currency-converter-icon-disclaimer'>Icons made by Freepik from www.flaticon.com </span>";
+        "</div>";
 
-    $("#bp-result").html(HTML_output);
-    $("#bp-result").fadeIn();
+    $("#currency-result").html(HTML_output);
+    $("#currency-result").fadeIn();
 }
 
-function build_bp_output_html(string, value, unit, img) {
-    return "<h4>" + " <img src='" + img + "' width='10%'/>" + string + ": " + value + " " + unit + "</h4>";
+function build_currency_output_html(string, value, unit, img) {
+    return "<h4>" + " <img src='" + img + "' class='currency-icon'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
-$("#omtn-form").submit(function (event) {
+$("#currency-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
-
-    omtn_output();
-});
-
-$("#bp-form").submit(function (event) {
-    event.preventDefault(); // Prevent PHP fallback
-
-    bp_output();
+    window.location.hash = '';
+    window.location.hash = '#currency-result';
+    currency_output();
 });
 
 function get_century(year) {
@@ -399,48 +376,28 @@ function get_century(year) {
     }
 }
 
-function get_omtn_year() {
-    return parseInt($("#omtn-year").val());
+function get_currency_year() {
+    return parseInt($("#currency-year").val());
 }
 
-function get_omtn_pounds() {
-    return parseInt($("#omtn-pounds").val());
+function get_currency_pounds() {
+    return parseInt($("#currency-pounds").val());
 }
 
-function get_omtn_shillings() {
-    return parseInt($("#omtn-shillings").val());
+function get_currency_shillings() {
+    return parseInt($("#currency-shillings").val());
 }
 
-function get_omtn_old_pence() {
-    return parseInt($("#omtn-old-pence").val());
+function get_currency_old_pence() {
+    return parseInt($("#currency-old-pence").val());
 }
 
-function get_omtn_new_pence() {
-    return parseInt($("#omtn-new-pence").val()) / 100;
-}
-
-function get_bp_year() {
-    return parseInt($("#bp-year").val());
-}
-
-function get_bp_pounds() {
-    return parseInt($("#bp-pounds").val());
-}
-
-function get_bp_shillings() {
-    return parseInt($("#bp-shillings").val());
-}
-
-function get_bp_old_pence() {
-    return parseInt($("#bp-old-pence").val());
-}
-
-function get_bp_new_pence() {
-    return parseInt($("#bp-new-pence").val()) / 100;
+function get_currency_new_pence() {
+    return parseInt($("#currency-new-pence").val()) / 100;
 }
 
 
-function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
+function old_money_to_new_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
     var mathResult;
 
     if (year <= 1970) {
@@ -467,19 +424,19 @@ function omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation) 
     return mathResult;
 }
 
-function bp_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
+function currency_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
 
-    var bp_money_to_modern_value = omtn_formula(year, pounds, shillings, old_pence, new_pence, inflation);
+    var currency_money_to_modern_value = old_money_to_new_formula(year, pounds, shillings, old_pence, new_pence, inflation);
 
 
     return {
-        horses: Math.floor(bp_money_to_modern_value / get_horse_price(2017)),
-        cows: Math.floor(bp_money_to_modern_value / get_cow_price(2017)),
-        wool: Math.floor(bp_money_to_modern_value / get_wool_price(2017)),
-        wheat: Math.floor(bp_money_to_modern_value / get_wheat_price(2017)),
-        wage: Math.floor(bp_money_to_modern_value / get_wage_price(2017)),
-        houses: Math.floor(bp_money_to_modern_value / get_house_price(2017)),
-        money: bp_money_to_modern_value
+        horses: Math.floor(currency_money_to_modern_value / get_horse_price(2017)),
+        cows: Math.floor(currency_money_to_modern_value / get_cow_price(2017)),
+        wool: Math.floor(currency_money_to_modern_value / get_wool_price(2017)),
+        wheat: Math.floor(currency_money_to_modern_value / get_wheat_price(2017)),
+        wage: Math.floor(currency_money_to_modern_value / get_wage_price(2017)),
+        houses: Math.floor(currency_money_to_modern_value / get_house_price(2017)),
+        money: currency_money_to_modern_value
     }
 
 
@@ -513,5 +470,3 @@ function get_wage_price(year) {
 function get_house_price(year) {
     return conversion_data[year].uk_house_price;
 }
-
-
