@@ -59,7 +59,7 @@ generate_breadcrumbs( $pagesArray );
 
                                 <form action="index.php" method="post" id="currency-form">
                                     <fieldset>
-                                        <legend>Enter currency to show its purchasing power in 2017</legend>
+                                        <legend>Enter currency to show its purchasing power in 1270</legend>
                                         <div class="form-row">
                                             <label for="currency-year">Year of currency</label>
                                             <select id="currency-year" name="currency-year">
@@ -104,7 +104,8 @@ generate_breadcrumbs( $pagesArray );
                                         </div>
 
                                         <div class="form-row">
-                                            <input type="submit" name="convert-currency" id="currency--submit"
+                                            <p class="fieldset-disclaimer">The results of the calculations are intended to be a general guide to historical values, rather than a categorical statement of fact.</p>
+                                            <input type="submit" name="convert-currency" id="currency-submit"
                                                    value="Show currency power in 2017" class="button">
                                         </div>
 
