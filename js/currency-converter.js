@@ -812,12 +812,13 @@ $("#currency-year").change(function () {
 
 function change_fieldset_text() {
     $('legend').text("Enter currency to show its purchasing power in " + get_currency_year());
+    $('#currency-submit').val("Show purchasing power in " + get_currency_year());
 }
 
 function currency_output() {
 
     var currency_values = currency_formula(get_currency_year(), get_currency_pounds(), get_currency_shillings(), get_currency_old_pence(), get_currency_new_pence(), get_inflation_rate(get_currency_year()));
-    alert(currency_values.debug_bp_money);
+
     var century = get_century(get_currency_year());
 
     var century_preview = "";
@@ -959,8 +960,7 @@ function currency_formula(year, pounds, shillings, old_pence, new_pence, inflati
         wage: Math.floor(buying_power_money_value / get_wage_price(year)),
         houses: Math.floor(buying_power_money_value / get_house_price(year)),
         money: currency_money_to_modern_value,
-        bp_string: bp_string,
-        debug_bp_money: buying_power_money_value
+        bp_string: bp_string
     }
 
 
