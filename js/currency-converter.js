@@ -850,7 +850,7 @@ function currency_output() {
 }
 
 function build_currency_output_html(string, value, unit, img) {
-    return "<h4>" + " <img src='" + img + "' class='currency-icon'/>" + string + ": " + value + " " + unit + "</h4>";
+    return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
 $("#currency-form").submit(function (event) {
