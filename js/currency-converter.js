@@ -817,15 +817,16 @@ function change_fieldset_text() {
 
 function currency_output() {
 
-    var currency_values = currency_formula(get_currency_year(), get_currency_pounds(), get_currency_shillings(), get_currency_old_pence(), get_currency_new_pence(), get_inflation_rate(get_currency_year()));
+    var currency_values = currency_formula();
 
     var century = get_century(get_currency_year());
 
     var century_preview = "";
     var converted_money_string = currency_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+
     if (century != "21st") {
         century_preview = "<blockquote><p>" + conversion_data.century_intros[century] + "</p>" +
-            "<p><cite><a href='./" + century + "-century.php' target='_blank'>Read more about the " + century + " century. </a></p></cite></blockquote>";
+            "<p><cite><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></cite></blockquote>";
     }
 
     var HTML_output =
@@ -909,56 +910,82 @@ function get_currency_new_pence() {
     return parseInt($("#currency-new-pence").val()) / 100;
 }
 
+function get_user_inputs(){
 
-function old_money_to_new_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
+    // Returns users input, PLUS the inflation value based on the year they input.
+
+    return {
+     year : get_currency_year(),
+     pounds : get_currency_pounds(),
+     shillings : get_currency_shillings(),
+     old_pence : get_currency_old_pence(),
+     new_pence : get_currency_new_pence(),
+     inflation : get_inflation_rate(get_currency_year())
+
+}
+}
+
+function old_money_to_new_formula() {
     var mathResult;
+    var user_inputs = get_user_inputs();
 
-    if (year <= 1970) {
+    if (user_inputs.year <= 1970) {
 
-        mathResult = ((pounds + (shillings / 20) + (old_pence / 240) ) * inflation);
+        mathResult = ((user_inputs.pounds + (user_inputs.shillings / 20) + (user_inputs.old_pence / 240) ) * user_inputs.inflation);
 
     }
-    else if (year > 1970) {
-        if (year != 2017) {
-            mathResult = (pounds + new_pence) * inflation;
+    else if (user_inputs.year > 1970) {
+
+        if (user_inputs.year != 2017) {
+
+            /*
+            If the users input year isn't 2017, we need to add inflation to bring it up to 2005's value.
+            Then in the second if statement, we add 2017's 37% inflation to bring the 2005 money value to 2017's value.
+             */
+
+            mathResult = (user_inputs.pounds + user_inputs.new_pence) * user_inputs.inflation;
         }
         else {
-            mathResult = (pounds + new_pence);
+            mathResult = (user_inputs.pounds + user_inputs.new_pence);
         }
 
 
     }
 
 
-    if (year != 2017) {
+    if (user_inputs.year != 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
     return mathResult;
 }
 
-function currency_formula(year, pounds, shillings, old_pence, new_pence, inflation) {
+function currency_formula() {
+    var user_inputs = get_user_inputs();
 
-    var currency_money_to_modern_value = old_money_to_new_formula(year, pounds, shillings, old_pence, new_pence, inflation);
+    var currency_money_to_modern_value = old_money_to_new_formula();
+
     var buying_power_money_value;
-    var bp_string;
-    if(year < 1975) {
-        buying_power_money_value = pounds + (shillings /20) + (old_pence/240);
 
-        bp_string = "£"+pounds+", "+shillings+"s & "+old_pence+"d";
+    var bp_string;
+
+    if(user_inputs.year < 1975) {
+        buying_power_money_value = user_inputs.pounds + (user_inputs.shillings /20) + (user_inputs.old_pence/240);
+
+        bp_string = "£"+user_inputs.pounds+", "+user_inputs.shillings+"s & "+user_inputs.old_pence+"d";
     }
     else {
-        buying_power_money_value = pounds + new_pence;
-       bp_string = buying_power_money_value.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+        buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
+        bp_string = buying_power_money_value.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
     }
 
     return {
-        horses: Math.floor(buying_power_money_value / get_horse_price(year)),
-        cows: Math.floor(buying_power_money_value / get_cow_price(year)),
-        wool: Math.floor(buying_power_money_value / get_wool_price(year)),
-        wheat: Math.floor(buying_power_money_value / get_wheat_price(year)),
-        wage: Math.floor(buying_power_money_value / get_wage_price(year)),
-        houses: Math.floor(buying_power_money_value / get_house_price(year)),
+        horses: Math.floor(buying_power_money_value / get_horse_price(user_inputs.year)),
+        cows: Math.floor(buying_power_money_value / get_cow_price(user_inputs.year)),
+        wool: Math.floor(buying_power_money_value / get_wool_price(user_inputs.year)),
+        wheat: Math.floor(buying_power_money_value / get_wheat_price(user_inputs.year)),
+        wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
+        houses: Math.floor(buying_power_money_value / get_house_price(user_inputs.year)),
         money: currency_money_to_modern_value,
         bp_string: bp_string
     }
