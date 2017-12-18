@@ -817,30 +817,28 @@ function change_fieldset_text() {
 
 function currency_output() {
 
-    var currency_values = currency_formula();
-
-    var century = get_century(get_currency_year());
+    var currency_formula_return_values = currency_formula();
 
     var century_preview = "";
-    var converted_money_string = currency_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+    var converted_money_string = currency_formula_return_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
-    if (century != "21st") {
-        century_preview = "<blockquote><p>" + conversion_data.century_intros[century] + "</p>" +
-            "<p><cite><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></cite></blockquote>";
+    if (currency_formula_return_values.century != "21st") {
+        century_preview = "<blockquote><p>" + conversion_data.century_intros[currency_formula_return_values.century] + "</p>" +
+            "<p><cite><a href='./" + currency_formula_return_values.century + "-century.php'>Read more about the " + currency_formula_return_values.century + " century. </a></p></cite></blockquote>";
     }
 
     var HTML_output =
 
-        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" + "<h3>In " + get_currency_year() +", you could buy one of the following with " + currency_values.bp_string + ": </h3>" +
-        build_currency_output_html("Horses", currency_values.horses, "", "./img/horse.png") +
+        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" + "<h3>In " + get_currency_year() +", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
+        build_currency_output_html("Horses", currency_formula_return_values.horses, "", "./img/horse.png") +
 
-        build_currency_output_html("Cows", currency_values.cows, "", "./img/cow.png") +
+        build_currency_output_html("Cows", currency_formula_return_values.cows, "", "./img/cow.png") +
 
-        build_currency_output_html("Wool", currency_values.wool, "stones", "./img/ewe.png") +
+        build_currency_output_html("Wool", currency_formula_return_values.wool, "stones", "./img/ewe.png") +
 
-        build_currency_output_html("Wheat", currency_values.wheat, "quarters", "./img/wheat.png") +
+        build_currency_output_html("Wheat", currency_formula_return_values.wheat, "quarters", "./img/wheat.png") +
 
-        build_currency_output_html("Wages", currency_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
+        build_currency_output_html("Wages", currency_formula_return_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
 
         century_preview +
         "</div>";
@@ -860,70 +858,7 @@ $("#currency-form").submit(function (event) {
     currency_output();
 });
 
-function get_century(year) {
-    if (year >= 2000) {
-        return "21st";
-    }
-    else if (year >= 1900) {
-        return "20th";
-    }
-    else if (year >= 1800) {
-        return "19th";
-    }
-    else if (year >= 1700) {
-        return "18th";
-    }
-    else if (year >= 1600) {
-        return "17th";
-    }
-    else if (year >= 1500) {
-        return "16th";
-    }
-    else if (year >= 1400) {
-        return "15th";
-    }
-    else if (year >= 1300) {
-        return "14th";
-    }
-    else if (year >= 1200) {
-        return "13th";
-    }
-}
 
-function get_currency_year() {
-    return parseInt($("#currency-year").val());
-}
-
-function get_currency_pounds() {
-    return parseInt($("#currency-pounds").val());
-}
-
-function get_currency_shillings() {
-    return parseInt($("#currency-shillings").val());
-}
-
-function get_currency_old_pence() {
-    return parseInt($("#currency-old-pence").val());
-}
-
-function get_currency_new_pence() {
-    return parseInt($("#currency-new-pence").val()) / 100;
-}
-
-function get_user_inputs(){
-
-    // Returns users input, PLUS the inflation value based on the year they input.
-
-    return {
-     year : get_currency_year(),
-     pounds : get_currency_pounds(),
-     shillings : get_currency_shillings(),
-     old_pence : get_currency_old_pence(),
-     new_pence : get_currency_new_pence(),
-     inflation : get_inflation_rate(get_currency_year())
-
-}
-}
 
 function old_money_to_new_formula() {
     var mathResult;
@@ -987,12 +922,12 @@ function currency_formula() {
         wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
         houses: Math.floor(buying_power_money_value / get_house_price(user_inputs.year)),
         money: currency_money_to_modern_value,
-        bp_string: bp_string
+        bp_string: bp_string,
+        century: get_century(user_inputs.year)
     }
 
 
 }
-
 
 function get_inflation_rate(year) {
     return conversion_data[year].inflation;
@@ -1020,4 +955,68 @@ function get_wage_price(year) {
 
 function get_house_price(year) {
     return conversion_data[year].uk_house_price;
+}
+
+function get_century(year) {
+    if (year >= 2000) {
+        return "21st";
+    }
+    else if (year >= 1900) {
+        return "20th";
+    }
+    else if (year >= 1800) {
+        return "19th";
+    }
+    else if (year >= 1700) {
+        return "18th";
+    }
+    else if (year >= 1600) {
+        return "17th";
+    }
+    else if (year >= 1500) {
+        return "16th";
+    }
+    else if (year >= 1400) {
+        return "15th";
+    }
+    else if (year >= 1300) {
+        return "14th";
+    }
+    else if (year >= 1200) {
+        return "13th";
+    }
+}
+
+function get_currency_year() {
+    return parseInt($("#currency-year").val());
+}
+
+function get_currency_pounds() {
+    return parseInt($("#currency-pounds").val());
+}
+
+function get_currency_shillings() {
+    return parseInt($("#currency-shillings").val());
+}
+
+function get_currency_old_pence() {
+    return parseInt($("#currency-old-pence").val());
+}
+
+function get_currency_new_pence() {
+    return parseInt($("#currency-new-pence").val()) / 100;
+}
+
+function get_user_inputs(){
+
+    // Returns users input, PLUS the inflation value based on the year they input.
+
+    return {
+        year : get_currency_year(),
+        pounds : get_currency_pounds(),
+        shillings : get_currency_shillings(),
+        old_pence : get_currency_old_pence(),
+        new_pence : get_currency_new_pence(),
+        inflation : get_inflation_rate(get_currency_year()),
+    }
 }
