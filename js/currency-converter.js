@@ -771,7 +771,7 @@ var conversion_data = {
         "wool_price": 6.35,
         "wage_price": 100,
         "wheat_price": 1.88,
-        "uk_house_price": 226367
+        "century": "21st"
     },
     "century_intros": {
         "13th": "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
@@ -815,21 +815,28 @@ function change_fieldset_text() {
     $('#currency-submit').val("Show purchasing power in " + get_currency_year());
 }
 
-function currency_output() {
+function build_blockquote(intro, century) {
+    return "<blockquote><p>" + intro + "</p>" +
+        "<p><cite><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></cite></blockquote>";
+}
 
+function currency_output() {
+    var user_inputs = get_user_inputs();
     var currency_formula_return_values = currency_formula();
 
     var century_preview = "";
     var converted_money_string = currency_formula_return_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
 
     if (currency_formula_return_values.century != "21st") {
-        century_preview = "<blockquote><p>" + conversion_data.century_intros[currency_formula_return_values.century] + "</p>" +
-            "<p><cite><a href='./" + currency_formula_return_values.century + "-century.php'>Read more about the " + currency_formula_return_values.century + " century. </a></p></cite></blockquote>";
+            century_preview = build_blockquote(conversion_data.century_intros[user_inputs.century], user_inputs.century);
     }
 
     var HTML_output =
 
-        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" + "<h3>In " + get_currency_year() +", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
+        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
+
+        "<h3>In " + user_inputs.year +", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
+
         build_currency_output_html("Horses", currency_formula_return_values.horses, "", "./img/horse.png") +
 
         build_currency_output_html("Cows", currency_formula_return_values.cows, "", "./img/cow.png") +
@@ -920,10 +927,8 @@ function currency_formula() {
         wool: Math.floor(buying_power_money_value / get_wool_price(user_inputs.year)),
         wheat: Math.floor(buying_power_money_value / get_wheat_price(user_inputs.year)),
         wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
-        houses: Math.floor(buying_power_money_value / get_house_price(user_inputs.year)),
         money: currency_money_to_modern_value,
-        bp_string: bp_string,
-        century: get_century(user_inputs.year)
+        bp_string: bp_string
     }
 
 
@@ -952,11 +957,6 @@ function get_wheat_price(year) {
 function get_wage_price(year) {
     return conversion_data[year].wage_price;
 }
-
-function get_house_price(year) {
-    return conversion_data[year].uk_house_price;
-}
-
 function get_century(year) {
     if (year >= 2000) {
         return "21st";
@@ -1018,5 +1018,6 @@ function get_user_inputs(){
         old_pence : get_currency_old_pence(),
         new_pence : get_currency_new_pence(),
         inflation : get_inflation_rate(get_currency_year()),
+        century: get_century(get_currency_year())
     }
 }
