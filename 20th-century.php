@@ -2,7 +2,6 @@
 
 <?php
 //Used for browser title and for META tags.
-include 'get_root_url.php';
 $title = "Living in the Twentieth Century"
 ?>
 

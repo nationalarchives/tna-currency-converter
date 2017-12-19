@@ -252,8 +252,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -4659,7 +4659,7 @@ hr {
   position: fixed;
   top: 47%;
   right: -100px;
-  background: url(../img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, 0.66);
+  background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, 0.66);
   background-size: cover;
   z-index: 5000;
   border-radius: 50%;
@@ -4674,7 +4674,7 @@ hr {
   border-radius: 0; }
 
 a#cookieCutter {
-  background: url(../img/close-img.png) 0 2px no-repeat;
+  background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/close-img.png) 0 2px no-repeat;
   margin-left: 10px;
   padding-top: 1px;
   padding-left: 22px;
@@ -4716,7 +4716,7 @@ ul, ol {
   /* for consistency with heading and paragraph margins in articles */ }
 
 ul li {
-  list-style-image: url("../img/list-bullet.png"); }
+  list-style-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/list-bullet.png"); }
 
 ul li, ol li {
   margin: 0 0 .75em 0;
@@ -4747,7 +4747,7 @@ ul.child, ul.sibling, ul.triplets, ul.quadruplets {
   margin: 0; }
 
 ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
-  list-style-image: url("../img/list-link-bullet.png");
+  list-style-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/list-link-bullet.png");
   width: 96%;
   float: left;
   margin-bottom: 1em; }
@@ -5064,12 +5064,12 @@ blockquote:before {
     .mega-menu .toggle-sub-menu:hover {
       text-decoration: underline; }
     .mega-menu > ul > li > a, .mega-menu > ul > li > div {
-      background: url(../img/plus.png) 0 14px no-repeat;
+      background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; }
     .mega-menu > ul > li > a.expanded, .mega-menu > ul > li > div.expanded {
-      background: url(../img/minus.png) 0 14px no-repeat; }
+      background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/minus.png) 0 14px no-repeat; }
     .mega-menu > ul > li > a:focus {
       background: #FCE45C !important; }
     .mega-menu .mobile-home-link {
@@ -5128,7 +5128,7 @@ header {
     right: 15px;
     width: 40px;
     height: 40px;
-    background-image: url("../img/search-white.png");
+    background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/search-white.png");
     background-repeat: no-repeat;
     background-position: center; }
   header #search-field-wrapper ul {
@@ -5151,7 +5151,7 @@ header {
           background-color: #FCE45C;
           color: #222; }
   header #mega-menu-pull-down {
-    background-image: url("../img/menu-collapsed.png");
+    background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/menu-collapsed.png");
     background-position: 50% 90%;
     background-repeat: no-repeat;
     background-color: #cb0d07;
@@ -5204,7 +5204,7 @@ header {
   header #mega-menu-mobile {
     height: 40px;
     width: 40px;
-    background: url("../img/menu-trigram-lrg.png") center no-repeat;
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/menu-trigram-lrg.png") center no-repeat;
     border: 0px;
     z-index: 2;
     background-color: #cb0d07;
@@ -5230,7 +5230,7 @@ header {
   header .search-expander, header .search-close {
     height: 2.7em;
     width: 40px;
-    background: url("../img/search-white.png") center no-repeat;
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/search-white.png") center no-repeat;
     background-size: 90%;
     -ms-background-position-y: 7px;
     background-position-y: 7px;
@@ -5245,7 +5245,7 @@ header {
     height: 40px;
     color: #222; }
   header #mobileGlobalSearch input[type='submit'] {
-    background: url("../img/search-white.png") center no-repeat;
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/search-white.png") center no-repeat;
     cursor: pointer;
     background-color: #008484;
     width: 40px; }
@@ -5277,7 +5277,7 @@ header {
     right: 0;
     width: 40px;
     height: 40px;
-    background-image: url("../img/search-white.png") center no-repeat;
+    background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/search-white.png") center no-repeat;
     background-repeat: no-repeat;
     background-position: center; }
   header #scope-selector {
@@ -5288,12 +5288,12 @@ header {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background-image: url("../img/scope-selector.png");
+    background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/scope-selector.png");
     background-color: #555;
     background-size: cover;
     cursor: pointer; }
   header #globalSearch .expanded {
-    background-image: url("../img/scope-selector-expanded.png"); }
+    background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/scope-selector-expanded.png"); }
   header .search-field-wrapper-medium {
     float: right;
     max-width: 331px;
@@ -5331,7 +5331,7 @@ header {
 
 /* TNA footer styles */
 footer {
-  background-image: url("../img/footer-background.png");
+  background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/footer-background.png");
   background-color: #222;
   background-repeat: no-repeat;
   background-position: -6em 20px;
@@ -5456,7 +5456,7 @@ article {
   margin-bottom: 1.5em; }
   article .entry-header {
     padding: 10px 10px 0 0;
-    background: url("../img/dot-grey.png"); }
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/dot-grey.png"); }
     article .entry-header h1 {
       font-size: 2em;
       padding: 4px 10px;
@@ -5474,7 +5474,7 @@ article {
       display: inline-block; }
       article .entry-header h2 a {
         color: #fff;
-        background-image: url("../img/icon-24-heading-link.png");
+        background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/icon-24-heading-link.png");
         background-repeat: no-repeat;
         background-position: 100% 50%;
         padding-right: 32px; }
@@ -5483,7 +5483,7 @@ article {
     display: block;
     height: 10px;
     margin: 0 0 0 -10px;
-    background: url("../img/heading-flourish.png") no-repeat bottom left; }
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/heading-flourish.png") no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
     article .entry-content .thumbnail {
@@ -5527,7 +5527,7 @@ article {
   margin-top: 1em; }
 .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
   float: left;
-  list-style-image: url(../img/list-link-bullet.png);
+  list-style-image: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/list-link-bullet.png);
   margin-bottom: 1em; }
 .level-one .box-third .feature-img-bg, .level-one .box-half .feature-img-bg, .level-one .box-full .feature-img-bg {
   height: 180px; }
@@ -5555,7 +5555,7 @@ aside {
   margin-bottom: 1.5em; }
   aside .sidebar-header {
     padding: 10px 10px 0 0;
-    background: url(../img/dot-grey.png) #fff; }
+    background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/dot-grey.png) #fff; }
     aside .sidebar-header h2 {
       padding: 4px 32px 4px 10px;
       background-color: #405480;
@@ -5565,7 +5565,7 @@ aside {
       display: inline-block; }
       aside .sidebar-header h2 a {
         color: #fff;
-        background-image: url(../img/icon-24-heading-link.png);
+        background-image: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/icon-24-heading-link.png);
         background-repeat: no-repeat;
         background-position: 100% 50%;
         padding-right: 32px; }
@@ -5574,7 +5574,7 @@ aside {
     display: block;
     height: 10px;
     margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left; }
+    background: url(http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/heading-flourish.png) no-repeat bottom left; }
   aside .sidebar-nav {
     background-color: #fff;
     padding: 20px 0 0 20px; }
@@ -5821,10 +5821,10 @@ a.hue-teal, a.hue-red {
   .feature-img .eye_caption {
     width: 38px;
     height: 38px;
-    background: url("../img/eye-caption.png");
+    background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/eye-caption.png");
     color: #fff; }
     .feature-img .eye_caption:hover {
-      background: url("../img/eye-caption-hover.png"); }
+      background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/eye-caption-hover.png"); }
     .feature-img .eye_caption:focus {
       background-color: #fce45c;
       outline: 3px solid #ebab00;
@@ -5885,7 +5885,7 @@ a.hue-teal, a.hue-red {
 
 /* TNA icon styles */
 .sprite {
-  background-image: url("../img/icons-compressed.png");
+  background-image: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/icons-compressed.png");
   width: 40px;
   height: 40px;
   margin: 5px 5px 5px 0;
@@ -6087,7 +6087,7 @@ a.hue-teal, a.hue-red {
   padding: 0; }
 .category_template article .entry-header {
   padding: 10px 10px 0 0;
-  background: url("../img/dot-grey.png"); }
+  background: url("http://nationalarchives.gov.uk/wp-content/themes/tna-base/img/dot-grey.png"); }
 
 .newsletter-template {
   background: #dddddd;
