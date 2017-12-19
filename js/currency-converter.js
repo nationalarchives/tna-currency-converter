@@ -862,10 +862,54 @@ $("#currency-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
     window.location.hash = '';
     window.location.hash = '#currency-result';
-    currency_output();
+    if(check_validation()){
+        currency_output();
+    }
+
 });
 
+function check_validation() {
 
+    var u = get_user_inputs();
+
+
+
+        //Check if year is a number
+        if(isNaN(u.year)) {
+            return false;
+        }
+
+        //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
+        if(u.year <= 1970) {
+
+            if (u.year % 10 != 0) {
+                return false;
+            }
+
+        }
+
+        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc.
+        else if(u.year > 1970){
+
+            if(u.year % 5 != 0){
+
+                if(u.year != 2017){
+                   return false;
+                }
+
+            }
+        }
+
+        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc.
+        if(u.year < 1270) {
+            return false;
+        }
+
+
+    return true;
+
+
+}
 
 function old_money_to_new_formula() {
     var mathResult;
