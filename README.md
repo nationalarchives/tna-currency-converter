@@ -58,41 +58,40 @@ To convert the 2005 value to 2017 we multiply by 1.37 (37%) making the total £6
 
 # "Buying power" maths
 
-This part of the currency takes money from the past, and shows how powerful it would be in 2017.
+This part of the currency takes money from the past, and shows how powerful it would be in that year.
 
 The formula for buying power is calculated partly using the above "old money to new" formula.
 
 1. Take users money and year input
-2. Convert the money to 2017 currency using the above "old money to new" formula store as "new_money"
-3. Divide the "new_money" by the horse, cow, wool, wheat and wages prices to return the buying power.
+2. If the year input is below 1970, divide the shillings by 20 and the pence by 240. 
+3. Add the values calculate in step 2 and divide by the horse, cow, wool, wheat and wages prices to return the buying power.
 4 Floor the values (e.g. 1.5 horses becomes 1 horse) and return results to user
 
 #### Example
 User inputs 
  * 10 Pounds
- * 99 Pence
- * 1975 Year (which becomes a 5.57 inflation multiplier). 
+ * 5 Pence
+ * 5 Shillings
+ * 1270 Year (which becomes a 5.57 inflation multiplier). 
  
  The prices of horses, cows, wool, wages and wheat are then collected from a JS object:
  
-     "2017": {
-             "inflation": 1.37, // 37% inflation between 2005 and 2017
-             "horse_price": 2387.37,
-             "cow_price": 1200,
-             "wool_price": 6.35,
-             "wage_price": 100,
-             "wheat_price": 1.88,
-             "uk_house_price" : 226367
-         }
+     "1270": {
+        "inflation": 532.72,
+        "horse_price": 0.76,
+        "cow_price": 0.35,
+        "wool_price": 0.13,
+        "wheat_price": 0.16,
+        "wage_price": 0.01,
+        "century": "13th"
+    }
+    
+ You then convert the old money by doing what is mentioned in step 2:
  
- The old money to new formula is ran which returns £63.48, which is then used to calculate the buying power:
+ 10+ (5/20) + (5/240) = £10.27
  
-     63.48/2287.37 // Horses = 0
-     63.48/1200 // Cows = 0 
-     63.48/6.35 // Wool = 0 stones
-     63.48/100 // Wages = 0 days wages
-     63.48/1.88 // Wheat = 33 quarters
-     
- This then gives you the buying power of £10.99 in 1975 in 2017.    
+ You would then divide this 10.27 by 0.76 (horse_price), 0.35 (cow_price) and so on to return the buying power.
+ 
+ E.g. 10.27/0.76 (horse_price) returns 13.5. Floor this value and you are left with 13 horses.
      
      
