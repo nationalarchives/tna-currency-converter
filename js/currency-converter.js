@@ -909,15 +909,19 @@ function currency_formula() {
 
     var buying_power_money_value;
 
+
     var bp_string;
 
     if(user_inputs.year < 1975) {
         buying_power_money_value = user_inputs.pounds + (user_inputs.shillings /20) + (user_inputs.old_pence/240);
 
+        // Displays the currency in the buying power box, e.g. £10 1s 0d would be 10 pounds, 1 shilling, 0 pence.
         bp_string = "£"+user_inputs.pounds+", "+user_inputs.shillings+"s & "+user_inputs.old_pence+"d";
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
+
+        // Since it will be modern currency (after 1975) we can use toLocaleString to show the money value.
         bp_string = buying_power_money_value.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
     }
 
