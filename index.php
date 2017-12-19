@@ -57,7 +57,7 @@ generate_breadcrumbs( $pagesArray );
                         <div class="row entry-content">
                             <div class="col-md-12">
 
-                                <form action="index.php" method="post" id="currency-form">
+                                <form action="index.php" method="post" id="currency-form" >
                                     <fieldset>
                                         <legend>Enter currency to show its purchasing power in 1270</legend>
                                         <div class="form-row">
@@ -114,7 +114,7 @@ generate_breadcrumbs( $pagesArray );
                                 </form>
 
                                 <span id="currency-result"></span>
-
+                                <span id="currency-no-js-message">Sorry, you do not have JavaScript enabled which is required for the currency converter at the moment.</span>
                             </div>
                         </div>
                     </article>

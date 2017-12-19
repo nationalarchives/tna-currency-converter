@@ -92,3 +92,10 @@ blockquote {
     padding:7%;
 }
 
+.no-js #currency-form {
+    display: none;
+}
+
+.js #currency-no-js-message {
+    display: none;
+}
