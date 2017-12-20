@@ -869,6 +869,7 @@ $("#currency-form").submit(function (event) {
 
 });
 
+
 function set_validation_message(message) {
         $("#currency-validation").text(message);
         $("#currency-validation").show();
@@ -884,18 +885,11 @@ Number.isInteger = Number.isInteger || function(value) {
 
 function check_validation() {
 
-
       var year = get_currency_year();
       var pounds = get_currency_pounds();
       var shillings = get_currency_shillings();
       var old_pence = get_currency_old_pence();
       var new_pence = get_currency_new_pence();
-
-
-
-
-
-
 
         //Check if year is a number
         if(!Number.isInteger(year)) {
@@ -953,14 +947,8 @@ function check_validation() {
             return false;
         }
 
-
-
-
-
     $("#currency-validation").hide();
     return true;
-
-
 }
 
 
@@ -1030,7 +1018,7 @@ function currency_formula() {
         wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
         money: currency_money_to_modern_value,
         bp_string: bp_string
-    }
+    };
 
 
 }
@@ -1120,5 +1108,5 @@ function get_user_inputs(){
         new_pence : get_currency_new_pence(),
         inflation : get_inflation_rate(get_currency_year()),
         century: get_century(get_currency_year())
-    }
+    };
 }
