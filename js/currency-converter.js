@@ -860,56 +860,109 @@ function build_currency_output_html(string, value, unit, img) {
 
 $("#currency-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
-    window.location.hash = '';
-    window.location.hash = '#currency-result';
+
     if(check_validation()){
+        window.location.hash = '';
+        window.location.hash = '#currency-result';
         currency_output();
     }
 
 });
 
+function set_validation_message(message) {
+        $("#currency-validation").text(message);
+        $("#currency-validation").show();
+}
+
+
+//IE Polyfill
+Number.isInteger = Number.isInteger || function(value) {
+    return typeof value === "number" &&
+        isFinite(value) &&
+        Math.floor(value) === value;
+};
+
 function check_validation() {
 
-    var u = get_user_inputs();
+
+      var year = get_currency_year();
+      var pounds = get_currency_pounds();
+      var shillings = get_currency_shillings();
+      var old_pence = get_currency_old_pence();
+      var new_pence = get_currency_new_pence();
+
+
+
+
 
 
 
         //Check if year is a number
-        if(isNaN(u.year)) {
+        if(!Number.isInteger(year)) {
+            set_validation_message("Please enter a whole number into this field.");
             return false;
         }
 
         //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
-        if(u.year <= 1970) {
+        if(year <= 1970) {
 
-            if (u.year % 10 != 0) {
+            if (year % 10 != 0) {
+                set_validation_message("Please enter a year ending in 0. For example 1270.");
                 return false;
             }
 
         }
 
-        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc.
-        else if(u.year > 1970){
+        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
+        else if(year > 1970){
 
-            if(u.year % 5 != 0){
+            if(year % 5 != 0){
 
-                if(u.year != 2017){
+                if(year != 2017){
+                    set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
                    return false;
                 }
 
             }
         }
 
-        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc.
-        if(u.year < 1270) {
+
+        if(year < 1270) {
+            set_validation_message("Please enter a year above 1270.");
+            return false;
+        }
+
+        if(!Number.isInteger(pounds) || pounds < 0){
+            set_validation_message("Please enter a positive whole number into the pounds field.");
+            return false;
+        }
+
+        if(!Number.isInteger(shillings) || shillings < 0 || shillings > 19){
+            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
+            return false;
+        }
+
+        if(!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11){
+            set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
             return false;
         }
 
 
+        if(!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99 ){
+            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
+            return false;
+        }
+
+
+
+
+
+    $("#currency-validation").hide();
     return true;
 
 
 }
+
 
 function old_money_to_new_formula() {
     var mathResult;

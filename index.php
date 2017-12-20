@@ -94,7 +94,7 @@ generate_breadcrumbs( $pagesArray );
                                         <div class="form-row" id="currency-old-pence-row">
                                             <label for="omtn-old-pence">Pence (d)</label>
                                             <input type="number" name="omtn-old-pence" id="currency-old-pence"
-                                                   step="0.01" min="0" max="11.99" value="0">
+                                                  min="0" max="11" value="0">
                                         </div>
 
                                         <div class="form-row" id="currency-new-pence-row">
@@ -104,6 +104,7 @@ generate_breadcrumbs( $pagesArray );
                                         </div>
 
                                         <div class="form-row">
+                                            <p id="currency-validation" class="currency"></p>
                                             <p class="fieldset-disclaimer">The results of the calculations are intended to be a general guide to historical values, rather than a categorical statement of fact.</p>
                                             <input type="submit" name="convert-currency" id="currency-submit"
                                                    value="Show purchasing power in 1270" class="button">
