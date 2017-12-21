@@ -1,3 +1,8 @@
+/*For ES LINT Purposes */
+if(conversion_data == undefined){
+    var conversion_data = {};
+}
+
 $(function () {
     show_inputs_relevant_to_selected_year();
 });
@@ -145,22 +150,35 @@ function check_validation() {
         return false;
     }
 
-    if (!Number.isInteger(shillings) || shillings < 0 || shillings > 19) {
-        set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
-        return false;
+    if(year <= 1970){
+        if (!Number.isInteger(shillings) || shillings < 0 || shillings > 19) {
+            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
+            return false;
+        }
+
+        if (!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11) {
+            set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
+            return false;
+        }
+
+        if(pounds == 0 && old_pence == 0 && shillings == 0){
+            set_validation_message("Please enter a number above 0 into at least one field.");
+            return false;
+        }
+
     }
 
-    if (!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11) {
-        set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
-        return false;
+    if(year > 1970) {
+        if (!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99) {
+            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
+            return false;
+        }
+        if(pounds == 0 && new_pence == 0){
+            set_validation_message("Please enter a number above 0 into at least one field.");
+            return false;
+        }
+
     }
-
-
-    if (!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99) {
-        set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
-        return false;
-    }
-
 
     $("#currency-validation").hide();
     return true;

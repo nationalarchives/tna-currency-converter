@@ -97,7 +97,7 @@ generate_breadcrumbs($pagesArray);
                                             </div>
                                             <div class="form-row newer-currencies" id="currency-new-pence-row">
                                                 <label for="omtn-new-pence">Pence</label>
-                                                <input type="number" name="currency--new-pence" id="currency-new-pence"
+                                                <input type="number" name="currency-new-pence" id="currency-new-pence"
                                                        min="0" max="99" value="0">
                                             </div>
                                             <div class="form-row">
