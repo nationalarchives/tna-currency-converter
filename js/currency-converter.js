@@ -47,7 +47,7 @@ function currency_output() {
 
     var HTML_output =
 
-        "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
+        "<div class='currency' id='currency-result'><h3 id='currency-result-header'>In 2017, this is worth approximately: </h3>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
 
         "<h3>In " + user_inputs.year + ", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
 

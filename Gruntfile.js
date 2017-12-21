@@ -29,7 +29,8 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['js/currency-converter.js']
+            files: ['js/currency-converter.js'],
+            tasks:['concat','jshint','eslint','uglify']
         },
         eslint: {
             target: ['js/currency-converter.min.js']

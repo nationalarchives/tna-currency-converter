@@ -48,12 +48,13 @@
     background-image: url(http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/icon-24-accordion-close.png);
 }
 
-.result {
-
-}
-
 .currency {
     background-color: #FFF8D0;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
 }
 
 #currency-large-text {
@@ -82,6 +83,10 @@
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
+}
+
+#currency-result {
+    font-size: 1.2em;
 }
 
 #currency-converter-icon-disclaimer {
