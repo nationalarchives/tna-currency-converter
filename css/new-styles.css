@@ -59,10 +59,14 @@
 
 #currency-large-text {
     font-family: "Bitter", "Open Sans", arial, serif;
-    font-size: 3em !important;
+    font-size: 4em !important;
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
+}
+
+.currency-result-header {
+    font-size: 1.5em;
 }
 
 .currency h1, .currency img {
@@ -75,6 +79,10 @@
     padding: 0 0.5em !important;
 }
 
+.currency h4 {
+    font-size: 1.5em;
+}
+
 .currency img {
     padding: .5%;
 }
@@ -83,10 +91,6 @@
     margin-bottom: 10px !important;
     width: auto !important;
     padding: 0 0.5em !important;
-}
-
-#currency-result {
-    font-size: 1.2em;
 }
 
 #currency-converter-icon-disclaimer {
