@@ -45,7 +45,7 @@ generate_breadcrumbs( $pagesArray );
     </div>
 </div>
 
-<main role="main">
+<main>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -128,7 +128,7 @@ generate_breadcrumbs( $pagesArray );
             <div class="row">
                 <div class="col-md-12">
 
-                    <article role="contentinfo">
+                    <article>
                         <div class="entry-header">
                             <h2>Disclaimer</h2>
                         </div>
@@ -148,7 +148,7 @@ generate_breadcrumbs( $pagesArray );
             <div class="row">
                 <div class="col-md-12">
 
-                    <article role="navigation">
+                    <nav>
                         <div class="entry-header">
                             <h2>Navigation</h2>
                         </div>
@@ -167,7 +167,7 @@ generate_breadcrumbs( $pagesArray );
                                 </ul>
                             </div>
                         </div>
-                    </article>
+                    </nav>
                 </div>
 
 

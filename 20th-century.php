@@ -86,7 +86,7 @@ generate_breadcrumbs($pagesArray);
                 <div class="row">
                     <div class="col-md-12">
 
-                        <article role="navigation">
+                        <nav>
                             <div class="entry-header">
                                 <h2>Navigation</h2>
                             </div>
@@ -103,8 +103,9 @@ generate_breadcrumbs($pagesArray);
                                     <li><strong>Living in the 20th Century</strong></li>
                                 </ul>
                             </div>
+                        </nav>
                     </div>
-                    </article>
+
                 </div>
 
 
