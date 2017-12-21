@@ -20,28 +20,20 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jshint: {
-            files: ['js/currency-converter.js'],
-            options: {
-                globals: {
-                    jQuery: true
-                }
-            }
-        },
         watch: {
             files: ['js/currency-converter.js'],
-            tasks:['eslint','concat','jshint','uglify']
+            tasks:['eslint','concat','uglify']
         },
         eslint: {
             target: ['js/currency-converter.js']
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-eslint');
-    grunt.registerTask('default', ['eslint','concat','jshint','uglify','watch']);
+    grunt.registerTask('default', ['eslint','concat','uglify','watch']);
 
 };
