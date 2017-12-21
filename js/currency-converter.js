@@ -73,7 +73,7 @@ function build_currency_output_html(string, value, unit, img) {
 }
 
 $("#currency-form").submit(function (event) {
-    event.preventDefault(); // Prevent PHP fallback
+    event.preventDefault();
 
     if (check_validation()) {
         window.location.hash = '';
@@ -161,6 +161,7 @@ function check_validation() {
         return false;
     }
 
+
     $("#currency-validation").hide();
     return true;
 }
@@ -208,13 +209,31 @@ function currency_formula() {
     var buying_power_money_value;
 
 
-    var bp_string;
+    var bp_string = "";
 
     if (user_inputs.year < 1975) {
         buying_power_money_value = user_inputs.pounds + (user_inputs.shillings / 20) + (user_inputs.old_pence / 240);
 
-        // Displays the currency in the buying power box, e.g. £10 1s 0d would be 10 pounds, 1 shilling, 0 pence.
+        if(user_inputs.pounds > 0) {
+            bp_string = "£" + user_inputs.pounds;
+        }
+        if(user_inputs.shillings > 0){
+            if(user_inputs.pounds > 0) {
+                bp_string = bp_string + ", ";
+            }
+
+            bp_string = bp_string + user_inputs.shillings + "s";
+        }
+        if(user_inputs.old_pence > 0) {
+            if(user_inputs.pounds > 0 || user_inputs.shillings > 0){
+                bp_string = bp_string +" & ";
+            }
+            bp_string = bp_string + user_inputs.old_pence + "d";
+        }
+
+        /* Displays the currency in the buying power box, e.g. £10 1s 0d would be 10 pounds, 1 shilling, 0 pence.
         bp_string = "£" + user_inputs.pounds + ", " + user_inputs.shillings + "s & " + user_inputs.old_pence + "d";
+        */
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;

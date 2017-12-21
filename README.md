@@ -4,7 +4,7 @@ Revamp for the currency converter located at http://nationalarchives.gov.uk/curr
 
 This currency converter converts any UK currency from 1270-2005 into 2017 values. This is the "old money to new" part of the code/formula.
 
-The currency converter uses the converted currency to calculate buying power. This is how much horses, sheep, etc. can be bought in 2017 with this money. It is explained in the "buying power" section of this README.
+The currency converter uses the converted currency to calculate buying power. This is how much horses, sheep, etc. can be bought in any year. It is explained in the "buying power" section of this README.
 
 It is built on top of the original TNA currency converter built in 2005, which helps give context to the maths explained below. 
 
