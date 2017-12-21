@@ -10,13 +10,29 @@ $(function () {
 function show_inputs_relevant_to_selected_year() {
     if (get_currency_year() > 1970) {
         /* Hide old UK currency inputs & show modern */
-        $(".newer-currencies").show();
-        $(".older-currencies").hide();
+
+        $(".newer-currencies").each(function () {
+            $(this).show();
+            $(this).find("input").attr('required', true);
+        });
+
+        $(".older-currencies").each(function () {
+            $(this).hide();
+            $(this).find("input").attr('required', false);
+        });
     }
     else if (get_currency_year() <= 1970) {
         /* Hide modern UK currency inputs & show old */
-        $(".newer-currencies").hide();
-        $(".older-currencies").show();
+
+        $(".newer-currencies").each(function () {
+            $(this).hide();
+            $(this).find("input").attr('required', false);
+        });
+
+        $(".older-currencies").each(function () {
+            $(this).show();
+            $(this).find("input").attr('required', true);
+        });
     }
 }
 
