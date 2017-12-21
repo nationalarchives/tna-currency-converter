@@ -811,7 +811,7 @@ $("#currency-year").change(function () {
 });
 
 function change_fieldset_text() {
-    $('legend').text("Enter currency to show its purchasing power in " + get_currency_year());
+    $('#currency-legend').text("Enter currency to show its purchasing power in " + get_currency_year());
     $('#currency-submit').val("Show purchasing power in " + get_currency_year());
 }
 
@@ -825,17 +825,20 @@ function currency_output() {
     var currency_formula_return_values = currency_formula();
 
     var century_preview = "";
-    var converted_money_string = currency_formula_return_values.money.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'});
+    var converted_money_string = currency_formula_return_values.money.toLocaleString('en-GB', {
+        style: 'currency',
+        currency: 'GBP'
+    });
 
     if (currency_formula_return_values.century != "21st") {
-            century_preview = build_blockquote(conversion_data.century_intros[user_inputs.century], user_inputs.century);
+        century_preview = build_blockquote(conversion_data.century_intros[user_inputs.century], user_inputs.century);
     }
 
     var HTML_output =
 
         "<div class='currency' id='currency-result'><h1>In 2017, this is worth approximately: </h1>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
 
-        "<h3>In " + user_inputs.year +", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
+        "<h3>In " + user_inputs.year + ", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
 
         build_currency_output_html("Horses", currency_formula_return_values.horses, "", "./img/horse.png") +
 
@@ -861,7 +864,7 @@ function build_currency_output_html(string, value, unit, img) {
 $("#currency-form").submit(function (event) {
     event.preventDefault(); // Prevent PHP fallback
 
-    if(check_validation()){
+    if (check_validation()) {
         window.location.hash = '';
         window.location.hash = '#currency-result';
         currency_output();
@@ -871,13 +874,13 @@ $("#currency-form").submit(function (event) {
 
 
 function set_validation_message(message) {
-        $("#currency-validation").text(message);
-        $("#currency-validation").show();
+    $("#currency-validation").text(message);
+    $("#currency-validation").show();
 }
 
 
 //IE Polyfill
-Number.isInteger = Number.isInteger || function(value) {
+Number.isInteger = Number.isInteger || function (value) {
     return typeof value === "number" &&
         isFinite(value) &&
         Math.floor(value) === value;
@@ -885,67 +888,67 @@ Number.isInteger = Number.isInteger || function(value) {
 
 function check_validation() {
 
-      var year = get_currency_year();
-      var pounds = get_currency_pounds();
-      var shillings = get_currency_shillings();
-      var old_pence = get_currency_old_pence();
-      var new_pence = get_currency_new_pence();
+    var year = get_currency_year();
+    var pounds = get_currency_pounds();
+    var shillings = get_currency_shillings();
+    var old_pence = get_currency_old_pence();
+    var new_pence = get_currency_new_pence();
 
-        //Check if year is a number
-        if(!Number.isInteger(year)) {
-            set_validation_message("Please enter a whole number into this field.");
+    //Check if year is a number
+    if (!Number.isInteger(year)) {
+        set_validation_message("Please enter a whole number into this field.");
+        return false;
+    }
+
+    //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
+    if (year <= 1970) {
+
+        if (year % 10 != 0) {
+            set_validation_message("Please enter a year ending in 0. For example 1270.");
             return false;
         }
 
-        //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
-        if(year <= 1970) {
+    }
 
-            if (year % 10 != 0) {
-                set_validation_message("Please enter a year ending in 0. For example 1270.");
+    //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
+    else if (year > 1970) {
+
+        if (year % 5 != 0) {
+
+            if (year != 2017) {
+                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
                 return false;
             }
 
         }
-
-        //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
-        else if(year > 1970){
-
-            if(year % 5 != 0){
-
-                if(year != 2017){
-                    set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
-                   return false;
-                }
-
-            }
-        }
+    }
 
 
-        if(year < 1270) {
-            set_validation_message("Please enter a year above 1270.");
-            return false;
-        }
+    if (year < 1270) {
+        set_validation_message("Please enter a year above 1270.");
+        return false;
+    }
 
-        if(!Number.isInteger(pounds) || pounds < 0){
-            set_validation_message("Please enter a positive whole number into the pounds field.");
-            return false;
-        }
+    if (!Number.isInteger(pounds) || pounds < 0) {
+        set_validation_message("Please enter a positive whole number into the pounds field.");
+        return false;
+    }
 
-        if(!Number.isInteger(shillings) || shillings < 0 || shillings > 19){
-            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
-            return false;
-        }
+    if (!Number.isInteger(shillings) || shillings < 0 || shillings > 19) {
+        set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
+        return false;
+    }
 
-        if(!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11){
-            set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
-            return false;
-        }
+    if (!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11) {
+        set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
+        return false;
+    }
 
 
-        if(!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99 ){
-            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
-            return false;
-        }
+    if (!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99) {
+        set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
+        return false;
+    }
 
     $("#currency-validation").hide();
     return true;
@@ -964,7 +967,6 @@ function old_money_to_new_formula() {
     else if (user_inputs.year > 1970) {
 
         if (user_inputs.year != 2017) {
-
             /*
             If the users input year isn't 2017, we need to add inflation to bring it up to 2005's value.
             Then in the second if statement, we add 2017's 37% inflation to bring the 2005 money value to 2017's value.
@@ -997,11 +999,11 @@ function currency_formula() {
 
     var bp_string;
 
-    if(user_inputs.year < 1975) {
-        buying_power_money_value = user_inputs.pounds + (user_inputs.shillings /20) + (user_inputs.old_pence/240);
+    if (user_inputs.year < 1975) {
+        buying_power_money_value = user_inputs.pounds + (user_inputs.shillings / 20) + (user_inputs.old_pence / 240);
 
         // Displays the currency in the buying power box, e.g. £10 1s 0d would be 10 pounds, 1 shilling, 0 pence.
-        bp_string = "£"+user_inputs.pounds+", "+user_inputs.shillings+"s & "+user_inputs.old_pence+"d";
+        bp_string = "£" + user_inputs.pounds + ", " + user_inputs.shillings + "s & " + user_inputs.old_pence + "d";
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
@@ -1046,6 +1048,7 @@ function get_wheat_price(year) {
 function get_wage_price(year) {
     return conversion_data[year].wage_price;
 }
+
 function get_century(year) {
     if (year >= 2000) {
         return "21st";
@@ -1077,36 +1080,36 @@ function get_century(year) {
 }
 
 function get_currency_year() {
-    return parseInt($("#currency-year").val());
+    return parseInt($("#currency-year").val(), 10);
 }
 
 function get_currency_pounds() {
-    return parseInt($("#currency-pounds").val());
+    return parseInt($("#currency-pounds").val(), 10);
 }
 
 function get_currency_shillings() {
-    return parseInt($("#currency-shillings").val());
+    return parseInt($("#currency-shillings").val(), 10);
 }
 
 function get_currency_old_pence() {
-    return parseInt($("#currency-old-pence").val());
+    return parseInt($("#currency-old-pence").val(), 10);
 }
 
 function get_currency_new_pence() {
-    return parseInt($("#currency-new-pence").val()) / 100;
+    return parseInt($("#currency-new-pence").val(), 10) / 100;
 }
 
-function get_user_inputs(){
+function get_user_inputs() {
 
     // Returns users input, PLUS the inflation value based on the year they input.
 
     return {
-        year : get_currency_year(),
-        pounds : get_currency_pounds(),
-        shillings : get_currency_shillings(),
-        old_pence : get_currency_old_pence(),
-        new_pence : get_currency_new_pence(),
-        inflation : get_inflation_rate(get_currency_year()),
+        year: get_currency_year(),
+        pounds: get_currency_pounds(),
+        shillings: get_currency_shillings(),
+        old_pence: get_currency_old_pence(),
+        new_pence: get_currency_new_pence(),
+        inflation: get_inflation_rate(get_currency_year()),
         century: get_century(get_currency_year())
     };
 }

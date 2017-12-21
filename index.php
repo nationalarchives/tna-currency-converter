@@ -59,7 +59,7 @@ generate_breadcrumbs( $pagesArray );
 
                                 <form action="index.php" method="post" id="currency-form" >
                                     <fieldset>
-                                        <legend>Enter currency to show its purchasing power in 1270</legend>
+                                        <legend id="currency-legend">Enter currency to show its purchasing power in 1270</legend>
                                         <div class="form-row">
                                             <label for="currency-year">Year of currency</label>
                                             <select id="currency-year" name="currency-year">
@@ -86,7 +86,6 @@ generate_breadcrumbs( $pagesArray );
                                             <select id="currency-shillings" name="currency-shillings">
 												<?php for ( $i = 0; $i <= 19; $i = $i + 1 ) {
 													echo "<option value='" . $i . "'>" . $i . "</option>";
-
 												} ?>
                                             </select>
                                         </div>
@@ -118,6 +117,7 @@ generate_breadcrumbs( $pagesArray );
                                 <span id="currency-no-js-message">Sorry, you do not have JavaScript enabled which is required for the currency converter at the moment.</span>
                             </div>
                         </div>
+
                     </article>
 
                 </div>
