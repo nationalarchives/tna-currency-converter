@@ -83,7 +83,7 @@ generate_breadcrumbs($pagesArray);
             <div class="row">
                 <div class="col-md-12">
 
-                    <article>
+                    <article role="navigation">
                         <div class="entry-header">
                             <h2>Navigation</h2>
                         </div>

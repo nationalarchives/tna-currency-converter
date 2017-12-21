@@ -28,7 +28,7 @@ $pagesArray = array(
 generate_breadcrumbs( $pagesArray );
 ?>
 
-<div class="level-one">
+<div class="level-one" role="banner">
     <div class="container">
         <div class="row" role="banner">
             <div class="col-md-12">
@@ -45,12 +45,14 @@ generate_breadcrumbs( $pagesArray );
     </div>
 </div>
 
+<main role="main">
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <div class="row">
                 <div class="col-md-12">
-                    <article>
+
+                    <article role="application">
                         <div class="entry-header">
                             <h2>Currency Converter</h2>
                         </div>
@@ -126,7 +128,7 @@ generate_breadcrumbs( $pagesArray );
             <div class="row">
                 <div class="col-md-12">
 
-                    <article>
+                    <article role="contentinfo">
                         <div class="entry-header">
                             <h2>Disclaimer</h2>
                         </div>
@@ -146,7 +148,7 @@ generate_breadcrumbs( $pagesArray );
             <div class="row">
                 <div class="col-md-12">
 
-                    <article>
+                    <article role="navigation">
                         <div class="entry-header">
                             <h2>Navigation</h2>
                         </div>
@@ -175,7 +177,7 @@ generate_breadcrumbs( $pagesArray );
         </div>
     </div>
 </div>
-
+</main>
 
 <!-- END EDITING CONTENT -->
 
