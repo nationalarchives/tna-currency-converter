@@ -8,6 +8,16 @@ The currency converter uses the converted currency to calculate buying power. Th
 
 It is built on top of the original TNA currency converter built in 2005, which helps give context to the maths explained below. 
 
+# Installation
+You will need PHP installed to run this application.
+
+1. Clone the repository
+2. From root, run
+     
+     php -S localhost:8080
+
+substitute localhost:8080 with your equivalent server address if necessary.
+
 # "Old money to new" maths
 
 This part of the currency converter takes any money from 1270 upwards and converts it to its worth in 2017.
