@@ -48,8 +48,8 @@ function change_fieldset_text() {
 }
 
 function build_blockquote(intro, century) {
-    return "<blockquote><p>" + intro + "</p>" +
-        "<p><cite><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></cite></blockquote>";
+    return "<div id='currency-century-intro'>"+ "<p>" + intro + "</p>" +
+        "<p id='currency-century-intro-read-more'><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></div>";
 }
 
 function currency_output() {
@@ -62,7 +62,7 @@ function currency_output() {
         currency: 'GBP'
     });
 
-    if (currency_formula_return_values.century != "21st") {
+    if (user_inputs.century != "21st") {
         century_preview = build_blockquote(conversion_data.century_intros[user_inputs.century], user_inputs.century);
     }
 
@@ -133,7 +133,7 @@ function check_validation() {
     }
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
-    if (year <= 1970) {
+    if (year <= 1900) {
 
         if (year % 10 != 0) {
             set_validation_message("Please enter a year ending in 0. For example 1270.");
@@ -143,7 +143,7 @@ function check_validation() {
     }
 
     //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
-    else if (year > 1970) {
+    else if (year > 1900) {
 
         if (year % 5 != 0) {
 

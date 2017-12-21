@@ -97,8 +97,12 @@
     font-size: 0.6em;
 }
 
-blockquote {
-    padding:7%;
+#currency-century-intro {
+    padding:5%;
+}
+
+#currency-century-intro-read-more {
+    float:right;
 }
 
 .no-js #currency-form {
