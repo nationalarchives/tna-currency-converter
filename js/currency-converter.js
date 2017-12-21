@@ -97,7 +97,9 @@ $("#currency-form").submit(function (event) {
     event.preventDefault();
 
     if (check_validation()) {
-        window.location.hash = '';
+        if(window.location.hash == '#currency-result'){
+            window.location.hash = ''; // Reset so that browser will auto-scroll down again.
+        }
         window.location.hash = '#currency-result';
         currency_output();
     }
