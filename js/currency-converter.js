@@ -1,25 +1,23 @@
 $(function () {
-    hide_inputs_by_year();
+    show_inputs_relevant_to_selected_year();
 });
 
-function hide_inputs_by_year() {
+function show_inputs_relevant_to_selected_year() {
     if (get_currency_year() > 1970) {
         /* Hide old UK currency inputs & show modern */
-        $("#currency-shillings-row").hide();
-        $("#currency-old-pence-row").hide();
-        $("#currency-new-pence-row").show();
+        $(".newer-currencies").show();
+        $(".older-currencies").hide();
     }
     else if (get_currency_year() <= 1970) {
         /* Hide modern UK currency inputs & show old */
-        $("#currency-shillings-row").show();
-        $("#currency-old-pence-row").show();
-        $("#currency-new-pence-row").hide();
+        $(".newer-currencies").hide();
+        $(".older-currencies").show();
     }
 }
 
 $("#currency-year").change(function () {
     change_fieldset_text();
-    hide_inputs_by_year();
+    show_inputs_relevant_to_selected_year();
 
 });
 

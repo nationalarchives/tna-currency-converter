@@ -81,7 +81,7 @@ generate_breadcrumbs($pagesArray);
                                                        value="0"
                                                        required>
                                             </div>
-                                            <div class="form-row" id="currency-shillings-row">
+                                            <div class="form-row older-currencies" id="currency-shillings-row">
                                                 <label for="currency-shillings">Shillings (s)</label>
                                                 <select id="currency-shillings" name="currency-shillings">
                                                     <?php
@@ -90,12 +90,12 @@ generate_breadcrumbs($pagesArray);
                                                     } ?>
                                                 </select>
                                             </div>
-                                            <div class="form-row" id="currency-old-pence-row">
+                                            <div class="form-row older-currencies" id="currency-old-pence-row">
                                                 <label for="omtn-old-pence">Pence (d)</label>
                                                 <input type="number" name="omtn-old-pence" id="currency-old-pence"
                                                        min="0" max="11" value="0">
                                             </div>
-                                            <div class="form-row" id="currency-new-pence-row">
+                                            <div class="form-row newer-currencies" id="currency-new-pence-row">
                                                 <label for="omtn-new-pence">Pence</label>
                                                 <input type="number" name="currency--new-pence" id="currency-new-pence"
                                                        min="0" max="99" value="0">
