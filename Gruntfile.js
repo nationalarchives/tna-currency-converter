@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         concat: {
             options: {
                 // define a string to put between each file in the concatenated output
-                separator: ';'
+                separator: '\n\n'
             },
             dist: {
                 // the files to concatenate
@@ -29,11 +29,10 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['js/currency-converter.js'],
-            tasks: ['jshint']
+            files: ['js/currency-converter.js']
         },
         eslint: {
-            target: ['js/currency-converter.js']
+            target: ['js/currency-converter.min.js']
         }
     });
 
@@ -42,6 +41,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-eslint');
-    grunt.registerTask('default', ['jshint','eslint','concat','uglify','watch']);
+    grunt.registerTask('default', ['concat','jshint','eslint','uglify','watch']);
 
 };
