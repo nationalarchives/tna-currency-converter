@@ -1,8 +1,3 @@
-/*For ES LINT Purposes */
-if(conversion_data == undefined){
-    var conversion_data = {};
-}
-
 $(function () {
     show_inputs_relevant_to_selected_year();
 });
