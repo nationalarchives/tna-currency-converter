@@ -8,15 +8,15 @@ module.exports = function(grunt) {
             },
             dist: {
                 // the files to concatenate
-                src: ['js/currency-data.js','js/currency-converter.js'],
+                src: ['js/src/currency-data.js','js/src/currency-converter.js'],
                 // the location of the resulting JS file
-                dest: 'js/currency-converter.min.js'
+                dest: 'js/dist/currency-converter-build.js'
             }
         },
         uglify: {
             dist: {
                 files: {
-                    'js/currency-converter.min.js': ['js/currency-converter.min.js']
+                    'js/dist/currency-converter-build.min.js': ['js/dist/currency-converter-build.js']
                 }
             }
         },
@@ -25,10 +25,10 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ['js/currency-converter.js'],
-            tasks:['eslint','concat','uglify']
+            tasks:['eslint','concat','uglify','qunit']
         },
         eslint: {
-            target: ['js/currency-converter.js']
+            target: ['js/src/currency-converter.js']
         }
     });
 
