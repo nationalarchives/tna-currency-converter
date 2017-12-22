@@ -198,9 +198,9 @@ function check_validation() {
 }
 
 
-function old_money_to_new_formula() {
+function old_money_to_new_formula(user_inputs) {
     var mathResult;
-    var user_inputs = get_user_inputs();
+    user_inputs = user_inputs || get_user_inputs();
 
     if (user_inputs.year <= 1970) {
 
@@ -232,10 +232,10 @@ function old_money_to_new_formula() {
     return mathResult;
 }
 
-function currency_formula() {
-    var user_inputs = get_user_inputs();
+function currency_formula(user_inputs) {
+    user_inputs = user_inputs || get_user_inputs();
 
-    var currency_money_to_modern_value = old_money_to_new_formula();
+    var currency_money_to_modern_value = old_money_to_new_formula(user_inputs);
 
     var buying_power_money_value;
 
