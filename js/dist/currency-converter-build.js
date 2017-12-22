@@ -894,7 +894,6 @@ function set_validation_message(message) {
     $("#currency-validation").show();
 }
 
-
 //IE Polyfill
 Number.isInteger = Number.isInteger || function (value) {
     return typeof value === "number" &&
@@ -1007,7 +1006,6 @@ function old_money_to_new_formula(user_inputs) {
         else {
             mathResult = (user_inputs.pounds + user_inputs.new_pence);
         }
-
 
     }
 
