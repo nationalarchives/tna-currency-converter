@@ -829,7 +829,7 @@ function change_fieldset_text() {
     $('#currency-submit').val("Show purchasing power in " + get_currency_year());
 }
 
-function build_blockquote(intro, century) {
+function build_century_intro_paragraph(intro, century) {
     return "<div id='currency-century-intro'>"+ "<p>" + intro + "</p>" +
         "<p id='currency-century-intro-read-more'><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></div>";
 }
@@ -845,7 +845,7 @@ function currency_output() {
     });
 
     if (user_inputs.century != "21st") {
-        century_preview = build_blockquote(conversion_data.century_intros[user_inputs.century], user_inputs.century);
+        century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
     }
 
     var HTML_output =
