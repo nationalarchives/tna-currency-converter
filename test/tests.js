@@ -12,5 +12,4 @@ QUnit.test( "1270 year, £1000 input currency_formula test", function( assert ) 
 
     var currency_converter_output = old_money_to_new_formula(test_inputs);
     assert.ok( currency_converter_output === 729826.4, "Passed! - £1000 returned 729826.4" );
-
 });

@@ -107,12 +107,6 @@ function set_validation_message(message) {
     $("#currency-validation").show();
 }
 
-//IE Polyfill
-Number.isInteger = Number.isInteger || function (value) {
-    return typeof value === "number" &&
-        isFinite(value) &&
-        Math.floor(value) === value;
-};
 
 function check_validation() {
 
@@ -121,12 +115,6 @@ function check_validation() {
     var shillings = get_currency_shillings();
     var old_pence = get_currency_old_pence();
     var new_pence = get_currency_new_pence();
-
-    //Check if year is a number
-    if (!Number.isInteger(year)) {
-        set_validation_message("Please enter a whole number into this field.");
-        return false;
-    }
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
@@ -157,18 +145,18 @@ function check_validation() {
         return false;
     }
 
-    if (!Number.isInteger(pounds) || pounds < 0) {
+    if (pounds < 0) {
         set_validation_message("Please enter a positive whole number into the pounds field.");
         return false;
     }
 
     if(year <= 1970){
-        if (!Number.isInteger(shillings) || shillings < 0 || shillings > 19) {
+        if (shillings < 0 || shillings > 19) {
             set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
             return false;
         }
 
-        if (!Number.isInteger(old_pence) || old_pence < 0 || old_pence > 11) {
+        if (old_pence < 0 || old_pence > 11) {
             set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
             return false;
         }
@@ -181,7 +169,7 @@ function check_validation() {
     }
 
     if(year > 1970) {
-        if (!Number.isInteger(new_pence) || new_pence < 0 || new_pence > 99) {
+        if (new_pence < 0 || new_pence > 99) {
             set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
             return false;
         }
