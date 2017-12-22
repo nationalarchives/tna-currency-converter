@@ -18,6 +18,24 @@ You will need PHP installed to run this application.
 
 substitute localhost:8080 with your equivalent server address if necessary.
 
+## Grunt
+
+Grunt is available in this project. It is used to:
+
+1. Run ESLint on the currency-converter.js file to improve code quality and easily detect syntax erros
+2. Concat the large currency conversion data to the logic file at build, to make the currency-converter.js easier to read for developers
+3. Create a minified version of the concatenated js file using uglify
+4. Run QUnit tests to ensure the currency converter still works after every code change
+5. Watch the currency-converter.js file for any changes and run the above steps again
+
+To use grunt:
+
+1. Ensure you have installed the following npm packages
+    
+    [grunt](https://gruntjs.com/getting-started), [grunt-contrib-concat](https://www.npmjs.com/package/grunt-contrib-concat), [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify), [grunt-contrib-qunit](https://www.npmjs.com/package/grunt-contrib-qunit), [grunt-eslint](https://www.npmjs.com/package/grunt-eslint)
+
+2. Run "grunt" in the terminal from the projects root    
+
 # "Old money to new" maths
 
 This part of the currency converter takes any money from 1270 upwards and converts it to its worth in 2017.
