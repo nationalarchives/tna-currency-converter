@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -57,8 +57,8 @@ generate_breadcrumbs($pagesArray);
                                     a population that largely did not produce food and cheaper cotton and other
                                     manufactured goods for all.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -108,8 +108,8 @@ generate_breadcrumbs($pagesArray);
                                     barmaids brought drinks to the passenger where the stops were too short to allow
                                     them to get out.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -124,8 +124,8 @@ generate_breadcrumbs($pagesArray);
                                     half-penny and the farthing, all coined in bronze. Watermarked bank notes were also
                                     developed.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

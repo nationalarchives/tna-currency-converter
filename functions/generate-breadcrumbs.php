@@ -5,8 +5,8 @@ function generate_breadcrumbs( $pagesArray ) {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-					<div class="breadcrumbs"><span itemscope="" itemtype="http://conversion_data-vocabulary.org/Breadcrumb"><a
-                                    href="http://www.nationalarchives.gov.uk/" itemprop="url"><span itemprop="title">Home</span></a></span>
+					<div class="breadcrumbs" itemscope="" itemtype="http://conversion_data-vocabulary.org/Breadcrumb"><span>
+					<a href="http://www.nationalarchives.gov.uk/" itemprop="url"><span itemprop="title">Home</span></a></span>
                         <span class="sep">&gt;</span>
 END;
 	for ( $i = 0; $i < sizeof( $pagesArray ); $i ++ ) {

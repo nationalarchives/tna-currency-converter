@@ -1,4 +1,4 @@
-<footer id="footer" class="breather-top-bottom" role="contentinfo">
+<footer id="footer" class="breather-top-bottom">
     <div class="container">
         <div class="row">
             <div class="footer-col col-xs-12 col-sm-12 col-md-3 col-lg-3">

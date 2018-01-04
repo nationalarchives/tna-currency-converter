@@ -1,4 +1,4 @@
-<header id="header" role="banner">
+<header id="header">
     <a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
     <div class="container">
         <div class="row">

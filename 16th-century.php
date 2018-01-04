@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -63,8 +63,8 @@ generate_breadcrumbs($pagesArray);
                                     in Westmorland died in 1578 leaving the stock of his shop which included Spanish
                                     silks, French garters, Norwich lace, Oxford gloves and Turkey purses.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -81,8 +81,8 @@ generate_breadcrumbs($pagesArray);
                                     royal officials and later the king's mail. In sixteenth century this system of post
                                     horses was extended and made available, at a price, to the general public.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -98,8 +98,8 @@ generate_breadcrumbs($pagesArray);
                                     shilling was produced, testimony to the growing commerce and wealth of the
                                     country.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

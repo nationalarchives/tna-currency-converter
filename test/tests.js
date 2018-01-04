@@ -29,6 +29,9 @@ QUnit.test("Locale String generator", function (assert) {
     assert.equal(number_to_pounds_string(1.1), "£1.10", "Passed for 1.1");
     assert.equal(number_to_pounds_string(1.20), "£1.20", "Passed for 1.20");
 
+    assert.equal(number_to_pounds_string(0), "£0.00", "Passed for 0");
+    assert.equal(number_to_pounds_string(0.1),"£0.10", "Passed for 0.1");
+    assert.equal(number_to_pounds_string(0.01),"£0.01", "Passed for 0.01");
 
 
 });

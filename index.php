@@ -133,8 +133,9 @@ generate_breadcrumbs($pagesArray);
                                     fact.
                                     Icons made by Freepik from www.flaticon.com</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
+
                 </div>
             </div>
             <div class="col-md-3">

@@ -34,7 +34,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -93,8 +93,8 @@ generate_breadcrumbs($pagesArray);
                                     the towns and traditional landlord tenant relationships and communal methods of
                                     working the land had to be redefined.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -115,8 +115,8 @@ generate_breadcrumbs($pagesArray);
                                     grains. The inflationary effect of devaluation was encouraged by the swift revival
                                     of wool exports after the Black Death and renewed inflow of silver.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

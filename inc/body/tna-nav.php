@@ -1,4 +1,4 @@
-<nav id="nav" role="navigation">
+<nav id="nav">
 	<div class="mega-menu clearfix">
 		<?php include 'mega-menu.inc' ?>
 	</div>

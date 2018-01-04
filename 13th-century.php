@@ -34,7 +34,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -67,8 +67,8 @@ generate_breadcrumbs($pagesArray);
                                     Â£3 to the cost of a garment and luxurious textiles such as silks and linens, while
                                     others wore a larger amount of woollen cloth.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -91,8 +91,8 @@ generate_breadcrumbs($pagesArray);
                                     roads many people walked or rode and goods were transported by cart, probably small
                                     one horse carts.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -117,8 +117,8 @@ generate_breadcrumbs($pagesArray);
                                     the monetized economy. Rents to landlords, for example, were increasingly paid in
                                     cash rather than goods or service.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

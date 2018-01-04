@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -45,8 +45,9 @@ generate_breadcrumbs($pagesArray);
                                     employment in manufacturing towards occupation in service sectors and the increasing
                                     importance of professional, managerial and technical roles.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
+
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -93,8 +94,9 @@ generate_breadcrumbs($pagesArray);
                                     century, cheaper air travel opened the world to people from all socio-economic
                                     backgrounds and the population generally took more holidays than ever before.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
+
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -106,8 +108,9 @@ generate_breadcrumbs($pagesArray);
                                 <p>It took four years to achieve, but decimal coinage became the official currency of
                                     the UK on 15 February 1971 with the issue of the 1/2p, 1p and 2p pieces.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
+
                 </div>
             </div>
             <div class="col-md-3">

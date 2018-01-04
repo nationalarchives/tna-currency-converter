@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -75,8 +75,8 @@ generate_breadcrumbs($pagesArray);
                                     William Stout of Lancaster both of whom stocked a wide range of goods of English,
                                     colonial and foreign origins.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -94,8 +94,8 @@ generate_breadcrumbs($pagesArray);
                                     cost, with fares for inside passengers being, typically, 4d. or 5d. a mile and for
                                     outside passengers 2d. or 3d.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -138,8 +138,8 @@ generate_breadcrumbs($pagesArray);
                                     England was created in 1694 and the first issue of bank notes followed in the same
                                     year.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

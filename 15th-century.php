@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -72,8 +72,8 @@ generate_breadcrumbs($pagesArray);
                                     luxuries had to be reassessed but recovery was quick in the latter half of the
                                     century.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -88,8 +88,8 @@ generate_breadcrumbs($pagesArray);
                                     beds for visitors such as pilgrims, traders and royal officials and English inns had
                                     the reputation of being warm and welcoming.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -104,8 +104,8 @@ generate_breadcrumbs($pagesArray);
                                     known as the Angel and it became the coin worth 6s. 8d. In 1489, Henry VII minted
                                     the first gold piece of 20s. to be called a sovereign.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">

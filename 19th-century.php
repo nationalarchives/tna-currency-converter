@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" role="main" class="content-area">
+<main id="primary" class="content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -80,8 +80,9 @@ generate_breadcrumbs($pagesArray);
                                     hall entertainment for the new working classes. The new railway network also made
                                     leisure travel and seaside holidays a possibility for many.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
+
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -133,8 +134,8 @@ generate_breadcrumbs($pagesArray);
                                     had to be preceded by a man with a red flag to warn pedestrians of their
                                     approach.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -146,8 +147,8 @@ generate_breadcrumbs($pagesArray);
                                 <p>The first two shilling piece or florin was issued in 1849 and the double-florin in
                                     1887.</p>
                             </div>
+                        </article>
                     </div>
-                    </article>
                 </div>
             </div>
             <div class="col-md-3">
@@ -177,6 +178,7 @@ generate_breadcrumbs($pagesArray);
                 </div>
             </div>
         </div>
+    </div>
 </main>
 <!-- END EDITING CONTENT -->
 <?php
