@@ -3,7 +3,7 @@ $(function () {
 });
 
 function show_inputs_relevant_to_selected_year() {
-    if (get_currency_year() > 1970) {
+    if ( get_currency("#currency-year") > 1970) {
         /* Hide old UK currency inputs & show modern */
 
         $(".newer-currencies").each(function () {
@@ -27,7 +27,7 @@ function show_inputs_relevant_to_selected_year() {
             $(this).find("label").removeAttr('for');
         });
     }
-    else if (get_currency_year() <= 1970) {
+    else if ( get_currency("#currency-year") <= 1970) {
         /* Hide modern UK currency inputs & show old */
 
         $(".newer-currencies").each(function () {
@@ -62,8 +62,8 @@ $("#currency-year").change(function () {
 });
 
 function change_fieldset_text() {
-    $('#currency-legend').text("Enter currency to show its purchasing power in " + get_currency_year());
-    $('#currency-submit').val("Show purchasing power in " + get_currency_year());
+    $('#currency-legend').text("Enter currency to show its purchasing power in " +  get_currency("#currency-year"));
+    $('#currency-submit').val("Show purchasing power in " +  get_currency("#currency-year"));
 }
 
 function build_century_intro_paragraph(intro, century) {
@@ -131,11 +131,11 @@ function set_validation_message(message) {
 
 function check_validation() {
 
-    var year = get_currency_year();
-    var pounds = get_currency_pounds();
-    var shillings = get_currency_shillings();
-    var old_pence = get_currency_old_pence();
-    var new_pence = get_currency_new_pence();
+    var year =  get_currency("#currency-year");
+    var pounds =  get_currency("#currency-pounds");
+    var shillings =  get_currency("#currency-shillings")
+    var old_pence = get_currency("#currency-old-pence")
+    var new_pence =  get_currency("#currency-new-pence")
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
@@ -393,24 +393,16 @@ function get_century(year) {
     }
 }
 
-function get_currency_year() {
-    return parseInt($("#currency-year").val(), 10);
-}
 
-function get_currency_pounds() {
-    return parseInt($("#currency-pounds").val(), 10);
-}
+function get_currency(html_id) {
 
-function get_currency_shillings() {
-    return parseInt($("#currency-shillings").val(), 10);
-}
+    if(html_id === "#currency-new-pence"){
+        return parseInt($(html_id).val(), 10) / 100;
+    }
+    else {
+        return parseInt($(html_id).val(), 10);
+    }
 
-function get_currency_old_pence() {
-    return parseInt($("#currency-old-pence").val(), 10);
-}
-
-function get_currency_new_pence() {
-    return parseInt($("#currency-new-pence").val(), 10) / 100;
 }
 
 function get_user_inputs() {
@@ -418,12 +410,12 @@ function get_user_inputs() {
     // Returns users input, PLUS the inflation value based on the year they input.
 
     return {
-        year: get_currency_year(),
-        pounds: get_currency_pounds(),
-        shillings: get_currency_shillings(),
-        old_pence: get_currency_old_pence(),
-        new_pence: get_currency_new_pence(),
-        inflation: get_inflation_rate(get_currency_year()),
-        century: get_century(get_currency_year())
+        year: get_currency("#currency-year"),
+        pounds: get_currency("#currency-pounds"),
+        shillings: get_currency("#currency-shillings"),
+        old_pence: get_currency("#currency-old-pence"),
+        new_pence: get_currency("#currency-new-pence"),
+        inflation: get_inflation_rate( get_currency("#currency-year")),
+        century: get_century( get_currency("#currency-year"))
     };
 }
