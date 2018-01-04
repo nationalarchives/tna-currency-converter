@@ -35,7 +35,7 @@ generate_breadcrumbs($pagesArray);
         <div class="row" role="banner">
             <div class="col-md-12">
                 <article class="banner feature-img feature-img-bg"
-                         style="background-image: url(./img/currency-converter-banner.jpg);">
+                         style="background-image: url(./img/currency-converter-banner.jpg);" role="banner">
                     <div class="entry-header">
                         <h1>Currency Converter: 1270 - 2017</h1>
                     </div>
