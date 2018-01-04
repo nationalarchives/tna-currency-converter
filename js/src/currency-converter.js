@@ -232,12 +232,11 @@ function old_money_to_new_formula(user_inputs) {
 
     }
 
-
     if (user_inputs.year != 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
-    return mathResult;
+    return mathResult.toFixed(2);
 }
 
 function currency_formula(user_inputs) {
@@ -270,9 +269,6 @@ function currency_formula(user_inputs) {
             bp_string = bp_string + user_inputs.old_pence + "d";
         }
 
-        /* Displays the currency in the buying power box, e.g. £10 1s 0d would be 10 pounds, 1 shilling, 0 pence.
-        bp_string = "£" + user_inputs.pounds + ", " + user_inputs.shillings + "s & " + user_inputs.old_pence + "d";
-        */
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
@@ -286,7 +282,7 @@ function currency_formula(user_inputs) {
         wool: Math.floor(buying_power_money_value / get_wool_price(user_inputs.year)),
         wheat: Math.floor(buying_power_money_value / get_wheat_price(user_inputs.year)),
         wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
-        money: currency_money_to_modern_value.toFixed(2),
+        money: currency_money_to_modern_value,
         bp_string: bp_string
     };
 

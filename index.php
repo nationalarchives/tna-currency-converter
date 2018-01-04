@@ -44,7 +44,7 @@ generate_breadcrumbs($pagesArray);
         </div>
     </div>
 </div>
-<main>
+<main role="main">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -56,7 +56,7 @@ generate_breadcrumbs($pagesArray);
                             </div>
                             <div class="row entry-content">
                                 <div class="col-md-12">
-                                    <form action="index.php" method="post" id="currency-form">
+                                    <form action="index.php" method="post" id="currency-form" role="application">
                                         <fieldset>
                                             <legend id="currency-legend">Enter currency to show its purchasing power in
                                                 1270

@@ -24,7 +24,7 @@ $pagesArray = array(
 );
 generate_breadcrumbs($pagesArray);
 ?>
-<main id="primary" class="content-area">
+<main id="primary" class="content-area" role="main">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -117,7 +117,7 @@ generate_breadcrumbs($pagesArray);
                 <div class="row">
                     <div class="col-md-12">
                         <article>
-                            <nav>
+                            <nav role="navigation">
                                 <div class="entry-header">
                                     <h2>Navigation</h2>
                                 </div>
