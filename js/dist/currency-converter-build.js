@@ -1192,26 +1192,6 @@ function get_currency(html_id) {
 
 }
 
-/*function get_currency_year() {
-    return parseInt($("#currency-year").val(), 10);
-}
-
-function get_currency_pounds() {
-    return parseInt($("#currency-pounds").val(), 10);
-}
-
-function get_currency_shillings() {
-    return parseInt($("#currency-shillings").val(), 10);
-}
-
-function get_currency_old_pence() {
-    return parseInt($("#currency-old-pence").val(), 10);
-}
-
-function get_currency_new_pence() {
-    return parseInt($("#currency-new-pence").val(), 10) / 100;
-}*/
-
 function get_user_inputs() {
 
     // Returns users input, PLUS the inflation value based on the year they input.
