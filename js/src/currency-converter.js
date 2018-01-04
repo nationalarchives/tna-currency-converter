@@ -9,11 +9,22 @@ function show_inputs_relevant_to_selected_year() {
         $(".newer-currencies").each(function () {
             $(this).show();
             $(this).find("input").attr('required', true);
+
+            var label_for_value = $(this).find("input").attr("name");
+            $(this).find("label").attr('for',label_for_value);
         });
 
         $(".older-currencies").each(function () {
             $(this).hide();
-            $(this).find("input").attr('required', false);
+
+            if($(this).find("input").length > 0) {
+                $(this).find("input").removeAttr('required');
+            }
+            else {
+                $(this).find("select").removeAttr('required');
+            }
+
+            $(this).find("label").removeAttr('for');
         });
     }
     else if (get_currency_year() <= 1970) {
@@ -21,12 +32,25 @@ function show_inputs_relevant_to_selected_year() {
 
         $(".newer-currencies").each(function () {
             $(this).hide();
-            $(this).find("input").attr('required', false);
+            $(this).find("input").removeAttr('required');
+            $(this).find("label").removeAttr('for');
         });
 
         $(".older-currencies").each(function () {
             $(this).show();
-            $(this).find("input").attr('required', true);
+            var label_for_value;
+
+            if($(this).find("input").length > 0) {
+                $(this).find("input").attr('required', true);
+                label_for_value = $(this).find("input").attr("name");
+                $(this).find("label").attr('for',label_for_value);
+            }
+            else {
+                $(this).find("select").attr('required',true);
+                label_for_value = $(this).find("select").attr("name");
+                $(this).find("label").attr('for',label_for_value);
+            }
+
         });
     }
 }
