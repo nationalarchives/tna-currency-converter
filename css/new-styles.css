@@ -1,0 +1,114 @@
+.lesson-list-parent {
+    font-family: "Bitter", "Open Sans", SansSerif;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.lesson-list-parent li, .lesson-sidebar li {
+    list-style-image: url(../img/list-link-bullet.png);
+}
+
+.lesson-list-child {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.filter-togglee {
+    display: none;
+    text-align: left;
+    background: white;
+    color: black;
+    padding: 10px;
+    margin-top: 0;
+    transition: height 1s ease-out;
+}
+
+.filter-toggler {
+    -webkit-transition: background-image 300ms linear;
+    -moz-transition: background-image 300ms linear;
+    -o-transition: background-image 300ms linear;
+    -ms-transition: background-image 300ms linear;
+    transition: background-image 300ms linear;
+    margin-top: 0;
+    text-align: left;
+    display: block;
+    padding: .8em;
+    background-color: #eee;
+    color: #000;
+    border-bottom: 1px solid #DDD;
+    border-top: 1px solid #fff;
+    background-image: url(http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/icon-24-accordion-open.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 99% center;
+    cursor: pointer;
+}
+
+.show {
+    background-image: url(http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/icon-24-accordion-close.png);
+}
+
+.currency {
+    background-color: #FFF8D0;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+
+#currency-large-text {
+    font-family: "Bitter", "Open Sans", arial, serif;
+    font-size: 4em !important;
+    margin-bottom: 10px !important;
+    width: auto !important;
+    padding: 0 0.5em !important;
+}
+
+.currency-result-header {
+    font-size: 1.5em;
+}
+
+.currency h1, .currency img {
+    padding: 0 0.5em !important;
+}
+
+.currency p, .currency h4 {
+    margin-bottom: 10px !important;
+    width: auto !important;
+    padding: 0 0.5em !important;
+}
+
+.currency h4 {
+    font-size: 1.5em;
+}
+
+.currency img {
+    padding: .5%;
+}
+
+.currency h3 {
+    margin-bottom: 10px !important;
+    width: auto !important;
+    padding: 0 0.5em !important;
+}
+
+#currency-converter-icon-disclaimer {
+    font-size: 0.6em;
+}
+
+#currency-century-intro {
+    padding:5%;
+}
+
+#currency-century-intro-read-more {
+    float:right;
+}
+
+.no-js #currency-form {
+    display: none;
+}
+
+.js #currency-no-js-message {
+    display: none;
+}

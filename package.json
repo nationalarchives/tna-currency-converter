@@ -1,0 +1,32 @@
+{
+  "name": "tna-currency-converter",
+  "version": "1.0.0",
+  "description": "Revamp for the currency converter located at http://nationalarchives.gov.uk/currency",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nationalarchives/tna-currency-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nationalarchives/tna-currency-converter/issues"
+  },
+  "homepage": "https://github.com/nationalarchives/tna-currency-converter#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-eslint": "^20.1.0",
+    "qunit": "^2.4.1"
+  },
+  "dependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jslint": "^1.1.15"
+  }
+}
