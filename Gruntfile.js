@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/child-sass.css': 'css/sass/child-sass.scss'
+                    'css/currency-sass.css': 'css/sass/currency-sass.scss'
                 }
             }
         },
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'css/child-sass.css.min': ['css/child-sass.css']
+                    'css/currency-sass.css.min': ['css/currency-sass.css']
                 }
             }
         },

@@ -17,14 +17,13 @@ function setThemeGlobals($environment = null) {
         case 'internal':
         case 'development':
             $pre_path = '';
-            $pre_crumbs = array('Site home title' => '/');
+            $pre_crumbs = array('Currency Converter: 1270 – 2017' => '/');
             break;
         case 'external':
             $pre_crumbs = array(
-                'About' => '/about/',
-                'Site home title' => '/about/site-home-title/'
+                'Currency Converter: 1270 – 2017' => '/currency/'
             );
-            $pre_path = '/about/site-home-title';
+            $pre_path = '/currency';
             break;
     }
 }
