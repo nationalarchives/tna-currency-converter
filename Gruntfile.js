@@ -23,20 +23,56 @@ module.exports = function (grunt) {
                 }
             }
         },
+        concat: {
+            options: {
+                // define a string to put between each file in the concatenated output
+                separator: '\n\n'
+            },
+            dist: {
+                // the files to concatenate
+                src: ['js/src/currency-data.js','js/src/currency-converter.js'],
+                // the location of the resulting JS file
+                dest: 'js/dist/currency-converter-build.js'
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    'js/dist/currency-converter-build.min.js': ['js/dist/currency-converter-build.js']
+                }
+            }
+        },
+        qunit: {
+            all: ['qunit/test.html']
+        },
+        eslint: {
+            target: ['js/src/currency-converter.js']
+        },
         watch: {
             css: {
-                files: 'css/sass/*.scss',
-                tasks: ['sass', 'cssmin']
+                files: ['css/sass/*.scss','js/src/currency-converter.js'],
+                tasks: ['sass', 'cssmin', 'eslint','concat','uglify','qunit']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-eslint');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+
 
     // Default task(s).
     grunt.registerTask('default', [
         'sass',
-        'cssmin'
+        'cssmin',
+        'eslint',
+        'concat',
+        'uglify',
+        'qunit',
+        'watch'
     ]);
 };
