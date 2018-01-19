@@ -16,7 +16,6 @@ $title = "Currency Converter: 1270 to 2017 - The National Archives"
 <?php
 include 'inc/body/body.php';
 include 'functions/generate-breadcrumbs.php';
-include 'functions/currency-math-values.php';
 //		Add breadcrumbs here
 $pagesArray = array(
     array(
