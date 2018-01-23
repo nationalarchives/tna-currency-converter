@@ -20,8 +20,9 @@ get_header(); ?>
                 ?>
             </div>
         </div>
-        <main role="main">
+
             <div class="row">
+                <main role="main">
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
@@ -113,36 +114,12 @@ get_header(); ?>
 
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="row">
-                    <div class="col-md-12">
-                        <article>
-                            <nav>
-                                <div class="entry-header">
-                                    <h2>Navigation</h2>
-                                </div>
-                                <div class="row entry-content">
-                                    <div class="col-md-12">
-                                        <ul class="full">
-                                            <li><strong>Currency Converter</strong></li>
-                                            <li><a href="./13th-century.php">Living in the 13th Century</a></li>
-                                            <li><a href="./14th-century.php">Living in the 14th Century</a></li>
-                                            <li><a href="./15th-century.php">Living in the 15th Century</a></li>
-                                            <li><a href="./16th-century.php">Living in the 16th Century</a></li>
-                                            <li><a href="./17th-century.php">Living in the 17th Century</a></li>
-                                            <li><a href="./18th-century.php">Living in the 18th Century</a></li>
-                                            <li><a href="./19th-century.php">Living in the 19th Century</a></li>
-                                            <li><a href="./20th-century.php">Living in the 20th Century</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </article>
-                    </div>
-                </div>
-            </div>
-    </div>
         </main>
+	            <?php include 'sidebar.php' ?>
+
+    </div>
+
+
     </div>
 </div>
 
