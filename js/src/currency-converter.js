@@ -27,7 +27,7 @@ function show_inputs_relevant_to_selected_year() {
 
         $(".newer-currencies").each(function () {
             $(this).show();
-            $(this).find("input").attr('required', true);
+            $(this).find("input").attr('required');
 
             var label_for_value = $(this).find("input").attr("name");
             $(this).find("label").attr('for',label_for_value);
@@ -89,7 +89,7 @@ function currency_output() {
     var currency_formula_return_values = currency_formula();
 
     var century_preview = "";
-    var converted_money_string = number_to_pounds_string(currency_formula_return_values.money);
+    var converted_money_string = number_to_pounds_string(currency_formula_return_values.money, true);
 
     if (user_inputs.century != "21st") {
         century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
@@ -131,14 +131,14 @@ function check_validation() {
 
     var year =  get_currency("#currency-year");
     var pounds =  get_currency("#currency-pounds");
-    var shillings =  get_currency("#currency-shillings")
-    var old_pence = get_currency("#currency-old-pence")
-    var new_pence =  get_currency("#currency-new-pence")
+    var shillings =  get_currency("#currency-shillings");
+    var old_pence = get_currency("#currency-old-pence");
+    var new_pence =  get_currency("#currency-new-pence");
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
 
-        if (year % 10 != 0) {
+        if (year % 10 !== 0) {
             set_validation_message("Please enter a year ending in 0. For example 1270.");
             return false;
         }
@@ -148,9 +148,9 @@ function check_validation() {
     //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
     else if (year > 1900) {
 
-        if (year % 5 != 0) {
+        if (year % 5 !== 0) {
 
-            if (year != 2017) {
+            if (year !== 2017) {
                 set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
                 return false;
             }
@@ -180,7 +180,7 @@ function check_validation() {
             return false;
         }
 
-        if (pounds == 0 && old_pence == 0 && shillings == 0) {
+        if (pounds === 0 && old_pence === 0 && shillings === 0) {
             set_validation_message("Please enter a number above 0 into at least one field.");
             return false;
         }
@@ -192,7 +192,7 @@ function check_validation() {
             set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
             return false;
         }
-        if (pounds == 0 && new_pence == 0) {
+        if (pounds === 0 && new_pence === 0) {
             set_validation_message("Please enter a number above 0 into at least one field.");
             return false;
         }
@@ -216,7 +216,7 @@ function old_money_to_new_formula(user_inputs) {
     }
     else if (user_inputs.year > 1970) {
 
-        if (user_inputs.year != 2017) {
+        if (user_inputs.year !== 2017) {
             /*
             If the users input year isn't 2017, we need to add inflation to bring it up to 2005's value.
             Then in the second if statement, we add 2017's 37% inflation to bring the 2005 money value to 2017's value.
@@ -230,7 +230,7 @@ function old_money_to_new_formula(user_inputs) {
 
     }
 
-    if (user_inputs.year != 2017) {
+    if (user_inputs.year !== 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
@@ -244,14 +244,13 @@ function currency_formula(user_inputs) {
 
     var buying_power_money_value;
 
-
     var bp_string = "";
 
     if (user_inputs.year < 1975) {
         buying_power_money_value = user_inputs.pounds + (user_inputs.shillings / 20) + (user_inputs.old_pence / 240);
 
         if (user_inputs.pounds > 0) {
-            bp_string = "£" + user_inputs.pounds;
+            bp_string = number_to_pounds_string(user_inputs.pounds, false);
         }
         if (user_inputs.shillings > 0) {
             if (user_inputs.pounds > 0) {
@@ -266,12 +265,11 @@ function currency_formula(user_inputs) {
             }
             bp_string = bp_string + user_inputs.old_pence + "d";
         }
-
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
 
-        bp_string = number_to_pounds_string(buying_power_money_value);
+        bp_string = number_to_pounds_string(buying_power_money_value, true);
     }
 
     return {
@@ -286,41 +284,19 @@ function currency_formula(user_inputs) {
 
 }
 
-function number_to_pounds_string(number) {
+function number_to_pounds_string(number, include_pence) {
 
     var split_number = number.toString().split(".");
     var pounds_string = split_number[0];
     var pence_string = split_number[1] || "";
     var split_number_pounds_length = pounds_string.length;
 
-    var comma = ",";
-    var position_for_comma;
-    var sliced_pounds_string;
+    var sliced_pounds_string = "";
     var output_string;
 
     // If the £ value is more than £999, we need to add a comma. E.g. 1000 needs to become £1,000.
     if (split_number_pounds_length > 3) {
-        switch (split_number_pounds_length) {
-
-            case 4:
-                // Numbers 1,000 to 9,999 we insert the comma at index 1
-                position_for_comma = 1;
-                break;
-            case 5:
-                // Numbers 10,000 to 99,999 we insert the comma at index 2
-                position_for_comma = 2;
-                break;
-            case 6:
-                // Numbers 100,000 to 999,999 we insert the comma at index 3
-                position_for_comma = 3;
-                break;
-
-            default:
-                break;
-        }
-
-        sliced_pounds_string = [pounds_string.slice(0, position_for_comma), comma, pounds_string.slice(position_for_comma)].join('');
-
+        sliced_pounds_string = pounds_string.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     }
     else {
         sliced_pounds_string = pounds_string;
@@ -333,7 +309,13 @@ function number_to_pounds_string(number) {
         pence_string = "00";
     }
 
-    output_string = "£" + sliced_pounds_string + "." + pence_string;
+    if(include_pence){
+        output_string = "£" + sliced_pounds_string + "." + pence_string;
+    }
+    else {
+        output_string = "£" + sliced_pounds_string;
+    }
+
     return output_string;
 }
 

@@ -16,22 +16,22 @@ QUnit.test( "1270 year, £1000 input currency_formula test", function( assert ) 
 
 QUnit.test("Locale String generator", function (assert) {
 
-    assert.equal(number_to_pounds_string(100000), "£100,000.00", "Passed for 100000");
-    assert.equal(number_to_pounds_string(999999), "£999,999.00", "Passed for 999999");
+    assert.equal(number_to_pounds_string(100000,true), "£100,000.00", "Passed for 100000");
+    assert.equal(number_to_pounds_string(999999,true), "£999,999.00", "Passed for 999999");
 
-    assert.equal(number_to_pounds_string(10000), "£10,000.00", "Passed for 10000");
-    assert.equal(number_to_pounds_string(99999), "£99,999.00", "Passed for 99999");
+    assert.equal(number_to_pounds_string(10000,true), "£10,000.00", "Passed for 10000");
+    assert.equal(number_to_pounds_string(99999,true), "£99,999.00", "Passed for 99999");
 
-    assert.equal(number_to_pounds_string(1000), "£1,000.00", "Passed for 1000");
-    assert.equal(number_to_pounds_string(9999), "£9,999.00", "Passed for 9999");
+    assert.equal(number_to_pounds_string(1000,true), "£1,000.00", "Passed for 1000");
+    assert.equal(number_to_pounds_string(9999,true), "£9,999.00", "Passed for 9999");
 
-    assert.equal(number_to_pounds_string(1), "£1.00", "Passed for 1");
-    assert.equal(number_to_pounds_string(1.1), "£1.10", "Passed for 1.1");
-    assert.equal(number_to_pounds_string(1.20), "£1.20", "Passed for 1.20");
+    assert.equal(number_to_pounds_string(1,true), "£1.00", "Passed for 1");
+    assert.equal(number_to_pounds_string(1.1,true), "£1.10", "Passed for 1.1");
+    assert.equal(number_to_pounds_string(1.20,true), "£1.20", "Passed for 1.20");
 
-    assert.equal(number_to_pounds_string(0), "£0.00", "Passed for 0");
-    assert.equal(number_to_pounds_string(0.1),"£0.10", "Passed for 0.1");
-    assert.equal(number_to_pounds_string(0.01),"£0.01", "Passed for 0.01");
+    assert.equal(number_to_pounds_string(0,true), "£0.00", "Passed for 0");
+    assert.equal(number_to_pounds_string(0.1,true),"£0.10", "Passed for 0.1");
+    assert.equal(number_to_pounds_string(0.01,true),"£0.01", "Passed for 0.01");
 
 
 });
@@ -46,6 +46,6 @@ QUnit.test("Buying power values", function (assert) {
      assert.ok(test_data.wheat === 6250, "Wheat test passed.");
      assert.ok(test_data.wage === 100000, "Wage test passed.");
      assert.equal(test_data.money, 729826.40, "Money test passed.");
-     assert.equal(test_data.bp_string, "£1000", "Buying power string passed.");
+     assert.equal(test_data.bp_string, "£1,000", "Buying power string passed.");
 
 });
