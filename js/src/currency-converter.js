@@ -13,6 +13,12 @@ $(function () {
         }
 
     });
+
+    $("#currency-year").change(function () {
+        change_fieldset_text();
+        show_inputs_relevant_to_selected_year();
+
+    });
 });
 
 function show_inputs_relevant_to_selected_year() {
@@ -68,12 +74,6 @@ function show_inputs_relevant_to_selected_year() {
     }
 }
 
-$("#currency-year").change(function () {
-    change_fieldset_text();
-    show_inputs_relevant_to_selected_year();
-
-});
-
 function change_fieldset_text() {
     $('#currency-legend').text("Enter currency to show its purchasing power in " +  get_currency("#currency-year"));
     $('#currency-submit').val("Show purchasing power in " +  get_currency("#currency-year"));
@@ -85,7 +85,6 @@ function build_century_intro_paragraph(intro, century) {
 }
 
 function currency_output() {
-    alert(wp_child_theme.templateURL);
     var user_inputs = get_user_inputs();
     var currency_formula_return_values = currency_formula();
 

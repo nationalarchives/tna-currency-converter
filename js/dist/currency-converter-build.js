@@ -800,6 +800,12 @@ $(function () {
         }
 
     });
+
+    $("#currency-year").change(function () {
+        change_fieldset_text();
+        show_inputs_relevant_to_selected_year();
+
+    });
 });
 
 function show_inputs_relevant_to_selected_year() {
@@ -854,12 +860,6 @@ function show_inputs_relevant_to_selected_year() {
         });
     }
 }
-
-$("#currency-year").change(function () {
-    change_fieldset_text();
-    show_inputs_relevant_to_selected_year();
-
-});
 
 function change_fieldset_text() {
     $('#currency-legend').text("Enter currency to show its purchasing power in " +  get_currency("#currency-year"));
