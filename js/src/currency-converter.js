@@ -1,5 +1,18 @@
 $(function () {
     show_inputs_relevant_to_selected_year();
+
+    $("#currency-form").submit(function (event) {
+        event.preventDefault();
+
+        if (check_validation()) {
+            if (window.location.hash == '#currency-result') {
+                window.location.hash = ''; // Reset so that browser will auto-scroll down again.
+            }
+            window.location.hash = '#currency-result';
+            currency_output();
+        }
+
+    });
 });
 
 function show_inputs_relevant_to_selected_year() {
@@ -72,6 +85,7 @@ function build_century_intro_paragraph(intro, century) {
 }
 
 function currency_output() {
+    alert(wp_child_theme.templateURL);
     var user_inputs = get_user_inputs();
     var currency_formula_return_values = currency_formula();
 
@@ -109,25 +123,10 @@ function build_currency_output_html(string, value, unit, img) {
     return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
-$("#currency-form").submit(function (event) {
-    event.preventDefault();
-
-    if (check_validation()) {
-        if (window.location.hash == '#currency-result') {
-            window.location.hash = ''; // Reset so that browser will auto-scroll down again.
-        }
-        window.location.hash = '#currency-result';
-        currency_output();
-    }
-
-});
-
-
 function set_validation_message(message) {
     $("#currency-validation").text(message);
     $("#currency-validation").show();
 }
-
 
 function check_validation() {
 

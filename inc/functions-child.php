@@ -28,6 +28,7 @@ function tna_child_scripts() {
             EDD_VERSION, true );
         wp_register_script( 'equal-heights-var', get_template_directory_uri() . '/js/equalHeights.js', array(),
             EDD_VERSION, true );
+
         wp_enqueue_script( 'equal-heights' );
         wp_enqueue_script( 'equal-heights-var' );
     }
@@ -36,4 +37,10 @@ function tna_child_scripts() {
     wp_enqueue_script( 'webtrends' );
     wp_enqueue_script( 'tna-base-min' );
     wp_enqueue_script( 'tna-base-flickr' );
+
+    if(is_page_template( 'page-home.php' )) {
+	    wp_register_script( 'currency-converter-build-min', get_stylesheet_directory_uri() . '/js/dist/currency-converter-build.min.js',array(),'',false);
+	    wp_enqueue_script( 'currency-converter-build-min' );
+	    wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array("templateURL" => get_stylesheet_directory_uri()));
+    }
 }

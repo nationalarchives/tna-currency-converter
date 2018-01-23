@@ -51,7 +51,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: ['css/sass/*.scss','js/src/currency-converter.js'],
-                tasks: ['sass', 'cssmin', 'eslint','concat','uglify','qunit']
+                tasks: ['sass', 'cssmin', 'eslint','concat','uglify','qunit', 'watch']
             }
         }
     });
