@@ -881,22 +881,22 @@ function currency_output() {
     if (user_inputs.century != "21st") {
         century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
     }
-
+    var HTML_img_string = wp_child_theme.templateURL + "/img/";
     var HTML_output =
 
         "<div class='currency' id='currency-result'><h3 class='currency-result-header'>In 2017, this is worth approximately: </h3>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
 
         "<h3 class='currency-result-header'>In " + user_inputs.year + ", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
 
-        build_currency_output_html("Horses", currency_formula_return_values.horses, "", "./img/horse.png") +
+        build_currency_output_html("Horses", currency_formula_return_values.horses, "", HTML_img_string+"horse.png") +
 
-        build_currency_output_html("Cows", currency_formula_return_values.cows, "", "./img/cow.png") +
+        build_currency_output_html("Cows", currency_formula_return_values.cows, "", HTML_img_string+"cow.png") +
 
-        build_currency_output_html("Wool", currency_formula_return_values.wool, "stones", "./img/ewe.png") +
+        build_currency_output_html("Wool", currency_formula_return_values.wool, "stones", HTML_img_string+"ewe.png") +
 
-        build_currency_output_html("Wheat", currency_formula_return_values.wheat, "quarters", "./img/wheat.png") +
+        build_currency_output_html("Wheat", currency_formula_return_values.wheat, "quarters", HTML_img_string+"wheat.png") +
 
-        build_currency_output_html("Wages", currency_formula_return_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
+        build_currency_output_html("Wages", currency_formula_return_values.wage, "days (skilled tradesman)", HTML_img_string+"coinage.png") +
 
         century_preview +
         "</div>";
