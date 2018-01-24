@@ -100,14 +100,11 @@ get_header(); ?>
                                 <h2>Disclaimer</h2>
                             </div>
                             <div class="entry-content">
-                                <p>The data used to provide the calculations for the currency converter has been
-                                    collated
-                                    from original documents and official statistics, and the survey of material used has
-                                    been as comprehensive as possible. However, the results of the calculations are
-                                    intended
-                                    to be a general guide to historic values, rather than a categorical statement of
-                                    fact.
-                                    Icons made by Freepik from www.flaticon.com</p>
+	                            <?php
+	                            while ( have_posts() ) : the_post();
+		                            the_content();
+	                            endwhile;
+	                            ?>
                             </div>
                         </article>
                     </div>

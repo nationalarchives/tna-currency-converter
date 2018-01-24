@@ -79,9 +79,9 @@ function change_fieldset_text() {
     $('#currency-submit').val("Show purchasing power in " +  get_currency("#currency-year"));
 }
 
-function build_century_intro_paragraph(intro, century) {
+function build_century_intro_paragraph(intro, century, url) {
     return "<div id='currency-century-intro'>" + "<p>" + intro + "</p>" +
-        "<p id='currency-century-intro-read-more'><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></div>";
+        "<p id='currency-century-intro-read-more'><a href='" + url + "'>Read more about the " + century + " century. </a></p></div>";
 }
 
 function currency_output() {
@@ -90,9 +90,29 @@ function currency_output() {
 
     var century_preview = "";
     var converted_money_string = number_to_pounds_string(currency_formula_return_values.money, true);
+    var excerpt = "";
+    var url = "";
 
     if (user_inputs.century != "21st") {
-        century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
+
+        $.map(wp_child_theme.excerptArray, function (value, index) {
+
+            $.map(value, function (value, index) {
+                if(index == user_inputs.century){
+                   excerpt = value;
+                }
+            });
+        });
+
+        $.map(wp_child_theme.urlArray, function (value, index) {
+            $.map(value, function (value, index) {
+                if(index == user_inputs.century){
+                    url = value;
+                }
+            });
+
+        });
+        century_preview = build_century_intro_paragraph(excerpt, user_inputs.century, url);
     }
     var HTML_img_string = wp_child_theme.templateURL + "/img/";
     var HTML_output =

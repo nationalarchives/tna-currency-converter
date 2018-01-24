@@ -41,6 +41,25 @@ function tna_child_scripts() {
     if(is_page_template( 'page-home.php' )) {
 	    wp_register_script( 'currency-converter-build-min', get_stylesheet_directory_uri() . '/js/dist/currency-converter-build.min.js',array(),'',false);
 	    wp_enqueue_script( 'currency-converter-build-min' );
-	    wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array("templateURL" => get_stylesheet_directory_uri()));
+
+
+	    $args = array (
+		   'exclude' => get_option( 'page_on_front' )
+	    );
+
+	    $excerpts = array();
+		$urls = array();
+	    foreach( get_pages($args) as $page ) {
+	    	array_push($excerpts,array(get_post_meta($page -> ID, 'currency_century', true) => $page->post_excerpt));
+	    	array_push($urls,array(get_post_meta($page -> ID, 'currency_century', true) => get_page_link($page->ID)));
+	    }
+
+	    var_dump($excerpts);
+
+	    wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array("templateURL" => get_stylesheet_directory_uri(), "excerptArray" => $excerpts, "urlArray" => $urls));
     }
+}
+
+function add_excerpts_to_pages() {
+	add_post_type_support( 'page', 'excerpt' );
 }

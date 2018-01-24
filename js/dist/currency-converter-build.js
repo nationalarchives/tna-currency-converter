@@ -772,16 +772,6 @@ var conversion_data = {
         "wage_price": 100,
         "wheat_price": 1.88,
         "century": "21st"
-    },
-    "century_intros": {
-        "13th": "Most peasants in the thirteenth century lived below a reasonable subsistence level and this standard declined during the century.",
-        "14th": "Between 1315 and 1322, the Great Famine, brought about by unusually prolonged periods of heavy rainfall and cold spells, killed 10-15% of the population.",
-        "15th": "A hierarchy of consumption patterns mirrored the social hierarchy. The poor bought locally and in small quantities, while the better-off ventured to small towns and provincial centres.",
-        "16th": "The sixteenth century was a period of population rise and price inflation. The social pressure on those with wealth to display it was considerable.",
-        "17th": "In the middle of the seventeenth century, the period of price and population rises ended and the country entered a period of stability in both, that was to last until the mid-eighteenth century.",
-        "18th": "One of the immediate and most important effects of the Act of Union in 1707 was the creation of a united free trade area managed from London. ",
-        "19th": "The period from the late 18th century to the mid-Victorian years witnessed a major shake up and change in both the economy and society.",
-        "20th": "The twentieth century saw the most rapid and dramatic social and economic change of any century."
     }
 };
 
@@ -866,9 +856,9 @@ function change_fieldset_text() {
     $('#currency-submit').val("Show purchasing power in " +  get_currency("#currency-year"));
 }
 
-function build_century_intro_paragraph(intro, century) {
+function build_century_intro_paragraph(intro, century, url) {
     return "<div id='currency-century-intro'>" + "<p>" + intro + "</p>" +
-        "<p id='currency-century-intro-read-more'><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></div>";
+        "<p id='currency-century-intro-read-more'><a href='" + url + "'>Read more about the " + century + " century. </a></p></div>";
 }
 
 function currency_output() {
@@ -877,9 +867,29 @@ function currency_output() {
 
     var century_preview = "";
     var converted_money_string = number_to_pounds_string(currency_formula_return_values.money, true);
+    var excerpt = "";
+    var url = "";
 
     if (user_inputs.century != "21st") {
-        century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
+
+        $.map(wp_child_theme.excerptArray, function (value, index) {
+
+            $.map(value, function (value, index) {
+                if(index == user_inputs.century){
+                   excerpt = value;
+                }
+            });
+        });
+
+        $.map(wp_child_theme.urlArray, function (value, index) {
+            $.map(value, function (value, index) {
+                if(index == user_inputs.century){
+                    url = value;
+                }
+            });
+
+        });
+        century_preview = build_century_intro_paragraph(excerpt, user_inputs.century, url);
     }
     var HTML_img_string = wp_child_theme.templateURL + "/img/";
     var HTML_output =
