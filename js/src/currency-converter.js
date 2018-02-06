@@ -1,7 +1,7 @@
 $(function () {
     show_inputs_relevant_to_selected_year();
 
-    $("#currency-form").submit(function (event) {
+    $("#currency-form").on('submit', function (event) {
         event.preventDefault();
 
         if (check_validation()) {
@@ -14,7 +14,7 @@ $(function () {
 
     });
 
-    $("#currency-year").change(function () {
+    $("#currency-year").on('change', function () {
         change_fieldset_text();
         show_inputs_relevant_to_selected_year();
 

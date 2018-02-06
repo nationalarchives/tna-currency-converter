@@ -778,7 +778,7 @@ var conversion_data = {
 $(function () {
     show_inputs_relevant_to_selected_year();
 
-    $("#currency-form").submit(function (event) {
+    $("#currency-form").on('submit', function (event) {
         event.preventDefault();
 
         if (check_validation()) {
@@ -791,7 +791,7 @@ $(function () {
 
     });
 
-    $("#currency-year").change(function () {
+    $("#currency-year").on('change', function () {
         change_fieldset_text();
         show_inputs_relevant_to_selected_year();
 
@@ -889,6 +889,7 @@ function currency_output() {
             });
 
         });
+
         century_preview = build_century_intro_paragraph(excerpt, user_inputs.century, url);
     }
     var HTML_img_string = wp_child_theme.templateURL + "/img/";
