@@ -54,7 +54,7 @@ get_header(); ?>
                                             <div class="form-row">
                                                 <label for="currency-pounds">Pounds</label>
                                                 <input type="number" id="currency-pounds" name="currency-pounds"
-                                                       value="0"
+                                                       value="0" placeholder="0"
                                                        required>
                                             </div>
                                             <div class="form-row older-currencies" id="currency-shillings-row">
@@ -69,12 +69,12 @@ get_header(); ?>
                                             <div class="form-row older-currencies" id="currency-old-pence-row">
                                                 <label >Pence (d)</label>
                                                 <input type="number" name="omtn-old-pence" id="currency-old-pence"
-                                                       min="0" max="11" value="0">
+                                                       min="0" max="11" value="0" placeholder="0">
                                             </div>
                                             <div class="form-row newer-currencies" id="currency-new-pence-row">
                                                 <label >Pence</label>
                                                 <input type="number" name="currency-new-pence" id="currency-new-pence"
-                                                       min="0" max="99" value="0">
+                                                       min="0" max="99" value="0" placeholder="0">
                                             </div>
                                             <div class="form-row">
                                                 <p id="currency-validation" class="currency"></p>
