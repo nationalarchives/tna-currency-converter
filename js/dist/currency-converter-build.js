@@ -1071,11 +1071,11 @@ function currency_formula(user_inputs) {
     }
 
     return {
-        horses: Math.floor(buying_power_money_value / get_horse_price(user_inputs.year)),
-        cows: Math.floor(buying_power_money_value / get_cow_price(user_inputs.year)),
-        wool: Math.floor(buying_power_money_value / get_wool_price(user_inputs.year)),
-        wheat: Math.floor(buying_power_money_value / get_wheat_price(user_inputs.year)),
-        wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
+        horses: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'horse_price')),
+        cows: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'cow_price')),
+        wool: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wool_price')),
+        wheat: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wheat_price')),
+        wage: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wage_price')),
         money: currency_money_to_modern_value,
         bp_string: bp_string
     };
@@ -1117,28 +1117,8 @@ function number_to_pounds_string(number, include_pence) {
     return output_string;
 }
 
-function get_inflation_rate(year) {
-    return conversion_data[year].inflation;
-}
-
-function get_horse_price(year) {
-    return conversion_data[year].horse_price;
-}
-
-function get_cow_price(year) {
-    return conversion_data[year].cow_price;
-}
-
-function get_wool_price(year) {
-    return conversion_data[year].wool_price;
-}
-
-function get_wheat_price(year) {
-    return conversion_data[year].wheat_price;
-}
-
-function get_wage_price(year) {
-    return conversion_data[year].wage_price;
+function get_price(year, price) {
+    return conversion_data[year][price];
 }
 
 function get_century(year) {
@@ -1193,7 +1173,7 @@ function get_user_inputs() {
         shillings: get_currency("#currency-shillings"),
         old_pence: get_currency("#currency-old-pence"),
         new_pence: get_currency("#currency-new-pence"),
-        inflation: get_inflation_rate(get_currency("#currency-year")),
+        inflation: get_price(get_currency("#currency-year"), 'inflation'),
         century: get_century(get_currency("#currency-year"))
     };
 }
