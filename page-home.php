@@ -68,8 +68,13 @@ get_header(); ?>
                                             </div>
                                             <div class="form-row older-currencies" id="currency-old-pence-row">
                                                 <label >Pence (d)</label>
-                                                <input type="number" name="omtn-old-pence" id="currency-old-pence"
-                                                       min="0" max="11" value="0" placeholder="0">
+                                                <select id="currency-old-pence">
+                                                    <?php
+                                                    for( $i = 0; $i < 12; $i++){
+	                                                    echo "<option value='" . $i . "'>" . $i . "</option>";
+                                                    }
+                                                    ?>
+                                                </select>
                                             </div>
                                             <div class="form-row newer-currencies" id="currency-new-pence-row">
                                                 <label >Pence</label>
