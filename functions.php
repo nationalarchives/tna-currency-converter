@@ -10,10 +10,8 @@ $environment = identifyEnvironmentFromIP( $_SERVER['SERVER_ADDR'], $_SERVER['REM
 setThemeGlobals( $environment );
 
 // add_action
-add_action( 'wp_enqueue_scripts', 'dequeue_parent_style', 9999 );
-add_action( 'wp_head', 'dequeue_parent_style', 9999 );
-add_action( 'wp_enqueue_scripts', 'tna_child_styles' );
-add_action( 'wp_enqueue_scripts', 'long_form_assets' );
+add_action( 'wp_enqueue_scripts', 'tna_child_styles', 999 );
+add_action( 'wp_print_scripts', 'dequeue_parent_script', 100 );
 add_action('wp_enqueue_scripts','tna_child_scripts');
 add_action( 'init', 'add_excerpts_to_pages' );
 add_action( 'init', 'currency_metaboxes' );
