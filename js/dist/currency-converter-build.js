@@ -782,11 +782,15 @@ $(function () {
         event.preventDefault();
 
         if (check_validation()) {
+            hide_validation_error_div();
             if (window.location.hash == '#currency-result') {
                 window.location.hash = ''; // Reset so that browser will auto-scroll down again.
             }
             window.location.hash = '#currency-result';
             currency_output();
+        }
+        else {
+            show_validation_error_div();
         }
 
     });
@@ -798,6 +802,16 @@ $(function () {
     });
 });
 
+function show_validation_error_div() {
+    window.location.hash = 'currency-error'
+    $("#currency-error").show();
+}
+
+function hide_validation_error_div() {
+    window.location.hash = '';
+    $("#currency-error").hide();
+}
+
 function show_inputs_relevant_to_selected_year() {
     if (get_currency("#currency-year") > 1970) {
         /* Hide old UK currency inputs & show modern */
@@ -805,6 +819,7 @@ function show_inputs_relevant_to_selected_year() {
         $(".newer-currencies").each(function () {
             $(this).show();
             $(this).find("input").attr('required');
+            $(this).find("input").attr('aria-required');
 
             var label_for_value = $(this).find("input").attr("name");
             $(this).find("label").attr('for', label_for_value);
@@ -815,9 +830,12 @@ function show_inputs_relevant_to_selected_year() {
 
             if ($(this).find("input").length > 0) {
                 $(this).find("input").removeAttr('required');
+                $(this).find("input").removeAttr('aria-required');
+
             }
             else {
                 $(this).find("select").removeAttr('required');
+                $(this).find("select").removeAttr('aria-required');
             }
 
             $(this).find("label").removeAttr('for');
@@ -829,6 +847,7 @@ function show_inputs_relevant_to_selected_year() {
         $(".newer-currencies").each(function () {
             $(this).hide();
             $(this).find("input").removeAttr('required');
+            $(this).find("input").removeAttr('aria-required');
             $(this).find("label").removeAttr('for');
         });
 
@@ -838,11 +857,13 @@ function show_inputs_relevant_to_selected_year() {
 
             if ($(this).find("input").length > 0) {
                 $(this).find("input").attr('required', true);
+                $(this).find("input").attr('aria-required', true);
                 label_for_value = $(this).find("input").attr("name");
                 $(this).find("label").attr('for', label_for_value);
             }
             else {
                 $(this).find("select").attr('required', true);
+                $(this).find("select").attr('aria-required', true);
                 label_for_value = $(this).find("select").attr("name");
                 $(this).find("label").attr('for', label_for_value);
             }
@@ -920,25 +941,38 @@ function build_currency_output_html(string, value, unit, img) {
     return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
-function set_validation_message(message) {
-    $("#currency-validation").text(message);
-    $("#currency-validation").show();
+
+
+function hide_validation_messages(){
+    hide_validation_error_div();
+    $(".form-error").remove();
+    $("input").removeClass("form-warning");
+    $("select").removeClass("form-warning");
+}
+
+function set_validation_message(message, id) {
+    show_validation_error_div();
+    $("#currency-"+id).addClass("form-warning");
+    $("#currency-"+id).after(function () {
+        return "<span class='form-error form-hint'>" + message +"</span>";
+    });
 }
 
 function check_validation() {
-
+    hide_validation_messages();
     var year = get_currency("#currency-year");
     var pounds = get_currency("#currency-pounds");
     var shillings = get_currency("#currency-shillings");
     var old_pence = get_currency("#currency-old-pence");
     var new_pence = get_currency("#currency-new-pence");
+    var return_boolean = true;
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
 
         if (year % 10 !== 0) {
-            set_validation_message("Please enter a year ending in 0. For example 1270.");
-            return false;
+            set_validation_message("Please enter a year ending in 0. For example 1270.", "year");
+            return_boolean = false;
         }
 
     }
@@ -949,8 +983,8 @@ function check_validation() {
         if (year % 5 !== 0) {
 
             if (year !== 2017) {
-                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
-                return false;
+                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.", "year");
+                return_boolean = false;
             }
 
         }
@@ -958,47 +992,48 @@ function check_validation() {
 
 
     if (year < 1270) {
-        set_validation_message("Please enter a year above 1270.");
-        return false;
+        set_validation_message("Please enter a year above 1270.", "year");
+        return_boolean = false;
     }
 
     if (pounds < 0) {
-        set_validation_message("Please enter a positive whole number into the pounds field.");
-        return false;
+        set_validation_message("Please enter a positive whole number into the pounds field.", "pounds");
+        return_boolean = false;
     }
 
     if (year <= 1970) {
         if (shillings < 0 || shillings > 19) {
-            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
-            return false;
+            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ","shillings");
+            return_boolean = false;
         }
 
         if (old_pence < 0 || old_pence > 11) {
-            set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
-            return false;
+            set_validation_message("Please enter a whole between 0 and 11 into the pence field.", "old-pence");
+            return_boolean = false;
         }
 
         if (pounds === 0 && old_pence === 0 && shillings === 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.");
-            return false;
+            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
+            set_validation_message("Please enter a number above 0 into at least one field.", "old-pence");
+            set_validation_message("Please enter a number above 0 into at least one field.", "shillings");
+            return_boolean = false;
         }
 
     }
 
     if (year > 1970) {
         if (new_pence < 0 || new_pence > 99) {
-            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
-            return false;
+            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.", "new-pence");
+            return_boolean = false;
         }
         if (pounds === 0 && new_pence === 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.");
-            return false;
+            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
+            return_boolean = false;
         }
 
     }
 
-    $("#currency-validation").hide();
-    return true;
+    return return_boolean;
 }
 
 
