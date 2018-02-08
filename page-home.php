@@ -42,6 +42,7 @@ get_header(); ?>
                                                 <label for="currency-year">Year of currency</label>
                                                 <select id="currency-year" name="currency-year">
                                                     <?php
+                                                    echo '<option value="" aria-label="Please select a year.">Please select a year</option>';
                                                     for ($i = 1270; $i <= 1900; $i = $i + 10) {
                                                         echo "<option value='" . $i . "'>" . $i . "</option>";
                                                     } ?>
