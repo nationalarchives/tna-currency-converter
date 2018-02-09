@@ -968,6 +968,7 @@ function check_validation() {
     var return_boolean = true;
 
     if(isNaN(year)){
+        // As the aria-label has no "value" attribute, it will be returned as NaN, so we must account for that.
         set_validation_message("Please select a value for year.", "year");
         return_boolean = false;
     }
