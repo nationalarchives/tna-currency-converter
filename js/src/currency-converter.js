@@ -1,38 +1,76 @@
 $(function () {
     show_inputs_relevant_to_selected_year();
+
+    $("#currency-form").on('submit', function (event) {
+        event.preventDefault();
+
+        if (check_validation()) {
+            hide_validation_error_div();
+            if (window.location.hash == '#currency-result') {
+                window.location.hash = ''; // Reset so that browser will auto-scroll down again.
+            }
+            window.location.hash = '#currency-result';
+            currency_output();
+        }
+        else {
+            show_validation_error_div();
+        }
+
+    });
+
+    $("#currency-year").on('change', function () {
+        change_fieldset_text();
+        show_inputs_relevant_to_selected_year();
+
+    });
 });
 
+function show_validation_error_div() {
+    window.location.hash = 'currency-h2'
+    $("#currency-error").show();
+}
+
+function hide_validation_error_div() {
+    window.location.hash = '';
+    $("#currency-error").hide();
+}
+
 function show_inputs_relevant_to_selected_year() {
-    if ( get_currency("#currency-year") > 1970) {
+    if (get_currency("#currency-year") > 1970) {
         /* Hide old UK currency inputs & show modern */
 
         $(".newer-currencies").each(function () {
             $(this).show();
-            $(this).find("input").attr('required', true);
+            $(this).find("input").attr('required');
+            $(this).find("input").attr('aria-required');
 
             var label_for_value = $(this).find("input").attr("name");
-            $(this).find("label").attr('for',label_for_value);
+            $(this).find("label").attr('for', label_for_value);
         });
 
         $(".older-currencies").each(function () {
             $(this).hide();
 
-            if($(this).find("input").length > 0) {
+            if ($(this).find("input").length > 0) {
                 $(this).find("input").removeAttr('required');
+                $(this).find("input").removeAttr('aria-required');
+
             }
             else {
                 $(this).find("select").removeAttr('required');
+                $(this).find("select").removeAttr('aria-required');
             }
 
             $(this).find("label").removeAttr('for');
         });
     }
-    else if ( get_currency("#currency-year") <= 1970) {
+    else if (get_currency("#currency-year") <= 1970) {
         /* Hide modern UK currency inputs & show old */
 
         $(".newer-currencies").each(function () {
             $(this).hide();
             $(this).find("input").removeAttr('required');
+            $(this).find("input").removeAttr('aria-required');
             $(this).find("label").removeAttr('for');
         });
 
@@ -40,35 +78,40 @@ function show_inputs_relevant_to_selected_year() {
             $(this).show();
             var label_for_value;
 
-            if($(this).find("input").length > 0) {
+            if ($(this).find("input").length > 0) {
                 $(this).find("input").attr('required', true);
+                $(this).find("input").attr('aria-required', true);
                 label_for_value = $(this).find("input").attr("name");
-                $(this).find("label").attr('for',label_for_value);
+                $(this).find("label").attr('for', label_for_value);
             }
             else {
-                $(this).find("select").attr('required',true);
+                $(this).find("select").attr('required', true);
+                $(this).find("select").attr('aria-required', true);
                 label_for_value = $(this).find("select").attr("name");
-                $(this).find("label").attr('for',label_for_value);
+                $(this).find("label").attr('for', label_for_value);
             }
 
         });
     }
 }
 
-$("#currency-year").change(function () {
-    change_fieldset_text();
-    show_inputs_relevant_to_selected_year();
-
-});
-
 function change_fieldset_text() {
-    $('#currency-legend').text("Enter currency to show its purchasing power in " +  get_currency("#currency-year"));
-    $('#currency-submit').val("Show purchasing power in " +  get_currency("#currency-year"));
+
+    if(isNaN(get_currency("#currency-year"))){
+        $('#currency-legend').text("Enter currency to show its purchasing power");
+        $('#currency-submit').val("Show purchasing power");
+    }
+    else {
+        $('#currency-legend').text("Enter currency to show its purchasing power in " + get_currency("#currency-year"));
+        $('#currency-submit').val("Show purchasing power in " + get_currency("#currency-year"));
+    }
+
+
 }
 
-function build_century_intro_paragraph(intro, century) {
+function build_century_intro_paragraph(intro, century, url) {
     return "<div id='currency-century-intro'>" + "<p>" + intro + "</p>" +
-        "<p id='currency-century-intro-read-more'><a href='./" + century + "-century.php'>Read more about the " + century + " century. </a></p></div>";
+        "<p id='currency-century-intro-read-more'><a href='" + url + "'>Read more about the " + century + " century. </a></p></div>";
 }
 
 function currency_output() {
@@ -76,27 +119,48 @@ function currency_output() {
     var currency_formula_return_values = currency_formula();
 
     var century_preview = "";
-    var converted_money_string = number_to_pounds_string(currency_formula_return_values.money);
+    var converted_money_string = number_to_pounds_string(currency_formula_return_values.money, true);
+    var excerpt = "";
+    var url = "";
 
     if (user_inputs.century != "21st") {
-        century_preview = build_century_intro_paragraph(conversion_data.century_intros[user_inputs.century], user_inputs.century);
-    }
 
+        $.map(wp_child_theme.excerptArray, function (value, index) {
+
+            $.map(value, function (value, index) {
+                if (index == user_inputs.century) {
+                    excerpt = value;
+                }
+            });
+        });
+
+        $.map(wp_child_theme.urlArray, function (value, index) {
+            $.map(value, function (value, index) {
+                if (index == user_inputs.century) {
+                    url = value;
+                }
+            });
+
+        });
+
+        century_preview = build_century_intro_paragraph(excerpt, user_inputs.century, url);
+    }
+    var HTML_img_string = wp_child_theme.templateURL + "/img/";
     var HTML_output =
 
         "<div class='currency' id='currency-result'><h3 class='currency-result-header'>In 2017, this is worth approximately: </h3>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
 
         "<h3 class='currency-result-header'>In " + user_inputs.year + ", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
 
-        build_currency_output_html("Horses", currency_formula_return_values.horses, "", "./img/horse.png") +
+        build_currency_output_html("Horses", currency_formula_return_values.horses, "", HTML_img_string + "horse.png") +
 
-        build_currency_output_html("Cows", currency_formula_return_values.cows, "", "./img/cow.png") +
+        build_currency_output_html("Cows", currency_formula_return_values.cows, "", HTML_img_string + "cow.png") +
 
-        build_currency_output_html("Wool", currency_formula_return_values.wool, "stones", "./img/ewe.png") +
+        build_currency_output_html("Wool", currency_formula_return_values.wool, "stones", HTML_img_string + "ewe.png") +
 
-        build_currency_output_html("Wheat", currency_formula_return_values.wheat, "quarters", "./img/wheat.png") +
+        build_currency_output_html("Wheat", currency_formula_return_values.wheat, "quarters", HTML_img_string + "wheat.png") +
 
-        build_currency_output_html("Wages", currency_formula_return_values.wage, "days (skilled tradesman)", "./img/coinage.png") +
+        build_currency_output_html("Wages", currency_formula_return_values.wage, "days (skilled tradesman)", HTML_img_string + "coinage.png") +
 
         century_preview +
         "</div>";
@@ -109,40 +173,44 @@ function build_currency_output_html(string, value, unit, img) {
     return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
-$("#currency-form").submit(function (event) {
-    event.preventDefault();
-
-    if (check_validation()) {
-        if (window.location.hash == '#currency-result') {
-            window.location.hash = ''; // Reset so that browser will auto-scroll down again.
-        }
-        window.location.hash = '#currency-result';
-        currency_output();
-    }
-
-});
 
 
-function set_validation_message(message) {
-    $("#currency-validation").text(message);
-    $("#currency-validation").show();
+function hide_validation_messages(){
+    hide_validation_error_div();
+    $(".form-error").remove();
+    $("input").removeClass("form-warning");
+    $("select").removeClass("form-warning");
 }
 
+function set_validation_message(message, id) {
+    show_validation_error_div();
+    $("#currency-"+id).addClass("form-warning");
+    $("#currency-"+id).after(function () {
+        return "<span class='form-error form-hint'>" + message +"</span>";
+    });
+}
 
 function check_validation() {
+    hide_validation_messages();
+    var year = get_currency("#currency-year");
+    var pounds = get_currency("#currency-pounds");
+    var shillings = get_currency("#currency-shillings");
+    var old_pence = get_currency("#currency-old-pence");
+    var new_pence = get_currency("#currency-new-pence");
+    var return_boolean = true;
 
-    var year =  get_currency("#currency-year");
-    var pounds =  get_currency("#currency-pounds");
-    var shillings =  get_currency("#currency-shillings")
-    var old_pence = get_currency("#currency-old-pence")
-    var new_pence =  get_currency("#currency-new-pence")
+    if(isNaN(year)){
+        // As the aria-label has no "value" attribute, it will be returned as NaN, so we must account for that.
+        set_validation_message("Please select a value for year.", "year");
+        return_boolean = false;
+    }
 
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
 
-        if (year % 10 != 0) {
-            set_validation_message("Please enter a year ending in 0. For example 1270.");
-            return false;
+        if (year % 10 !== 0) {
+            set_validation_message("Please enter a year ending in 0. For example 1270.", "year");
+            return_boolean = false;
         }
 
     }
@@ -150,11 +218,11 @@ function check_validation() {
     //Check if divisible by 5 - year must be 1975 or 1980 and not 1971 or 1979 etc. (Unless it's 2017)
     else if (year > 1900) {
 
-        if (year % 5 != 0) {
+        if (year % 5 !== 0) {
 
-            if (year != 2017) {
-                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.");
-                return false;
+            if (year !== 2017) {
+                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.", "year");
+                return_boolean = false;
             }
 
         }
@@ -162,47 +230,48 @@ function check_validation() {
 
 
     if (year < 1270) {
-        set_validation_message("Please enter a year above 1270.");
-        return false;
+        set_validation_message("Please enter a year above 1270.", "year");
+        return_boolean = false;
     }
 
     if (pounds < 0) {
-        set_validation_message("Please enter a positive whole number into the pounds field.");
-        return false;
+        set_validation_message("Please enter a positive whole number into the pounds field.", "pounds");
+        return_boolean = false;
     }
 
     if (year <= 1970) {
         if (shillings < 0 || shillings > 19) {
-            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ");
-            return false;
+            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ","shillings");
+            return_boolean = false;
         }
 
         if (old_pence < 0 || old_pence > 11) {
-            set_validation_message("Please enter a whole between 0 and 11 into the pence field.");
-            return false;
+            set_validation_message("Please enter a whole between 0 and 11 into the pence field.", "old-pence");
+            return_boolean = false;
         }
 
-        if (pounds == 0 && old_pence == 0 && shillings == 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.");
-            return false;
+        if (pounds === 0 && old_pence === 0 && shillings === 0) {
+            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
+            set_validation_message("Please enter a number above 0 into at least one field.", "old-pence");
+            set_validation_message("Please enter a number above 0 into at least one field.", "shillings");
+            return_boolean = false;
         }
 
     }
 
     if (year > 1970) {
         if (new_pence < 0 || new_pence > 99) {
-            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.");
-            return false;
+            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.", "new-pence");
+            return_boolean = false;
         }
-        if (pounds == 0 && new_pence == 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.");
-            return false;
+        if (pounds === 0 && new_pence === 0) {
+            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
+            return_boolean = false;
         }
 
     }
 
-    $("#currency-validation").hide();
-    return true;
+    return return_boolean;
 }
 
 
@@ -218,7 +287,7 @@ function old_money_to_new_formula(user_inputs) {
     }
     else if (user_inputs.year > 1970) {
 
-        if (user_inputs.year != 2017) {
+        if (user_inputs.year !== 2017) {
             /*
             If the users input year isn't 2017, we need to add inflation to bring it up to 2005's value.
             Then in the second if statement, we add 2017's 37% inflation to bring the 2005 money value to 2017's value.
@@ -232,7 +301,7 @@ function old_money_to_new_formula(user_inputs) {
 
     }
 
-    if (user_inputs.year != 2017) {
+    if (user_inputs.year !== 2017) {
         mathResult = mathResult * conversion_data[2017].inflation;
     }
 
@@ -246,14 +315,13 @@ function currency_formula(user_inputs) {
 
     var buying_power_money_value;
 
-
     var bp_string = "";
 
     if (user_inputs.year < 1975) {
         buying_power_money_value = user_inputs.pounds + (user_inputs.shillings / 20) + (user_inputs.old_pence / 240);
 
         if (user_inputs.pounds > 0) {
-            bp_string = "£" + user_inputs.pounds;
+            bp_string = number_to_pounds_string(user_inputs.pounds, false);
         }
         if (user_inputs.shillings > 0) {
             if (user_inputs.pounds > 0) {
@@ -268,61 +336,38 @@ function currency_formula(user_inputs) {
             }
             bp_string = bp_string + user_inputs.old_pence + "d";
         }
-
     }
     else {
         buying_power_money_value = user_inputs.pounds + user_inputs.new_pence;
 
-        bp_string = number_to_pounds_string(buying_power_money_value);
+        bp_string = number_to_pounds_string(buying_power_money_value, true);
     }
 
     return {
-        horses: Math.floor(buying_power_money_value / get_horse_price(user_inputs.year)),
-        cows: Math.floor(buying_power_money_value / get_cow_price(user_inputs.year)),
-        wool: Math.floor(buying_power_money_value / get_wool_price(user_inputs.year)),
-        wheat: Math.floor(buying_power_money_value / get_wheat_price(user_inputs.year)),
-        wage: Math.floor(buying_power_money_value / get_wage_price(user_inputs.year)),
+        horses: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'horse_price')),
+        cows: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'cow_price')),
+        wool: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wool_price')),
+        wheat: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wheat_price')),
+        wage: Math.floor(buying_power_money_value / get_price(user_inputs.year, 'wage_price')),
         money: currency_money_to_modern_value,
         bp_string: bp_string
     };
 
 }
 
-function number_to_pounds_string(number) {
+function number_to_pounds_string(number, include_pence) {
 
     var split_number = number.toString().split(".");
     var pounds_string = split_number[0];
     var pence_string = split_number[1] || "";
     var split_number_pounds_length = pounds_string.length;
 
-    var comma = ",";
-    var position_for_comma;
-    var sliced_pounds_string;
+    var sliced_pounds_string = "";
     var output_string;
 
     // If the £ value is more than £999, we need to add a comma. E.g. 1000 needs to become £1,000.
     if (split_number_pounds_length > 3) {
-        switch (split_number_pounds_length) {
-
-            case 4:
-                // Numbers 1,000 to 9,999 we insert the comma at index 1
-                position_for_comma = 1;
-                break;
-            case 5:
-                // Numbers 10,000 to 99,999 we insert the comma at index 2
-                position_for_comma = 2;
-                break;
-            case 6:
-                // Numbers 100,000 to 999,999 we insert the comma at index 3
-                position_for_comma = 3;
-                break;
-
-            default:
-                break;
-        }
-
-        sliced_pounds_string = [pounds_string.slice(0, position_for_comma), comma, pounds_string.slice(position_for_comma)].join('');
-
+        sliced_pounds_string = pounds_string.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     }
     else {
         sliced_pounds_string = pounds_string;
@@ -335,32 +380,18 @@ function number_to_pounds_string(number) {
         pence_string = "00";
     }
 
-    output_string = "£" + sliced_pounds_string + "." + pence_string;
+    if (include_pence) {
+        output_string = "£" + sliced_pounds_string + "." + pence_string;
+    }
+    else {
+        output_string = "£" + sliced_pounds_string;
+    }
+
     return output_string;
 }
 
-function get_inflation_rate(year) {
-    return conversion_data[year].inflation;
-}
-
-function get_horse_price(year) {
-    return conversion_data[year].horse_price;
-}
-
-function get_cow_price(year) {
-    return conversion_data[year].cow_price;
-}
-
-function get_wool_price(year) {
-    return conversion_data[year].wool_price;
-}
-
-function get_wheat_price(year) {
-    return conversion_data[year].wheat_price;
-}
-
-function get_wage_price(year) {
-    return conversion_data[year].wage_price;
+function get_price(year, price) {
+    return conversion_data[year][price];
 }
 
 function get_century(year) {
@@ -396,7 +427,7 @@ function get_century(year) {
 
 function get_currency(html_id) {
 
-    if(html_id === "#currency-new-pence"){
+    if (html_id === "#currency-new-pence") {
         return parseInt($(html_id).val(), 10) / 100;
     }
     else {
@@ -415,7 +446,7 @@ function get_user_inputs() {
         shillings: get_currency("#currency-shillings"),
         old_pence: get_currency("#currency-old-pence"),
         new_pence: get_currency("#currency-new-pence"),
-        inflation: get_inflation_rate( get_currency("#currency-year")),
-        century: get_century( get_currency("#currency-year"))
+        inflation: get_price(get_currency("#currency-year"), 'inflation'),
+        century: get_century(get_currency("#currency-year"))
     };
 }

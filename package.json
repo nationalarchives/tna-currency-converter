@@ -20,13 +20,13 @@
     "grunt": "^1.0.1",
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-eslint": "^20.1.0",
-    "qunit": "^2.4.1"
+    "qunit": "^2.4.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0"
   },
   "dependencies": {
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.2.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-jslint": "^1.1.15"
+    "grunt-contrib-watch": "^1.0.0"
   }
 }

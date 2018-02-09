@@ -11,13 +11,11 @@ It is built on top of the original TNA currency converter built in 2005, which h
 # Installation
 You will need PHP installed to run this application.
 
-1. Clone the repository
-2. From root, run
+1. Setup [TNA-Base](https://github.com/nationalarchives/tna-base) in WordPress
+2. Clone this repo to wp-content/themes
+3. Enable this theme in WP admin
+4. Create a page with the template Currency Converter to display the application.
      
-     php -S localhost:8080
-
-substitute localhost:8080 with your equivalent server address if necessary.
-
 ## Grunt
 
 Grunt is available in this project. It is used to:

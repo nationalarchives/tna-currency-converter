@@ -1,6 +1,28 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
+    // Project configuration.
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        sass: {
+            options: {
+                sourcemap: 'none'
+            },
+            dist: {
+                files: {
+                    'css/currency.css': 'css/sass/currency-sass.scss'
+                }
+            }
+        },
+        cssmin: {
+            options: {
+                sourceMap: true
+            },
+            target: {
+                files: {
+                    'css/currency.min.css': ['css/currency.css']
+                }
+            }
+        },
         concat: {
             options: {
                 // define a string to put between each file in the concatenated output
@@ -21,23 +43,36 @@ module.exports = function(grunt) {
             }
         },
         qunit: {
-            all: ['test/**/*.html']
-        },
-        watch: {
-            files: ['js/src/currency-converter.js'],
-            tasks:['eslint','concat','uglify','qunit']
+            all: ['qunit/test.html']
         },
         eslint: {
             target: ['js/src/currency-converter.js']
+        },
+        watch: {
+            css: {
+                files: ['css/sass/*.scss','js/src/currency-converter.js'],
+                tasks: ['sass', 'cssmin', 'eslint','concat','uglify','qunit', 'watch']
+            }
         }
     });
 
-
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-contrib-qunit');
-    grunt.registerTask('default', ['eslint','concat','uglify','qunit','watch']);
 
+
+    // Default task(s).
+    grunt.registerTask('default', [
+        'sass',
+        'cssmin',
+        'eslint',
+        'concat',
+        'uglify',
+        'qunit',
+        'watch'
+    ]);
 };
