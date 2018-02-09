@@ -63,11 +63,19 @@
 }
 
 #currency-large-text {
-  //font-family: "Bitter", "Open Sans", arial, serif;
   font-size: 4em;
   margin-bottom: 10px;
   width: auto;
   padding: 0 0.5em;
+  display: block;
+  @media(max-width: 513px){
+    font-size: 3em;
+  }
+}
+
+input[type=submit]:focus {
+    color: #222;
+    background-color: #fce45c;
 }
 
 .currency-result-header {

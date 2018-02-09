@@ -967,6 +967,11 @@ function check_validation() {
     var new_pence = get_currency("#currency-new-pence");
     var return_boolean = true;
 
+    if(isNaN(year)){
+        set_validation_message("Please select a value for year.", "year");
+        return_boolean = false;
+    }
+
     //Check if divisible by 10 - year must be 1270, 1280 and not 1271 or 1277 etc.
     if (year <= 1900) {
 
