@@ -28,15 +28,14 @@ get_header(); ?>
                     <div class="col-md-12">
                         <article>
                             <div class="entry-header">
-                                <h2>Currency Converter</h2>
+                                <h2 id="currency-h2">Currency Converter</h2>
                             </div>
                             <div class="row entry-content">
                                 <div class="col-md-12">
                                     <div id="currency-error" class="emphasis-block error-message" role="alert"><p class="h3">Sorry, there was a problem</p><p>Please check the highlighted fields to proceed.</p></div>
                                     <form action="index.php" method="post" id="currency-form" role="application">
                                         <fieldset>
-                                            <legend id="currency-legend">Enter currency to show its purchasing power in
-                                                1270
+                                            <legend id="currency-legend">Enter currency to show its purchasing power
                                             </legend>
                                             <div class="form-row">
                                                 <label for="currency-year">Year of currency</label>
@@ -89,7 +88,7 @@ get_header(); ?>
                                                     intended to be a general guide to historical values, rather than a
                                                     categorical statement of fact. </p>
                                                 <input type="submit" name="convert-currency" id="currency-submit"
-                                                       value="Show purchasing power in 1270" class="button">
+                                                       value="Show purchasing power" class="button">
                                             </div>
                                         </fieldset>
                                     </form>

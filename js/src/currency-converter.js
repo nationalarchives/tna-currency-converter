@@ -26,7 +26,7 @@ $(function () {
 });
 
 function show_validation_error_div() {
-    window.location.hash = 'currency-error'
+    window.location.hash = 'currency-h2'
     $("#currency-error").show();
 }
 
@@ -96,8 +96,17 @@ function show_inputs_relevant_to_selected_year() {
 }
 
 function change_fieldset_text() {
-    $('#currency-legend').text("Enter currency to show its purchasing power in " + get_currency("#currency-year"));
-    $('#currency-submit').val("Show purchasing power in " + get_currency("#currency-year"));
+
+    if(isNaN(get_currency("#currency-year"))){
+        $('#currency-legend').text("Enter currency to show its purchasing power");
+        $('#currency-submit').val("Show purchasing power");
+    }
+    else {
+        $('#currency-legend').text("Enter currency to show its purchasing power in " + get_currency("#currency-year"));
+        $('#currency-submit').val("Show purchasing power in " + get_currency("#currency-year"));
+    }
+
+
 }
 
 function build_century_intro_paragraph(intro, century, url) {
