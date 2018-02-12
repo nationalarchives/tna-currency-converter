@@ -1,5 +1,6 @@
 $(function () {
     show_inputs_relevant_to_selected_year();
+    change_fieldset_text();
 
     $("#currency-form").on('submit', function (event) {
         event.preventDefault();
