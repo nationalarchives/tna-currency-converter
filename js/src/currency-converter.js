@@ -267,6 +267,7 @@ function check_validation() {
         }
         if (pounds === 0 && new_pence === 0) {
             set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
+            set_validation_message("Please enter a number above 0 into at least one field.", "new-pence");
             return_boolean = false;
         }
 
