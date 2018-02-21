@@ -13,7 +13,7 @@
 				<?php } else { ?>
 				<a href="<?php echo make_path_relative( get_permalink($parent_page_id) ); ?>">
 					<?php } ?>
-					Also in Currency Converter
+                    Also in Currency converter
 				</a>
 		</h2>
 	</div>

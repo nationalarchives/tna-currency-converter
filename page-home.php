@@ -78,15 +78,13 @@ get_header(); ?>
                                                 </select>
                                             </div>
                                             <div class="form-row newer-currencies" id="currency-new-pence-row">
-                                                <label >Pence</label>
+                                                <label >Today’s pence (p)</label>
                                                 <input type="number" name="currency-new-pence" id="currency-new-pence"
                                                        min="0" max="99" value="0" placeholder="0">
                                             </div>
                                             <div class="form-row">
                                                 <p id="currency-validation" class="currency"></p>
-                                                <p class="fieldset-disclaimer">The results of the calculations are
-                                                    intended to be a general guide to historical values, rather than a
-                                                    categorical statement of fact. </p>
+                                                <p class="fieldset-disclaimer">The result of the calculation is intended to be a general guide to historical values, rather than a categorical statement of fact. </p>
                                                 <input type="submit" name="convert-currency" id="currency-submit"
                                                        value="Show purchasing power" class="button">
                                             </div>

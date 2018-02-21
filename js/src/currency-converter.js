@@ -202,7 +202,7 @@ function check_validation() {
 
     if(isNaN(year)){
         // As the aria-label has no "value" attribute, it will be returned as NaN, so we must account for that.
-        set_validation_message("Please select a value for year.", "year");
+        set_validation_message("Select a year of currency.", "year");
         return_boolean = false;
     }
 
@@ -210,7 +210,7 @@ function check_validation() {
     if (year <= 1900) {
 
         if (year % 10 !== 0) {
-            set_validation_message("Please enter a year ending in 0. For example 1270.", "year");
+            set_validation_message("Enter a year ending in 0. For example 1270.", "year");
             return_boolean = false;
         }
 
@@ -222,7 +222,7 @@ function check_validation() {
         if (year % 5 !== 0) {
 
             if (year !== 2017) {
-                set_validation_message("Please enter a year ending in 5 or 0. For example 1975 or 1980.", "year");
+                set_validation_message("Enter a year ending in 5 or 0. For example 1975 or 1980.", "year");
                 return_boolean = false;
             }
 
@@ -231,30 +231,30 @@ function check_validation() {
 
 
     if (year < 1270) {
-        set_validation_message("Please enter a year above 1270.", "year");
+        set_validation_message("Enter a year above 1270.", "year");
         return_boolean = false;
     }
 
     if (pounds < 0) {
-        set_validation_message("Please enter a positive whole number into the pounds field.", "pounds");
+        set_validation_message("Enter a valid number of pounds.", "pounds");
         return_boolean = false;
     }
 
     if (year <= 1970) {
         if (shillings < 0 || shillings > 19) {
-            set_validation_message("Please enter a whole number between 0 and 19 into the shillings field. ","shillings");
+            set_validation_message("Enter a whole number between 0 and 19 into the shillings field. ","shillings");
             return_boolean = false;
         }
 
         if (old_pence < 0 || old_pence > 11) {
-            set_validation_message("Please enter a whole between 0 and 11 into the pence field.", "old-pence");
+            set_validation_message("Enter a whole between 0 and 11 into the pence field.", "old-pence");
             return_boolean = false;
         }
 
         if (pounds === 0 && old_pence === 0 && shillings === 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
-            set_validation_message("Please enter a number above 0 into at least one field.", "old-pence");
-            set_validation_message("Please enter a number above 0 into at least one field.", "shillings");
+            set_validation_message("Enter a number above zero into at least one currency field.", "pounds");
+            set_validation_message("Enter a number above zero into at least one currency field.", "old-pence");
+            set_validation_message("Enter a number above zero into at least one currency field.", "shillings");
             return_boolean = false;
         }
 
@@ -262,12 +262,12 @@ function check_validation() {
 
     if (year > 1970) {
         if (new_pence < 0 || new_pence > 99) {
-            set_validation_message("Please enter a whole number between 0 and 99 into the pence field.", "new-pence");
+            set_validation_message("Enter a whole number between 0 and 99.", "new-pence");
             return_boolean = false;
         }
         if (pounds === 0 && new_pence === 0) {
-            set_validation_message("Please enter a number above 0 into at least one field.", "pounds");
-            set_validation_message("Please enter a number above 0 into at least one field.", "new-pence");
+            set_validation_message("Enter a number above zero into at least one currency field.", "pounds");
+            set_validation_message("Enter a number above zero into at least one currency field.", "new-pence");
             return_boolean = false;
         }
 
