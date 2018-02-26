@@ -28,7 +28,7 @@ get_header(); ?>
                     <div class="col-md-12">
                         <article>
                             <div class="entry-header">
-                                <h2 id="currency-h2">Currency Converter</h2>
+                                <h2 id="currency-h2"><?php echo get_post_meta( get_the_ID(), 'currency_application_h2', true ) ?></h2>
                             </div>
                             <div class="row entry-content">
                                 <div class="col-md-12">

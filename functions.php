@@ -14,4 +14,5 @@ add_action( 'wp_enqueue_scripts', 'tna_child_styles', 999 );
 add_action( 'wp_print_scripts', 'dequeue_parent_script', 100 );
 add_action('wp_enqueue_scripts','tna_child_scripts');
 add_action( 'init', 'add_excerpts_to_pages' );
-add_action( 'init', 'currency_metaboxes' );
+add_action( 'init', 'currency_century_metaboxes' );
+add_action( 'init', 'currency_h2_metabox' );
