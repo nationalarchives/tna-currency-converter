@@ -32,6 +32,13 @@ get_header(); ?>
                             </div>
                             <div class="row entry-content">
                                 <div class="col-md-12">
+
+	                                <?php
+	                                while ( have_posts() ) : the_post();
+		                                the_content();
+	                                endwhile;
+	                                ?>
+
                                     <div id="currency-error" class="emphasis-block error-message" role="alert"><p class="h3">Sorry, there was a problem</p><p>Please check the highlighted fields to proceed.</p></div>
                                     <form action="index.php" method="post" id="currency-form" role="application">
                                         <fieldset>
@@ -104,11 +111,7 @@ get_header(); ?>
                                 <h2>Disclaimer</h2>
                             </div>
                             <div class="entry-content">
-	                            <?php
-	                            while ( have_posts() ) : the_post();
-		                            the_content();
-	                            endwhile;
-	                            ?>
+	                            <?php echo get_post_meta( get_the_ID(), 'currency_application_disclaimer', true ) ?>
                             </div>
                         </article>
                     </div>
