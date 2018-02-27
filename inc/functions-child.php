@@ -16,11 +16,11 @@ function tna_child_styles() {
 }
 
 function tna_child_scripts() {
-	if ( is_page_template( 'page-home.php' ) ) {
-		wp_register_script( 'jquery-local', get_stylesheet_directory_uri(). '/js/jquery-1.11.3.min.js', false, NULL, true );
-		wp_register_script( 'currency-converter-build-min', get_stylesheet_directory_uri() . '/js/dist/currency-converter-build.min.js', array(),'1.0', true );
+	wp_register_script( 'jquery-local', get_stylesheet_directory_uri(). '/js/jquery-1.11.3.min.js', false, NULL, true );
+	wp_enqueue_script( 'jquery-local' );
 
-		wp_enqueue_script( 'jquery-local' );
+	if ( is_page_template( 'page-home.php' ) ) {
+		wp_register_script( 'currency-converter-build-min', get_stylesheet_directory_uri() . '/js/dist/currency-converter-build.min.js', array(),'1.0', true );
 		wp_enqueue_script( 'currency-converter-build-min' );
 
 		//Get all pages that aren't homepage. Get their excerpts and URL and pass to an array for Javascript to use.
