@@ -33,7 +33,7 @@ function tna_child_scripts() {
 
 		foreach ( get_pages( $args ) as $page ) {
 			array_push( $excerpts, array( get_post_meta( $page->ID, 'currency_century', true ) => $page->post_excerpt ) );
-			array_push( $urls, array( get_post_meta( $page->ID, 'currency_century', true ) => get_page_link( $page->ID ) ) );
+			array_push( $urls, array( get_post_meta( $page->ID, 'currency_century', true ) => make_path_relative(get_page_link( $page->ID ) )) );
 		}
 
 		wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array( "templateURL"  => make_path_relative(get_stylesheet_directory_uri()),

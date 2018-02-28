@@ -34,7 +34,7 @@
 				$redirect = get_post_meta( $page->ID, 'redirectUrl', true );
 				if ( $redirect ) { ?>
 					<li>
-						<a href="<?php echo $redirect; ?>" title="<?php echo $page->post_title ?>">
+						<a href="<?php echo make_path_relative($redirect); ?>" title="<?php echo $page->post_title ?>">
 							<?php echo $page->post_title; ?>
 						</a>
 					</li>
