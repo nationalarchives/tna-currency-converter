@@ -36,7 +36,7 @@ function tna_child_scripts() {
 			array_push( $urls, array( get_post_meta( $page->ID, 'currency_century', true ) => get_page_link( $page->ID ) ) );
 		}
 
-		wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array( "templateURL"  => get_stylesheet_directory_uri(),
+		wp_localize_script( 'currency-converter-build-min', 'wp_child_theme', array( "templateURL"  => make_path_relative(get_stylesheet_directory_uri()),
 		                                                                             "excerptArray" => $excerpts,
 		                                                                             "urlArray"     => $urls
 		) );

@@ -21,9 +21,9 @@ function setThemeGlobals($environment = null) {
             break;
         case 'external':
             $pre_crumbs = array(
-                'Currency Converter: 1270 – 2017' => '/currency/'
+                'Currency Converter: 1270 – 2017' => '/currency-converter/'
             );
-            $pre_path = '/currency';
+            $pre_path = '/currency-converter';
             break;
     }
 }
