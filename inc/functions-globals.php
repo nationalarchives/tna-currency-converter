@@ -17,10 +17,14 @@ function setThemeGlobals($environment = null) {
         case 'internal':
         case 'development':
             $pre_path = '';
-            $pre_crumbs = array('Currency Converter: 1270 – 2017' => '/');
+            $pre_crumbs = array('Help with your research' => '/help-with-your-research/',
+                                'Reading old documents' => '/help-with-your-research/reading-old-documents/',
+                                'Currency Converter: 1270 – 2017' => '/');
             break;
         case 'external':
             $pre_crumbs = array(
+	            'Help with your research' => '/help-with-your-research/',
+	            'Reading old documents' => '/help-with-your-research/reading-old-documents/',
                 'Currency Converter: 1270 – 2017' => '/currency-converter/'
             );
             $pre_path = '/currency-converter';
