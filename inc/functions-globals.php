@@ -18,8 +18,6 @@ function setThemeGlobals( $environment = null ) {
 		case 'development':
 			$pre_path   = '';
 			$pre_crumbs = array(
-				'Help with your research'         => '/help-with-your-research/',
-				'Reading old documents'           => '/help-with-your-research/reading-old-documents/',
 				'Currency Converter: 1270 – 2017' => '/'
 			);
 			break;
@@ -27,9 +25,9 @@ function setThemeGlobals( $environment = null ) {
 			$pre_crumbs = array(
 				'Help with your research'         => '/help-with-your-research/',
 				'Reading old documents'           => '/help-with-your-research/reading-old-documents/',
-				'Currency Converter: 1270 – 2017' => '/currency-converter/'
+				'Currency Converter: 1270 – 2017' => '/help-with-your-research/reading-old-documents/currency-converter/'
 			);
-			$pre_path   = '/currency-converter';
+			$pre_path   = '/help-with-your-research/reading-old-documents/currency-converter';
 			break;
 	}
 }
