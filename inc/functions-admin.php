@@ -31,7 +31,7 @@ function currency_application_metaboxes() {
 					'name' => 'Currency converter application disclaimer',
 					'desc' => '',
 					'id'   => 'currency_application_disclaimer',
-					'type' => 'text',
+					'type' => 'textarea',
 					'std'  => ''
 				)
 			)
