@@ -3,7 +3,7 @@ language:
   - node_js
 
 php:
-  - 5.5
+  - 7.2
 
 node_js:
   - 4.4.5
