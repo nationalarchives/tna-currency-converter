@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/nationalarchives/tna-currency-converter#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-qunit": "^2.0.0",
-    "grunt-eslint": "^20.1.0",
-    "qunit": "^2.4.1",
+    "grunt": "^1.0.4",
     "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-sass": "^1.0.0"
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "qunit": "^2.4.1"
   },
   "dependencies": {
     "grunt-contrib-concat": "^1.0.1",

@@ -47,18 +47,11 @@ module.exports = function (grunt) {
         },
         eslint: {
             target: ['js/src/currency-converter.js']
-        },
-        watch: {
-            css: {
-                files: ['css/sass/*.scss','js/src/currency-converter.js'],
-                tasks: ['sass', 'cssmin', 'eslint','concat','uglify','qunit', 'watch']
-            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-eslint');
@@ -72,7 +65,6 @@ module.exports = function (grunt) {
         'eslint',
         'concat',
         'uglify',
-        'qunit',
-        'watch'
+        'qunit'
     ]);
 };
