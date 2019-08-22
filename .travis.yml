@@ -1,21 +1,14 @@
 language:
-  - php
   - node_js
 
-php:
-  - 7.2
-
 node_js:
-  - 4.4.5
+  - 10.6
 
 install:
-  - composer require --dev phpunit/phpunit
   - npm install -g grunt-cli
-  - npm install
 
 script:
-  - phpunit tests/TNAGlobalsTest.php
-  - phpunit tests/FunctionTest.php
+  - grunt
 
 notifications:
   slack:
