@@ -98,8 +98,9 @@ legend {
   border-left: 4px solid #008484 !important; }
 
 .error-message {
-  background-color: #FFF8D0 !important;
-  border-left: 4px solid #EBAB2C !important; }
+  background-color: #fbe2bc !important;
+  border: 1px solid #000;
+  color: #000 !important; }
 
 .button-back,
 .form-step-2 .button,
@@ -315,7 +316,8 @@ input[type=number]::-webkit-outer-spin-button {
   background-image: url(http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/icon-24-accordion-close.png); }
 
 .currency {
-  background-color: #FFF8D0;
+  background-color: #fbe2bc;
+  border: 1px solid #000;
   white-space: pre-wrap;
   /* CSS3 */
   white-space: -moz-pre-wrap;
@@ -339,7 +341,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=submit]:focus {
   color: #222;
-  background-color: #fce45c; }
+  background-color: #fff; }
 
 .currency-result-header {
   font-size: 1.5em; }
@@ -369,9 +371,6 @@ input[type=submit]:focus {
 #currency-century-intro {
   padding: 5%; }
 
-#currency-century-intro-read-more {
-  float: right; }
-
 .no-js #currency-form {
   display: none; }
 
@@ -380,3 +379,5 @@ input[type=submit]:focus {
 
 #currency-error {
   display: none; }
+
+/*# sourceMappingURL=currency.css.map */

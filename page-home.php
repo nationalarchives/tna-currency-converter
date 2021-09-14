@@ -66,7 +66,7 @@ get_header(); ?>
                                                        required>
                                             </div>
                                             <div class="form-row older-currencies" id="currency-shillings-row">
-                                                <label>Shillings (s)</label>
+                                                <label for="currency-shillings">Shillings (s)</label>
                                                 <select id="currency-shillings" name="currency-shillings">
                                                     <?php
                                                     for ($i = 0; $i <= 19; $i = $i + 1) {
@@ -75,7 +75,7 @@ get_header(); ?>
                                                 </select>
                                             </div>
                                             <div class="form-row older-currencies" id="currency-old-pence-row">
-                                                <label >Pence (d)</label>
+                                                <label for="currency-old-pence">Pence (d)</label>
                                                 <select id="currency-old-pence">
                                                     <?php
                                                     for( $i = 0; $i < 12; $i++){
@@ -85,7 +85,7 @@ get_header(); ?>
                                                 </select>
                                             </div>
                                             <div class="form-row newer-currencies" id="currency-new-pence-row">
-                                                <label >Today’s pence (p)</label>
+                                                <label for="currency-new-pence" >Today’s pence (p)</label>
                                                 <input type="number" name="currency-new-pence" id="currency-new-pence"
                                                        min="0" max="99" value="0" placeholder="0">
                                             </div>
