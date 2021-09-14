@@ -83,8 +83,10 @@ legend {
   border-left: 4px solid #008484 !important; }
 
 .error-message {
-  background-color: #FFF8D0 !important;
-  border-left: 4px solid #EBAB2C !important; }
+  background-color: #fbe2bc !important;
+  border: 1px solid #000; 
+  color: #000 !important;
+}
 
 .button-back,
 .form-step-2 .button,

@@ -54,7 +54,8 @@
 }
 
 .currency {
-  background-color: #FFF8D0;
+  background-color: #fbe2bc;
+  border: 1px solid #000; 
   white-space: pre-wrap;      /* CSS3 */
   white-space: -moz-pre-wrap; /* Firefox */
   white-space: -pre-wrap;     /* Opera <7 */
@@ -75,7 +76,7 @@
 
 input[type=submit]:focus {
     color: #222;
-    background-color: #fce45c;
+    background-color: #fff;
 }
 
 .currency-result-header {
@@ -112,10 +113,6 @@ input[type=submit]:focus {
 
 #currency-century-intro {
   padding:5%;
-}
-
-#currency-century-intro-read-more {
-  float:right;
 }
 
 .no-js #currency-form {

@@ -149,7 +149,7 @@ function currency_output() {
     var HTML_img_string = wp_child_theme.templateURL + "/img/";
     var HTML_output =
 
-        "<div class='currency' id='currency-result'><h3 class='currency-result-header'>In 2017, this is worth approximately: </h3>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
+        "<div class='currency' id='currency-result' aria-live='polite'><h3 class='currency-result-header'>In 2017, this is worth approximately: </h3>" + "<span id='currency-large-text'>" + converted_money_string + "</span>" +
 
         "<h3 class='currency-result-header'>In " + user_inputs.year + ", you could buy one of the following with " + currency_formula_return_values.bp_string + ": </h3>" +
 
@@ -171,7 +171,7 @@ function currency_output() {
 }
 
 function build_currency_output_html(string, value, unit, img) {
-    return "<h4>" + " <img src='" + img + "'/>" + string + ": " + value + " " + unit + "</h4>";
+    return "<h4>" + " <img src='" + img + "'alt=''/>" + string + ": " + value + " " + unit + "</h4>";
 }
 
 
@@ -187,7 +187,7 @@ function set_validation_message(message, id) {
     show_validation_error_div();
     $("#currency-"+id).addClass("form-warning");
     $("#currency-"+id).after(function () {
-        return "<span class='form-error form-hint'>" + message +"</span>";
+        return "<span class='form-error form-hint' role='alert'>" + message +"</span>";
     });
 }
 
@@ -330,13 +330,13 @@ function currency_formula(user_inputs) {
                 bp_string = bp_string + ", ";
             }
 
-            bp_string = bp_string + user_inputs.shillings + "s";
+            bp_string = bp_string + user_inputs.shillings + "s<span class='sr-only'>(shillings)</span>";
         }
         if (user_inputs.old_pence > 0) {
             if (user_inputs.pounds > 0 || user_inputs.shillings > 0) {
                 bp_string = bp_string + " & ";
             }
-            bp_string = bp_string + user_inputs.old_pence + "d";
+            bp_string = bp_string + user_inputs.old_pence + "d<span class='sr-only'>(pence)</span>";
         }
     }
     else {
